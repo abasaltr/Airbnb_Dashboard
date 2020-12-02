@@ -5,3 +5,5 @@ Analyze datasets pertaining to the company Airbnb to create interactive visualiz
 <br>
 Project III Group Members:<br>
 Katy Fuentes, Nicole Pipkins, Radhika Balasubramaniam, Reza Abasaltian
+
+<a href="https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/docs/projectProposal_02rev.docx">Project Proposal</a>
