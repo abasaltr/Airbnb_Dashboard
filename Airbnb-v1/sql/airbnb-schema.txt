@@ -1,0 +1,2 @@
+# airbnbDB schema diagram.
+

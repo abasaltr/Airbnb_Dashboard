@@ -1,0 +1,706 @@
+{
+    "28380": {
+        "city": "Houston",
+        "latitude": 29.683698,
+        "longitude": -95.591341,
+        "name": "Alief",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "47651": {
+        "city": "Houston",
+        "latitude": 29.701712,
+        "longitude": -95.524601,
+        "name": "Sharpstown",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "232166": {
+        "city": "Houston",
+        "latitude": 29.57856,
+        "longitude": -95.131537,
+        "name": "Clear Lake",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "232872": {
+        "city": "Houston",
+        "latitude": 29.841271,
+        "longitude": -95.255972,
+        "name": "East Houston",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "235286": {
+        "city": "Houston",
+        "latitude": 29.738354,
+        "longitude": -95.295604,
+        "name": "Magnolia Park",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "235537": {
+        "city": "Houston",
+        "latitude": 29.680658,
+        "longitude": -95.475107,
+        "name": "Meyerland Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "235634": {
+        "city": "Houston",
+        "latitude": 29.620245,
+        "longitude": -95.326358,
+        "name": "Minnetex",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "236058": {
+        "city": "Houston",
+        "latitude": 29.773037,
+        "longitude": -95.214457,
+        "name": "Northshore",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "236416": {
+        "city": "Houston",
+        "latitude": 29.695035,
+        "longitude": -95.271472,
+        "name": "Park Place",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "236490": {
+        "city": "Houston",
+        "latitude": 29.706891,
+        "longitude": -95.287098,
+        "name": "Pecan Park",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "237635": {
+        "city": "Houston",
+        "latitude": 29.815497,
+        "longitude": -95.279277,
+        "name": "Settegast",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "238116": {
+        "city": "Houston",
+        "latitude": 29.654813,
+        "longitude": -95.363138,
+        "name": "Sunnyside",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "238122": {
+        "city": "Houston",
+        "latitude": 29.653852,
+        "longitude": -95.533813,
+        "name": "Greater Fondren Southwest",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "238880": {
+        "city": "Houston",
+        "latitude": 29.650884,
+        "longitude": -95.480871,
+        "name": "Westbury",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "238911": {
+        "city": "Houston",
+        "latitude": 29.676954,
+        "longitude": -95.548379,
+        "name": "Westwood",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271280": {
+        "city": "Houston",
+        "latitude": 29.869377,
+        "longitude": -95.43973,
+        "name": "Acres Home",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271282": {
+        "city": "Houston",
+        "latitude": 29.807839,
+        "longitude": -95.681647,
+        "name": "Addicks Park Ten",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271298": {
+        "city": "Houston",
+        "latitude": 29.724696,
+        "longitude": -95.383169,
+        "name": "Binz",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271304": {
+        "city": "Houston",
+        "latitude": 29.682866,
+        "longitude": -95.516995,
+        "name": "Braeburn",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271305": {
+        "city": "Houston",
+        "latitude": 29.70107,
+        "longitude": -95.430254,
+        "name": "Braeswood Place",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271322": {
+        "city": "Houston",
+        "latitude": 29.855187,
+        "longitude": -95.550077,
+        "name": "Carverdale",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271326": {
+        "city": "Houston",
+        "latitude": 29.635745,
+        "longitude": -95.438364,
+        "name": "Central Southwest",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271355": {
+        "city": "Houston",
+        "latitude": 29.755532,
+        "longitude": -95.359187,
+        "name": "Downtown",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271386": {
+        "city": "Houston",
+        "latitude": 29.625041,
+        "longitude": -95.506525,
+        "name": "Fondren Gardens",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271389": {
+        "city": "Houston",
+        "latitude": 29.757098,
+        "longitude": -95.379766,
+        "name": "Fourth Ward",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271403": {
+        "city": "Houston",
+        "latitude": 29.735532,
+        "longitude": -95.333206,
+        "name": "Greater Eastwood",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271404": {
+        "city": "Houston",
+        "latitude": 29.775471,
+        "longitude": -95.328492,
+        "name": "Greater Fifth Ward",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271406": {
+        "city": "Houston",
+        "latitude": 29.935837,
+        "longitude": -95.408703,
+        "name": "Greater Greenspoint",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271409": {
+        "city": "Houston",
+        "latitude": 29.880039,
+        "longitude": -95.480521,
+        "name": "Greater Inwood",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271410": {
+        "city": "Houston",
+        "latitude": 29.728792,
+        "longitude": -95.355074,
+        "name": "Greater Third Ward",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271411": {
+        "city": "Houston",
+        "latitude": 29.754918,
+        "longitude": -95.479557,
+        "name": "Greater Uptown",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271417": {
+        "city": "Houston",
+        "latitude": 29.709794,
+        "longitude": -95.479708,
+        "name": "Gulfton",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271426": {
+        "city": "Houston",
+        "latitude": 29.890461,
+        "longitude": -95.421563,
+        "name": "Hidden Valley",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271434": {
+        "city": "Houston",
+        "latitude": 29.817718,
+        "longitude": -95.216732,
+        "name": "Hunterwood",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271439": {
+        "city": "Houston",
+        "latitude": 29.830061,
+        "longitude": -95.393247,
+        "name": "Independence Heights",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271443": {
+        "city": "Houston",
+        "latitude": 29.802785,
+        "longitude": -95.319493,
+        "name": "Kashmere Gardens",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271448": {
+        "city": "Houston",
+        "latitude": 30.005629,
+        "longitude": -95.169425,
+        "name": "Lake Houston",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271449": {
+        "city": "Houston",
+        "latitude": 29.827555,
+        "longitude": -95.489028,
+        "name": "Langwood",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271458": {
+        "city": "Houston",
+        "latitude": 29.713323,
+        "longitude": -95.359348,
+        "name": "Macgregor",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271467": {
+        "city": "Houston",
+        "latitude": 29.768677,
+        "longitude": -95.596196,
+        "name": "Memorial",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271469": {
+        "city": "Houston",
+        "latitude": 29.743116,
+        "longitude": -95.375033,
+        "name": "Midtown",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271510": {
+        "city": "Houston",
+        "latitude": 29.795359,
+        "longitude": -95.363527,
+        "name": "Northside Village",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271539": {
+        "city": "Houston",
+        "latitude": 29.777826,
+        "longitude": -95.275876,
+        "name": "Pleasantville Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271560": {
+        "city": "Houston",
+        "latitude": 29.751767,
+        "longitude": -95.326333,
+        "name": "Second Ward",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271571": {
+        "city": "Houston",
+        "latitude": 29.674415,
+        "longitude": -95.417389,
+        "name": "South Main",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271573": {
+        "city": "Houston",
+        "latitude": 29.668297,
+        "longitude": -95.335925,
+        "name": "South Park",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271582": {
+        "city": "Houston",
+        "latitude": 29.808629,
+        "longitude": -95.51147,
+        "name": "Spring Branch Central",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271583": {
+        "city": "Houston",
+        "latitude": 29.803166,
+        "longitude": -95.475783,
+        "name": "Spring Branch East",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271584": {
+        "city": "Houston",
+        "latitude": 29.819445,
+        "longitude": -95.544095,
+        "name": "Spring Branch North",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271585": {
+        "city": "Houston",
+        "latitude": 29.807837,
+        "longitude": -95.553491,
+        "name": "Spring Branch West",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271615": {
+        "city": "Houston",
+        "latitude": 29.714816,
+        "longitude": -95.401591,
+        "name": "University Place",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271636": {
+        "city": "Houston",
+        "latitude": 29.838881,
+        "longitude": -95.560797,
+        "name": "Westbranch",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271637": {
+        "city": "Houston",
+        "latitude": 29.726024,
+        "longitude": -95.565829,
+        "name": "Westchase",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "271648": {
+        "city": "Houston",
+        "latitude": 29.954738,
+        "longitude": -95.542835,
+        "name": "Willowbrook",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "274488": {
+        "city": "Houston",
+        "latitude": 29.709901,
+        "longitude": -95.396508,
+        "name": "Medical Center Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "276351": {
+        "city": "Houston",
+        "latitude": 29.795324,
+        "longitude": -95.404769,
+        "name": "Greater Heights",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403528": {
+        "city": "Houston",
+        "latitude": 29.736097,
+        "longitude": -95.508091,
+        "name": "Woodlake - Briarmeadow",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403529": {
+        "city": "Houston",
+        "latitude": 29.596582,
+        "longitude": -95.483548,
+        "name": "Fort Bend - Houston",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403530": {
+        "city": "Houston",
+        "latitude": 29.731417,
+        "longitude": -95.436475,
+        "name": "Greenway - Upper Kirby Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403531": {
+        "city": "Houston",
+        "latitude": 29.722901,
+        "longitude": -95.307151,
+        "name": "Lawndale - Wayside",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403532": {
+        "city": "Houston",
+        "latitude": 29.717455,
+        "longitude": -95.267016,
+        "name": "Harrisburg - Manchester",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403533": {
+        "city": "Houston",
+        "latitude": 29.66742,
+        "longitude": -95.445888,
+        "name": "Willow Meadows - Willowbend Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403534": {
+        "city": "Houston",
+        "latitude": 29.685205,
+        "longitude": -95.248417,
+        "name": "Meadowbrook - Allendale",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403535": {
+        "city": "Houston",
+        "latitude": 29.710224,
+        "longitude": -95.31409,
+        "name": "Gulfgate Riverview - Pine Valley",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403536": {
+        "city": "Houston",
+        "latitude": 29.695284,
+        "longitude": -95.353516,
+        "name": "Ost - South Union",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403537": {
+        "city": "Houston",
+        "latitude": 29.686351,
+        "longitude": -95.395815,
+        "name": "Astrodome Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403538": {
+        "city": "Houston",
+        "latitude": 29.671436,
+        "longitude": -95.288625,
+        "name": "Golfcrest - Bellfort - Reveille",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403539": {
+        "city": "Houston",
+        "latitude": 29.974391,
+        "longitude": -95.332856,
+        "name": "Iah - Airport Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403540": {
+        "city": "Houston",
+        "latitude": 29.881609,
+        "longitude": -95.294638,
+        "name": "East Little York - Homestead",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403541": {
+        "city": "Houston",
+        "latitude": 29.867463,
+        "longitude": -95.382567,
+        "name": "Northside-Northline",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403542": {
+        "city": "Houston",
+        "latitude": 30.062399,
+        "longitude": -95.209669,
+        "name": "Kingwood Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403543": {
+        "city": "Houston",
+        "latitude": 29.853477,
+        "longitude": -95.336877,
+        "name": "Eastex - Jensen Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403544": {
+        "city": "Houston",
+        "latitude": 29.847872,
+        "longitude": -95.517872,
+        "name": "Fairbanks - Northwest Crossing",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403545": {
+        "city": "Houston",
+        "latitude": 29.829616,
+        "longitude": -95.442964,
+        "name": "Oak Forest - Garden Oaks",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403546": {
+        "city": "Houston",
+        "latitude": 29.826438,
+        "longitude": -95.310805,
+        "name": "Trinity - Houston Gardens",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403547": {
+        "city": "Houston",
+        "latitude": 29.62587,
+        "longitude": -95.270491,
+        "name": "Greater Hobby Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403548": {
+        "city": "Houston",
+        "latitude": 29.808224,
+        "longitude": -95.246619,
+        "name": "El Dorado - Oates Prairie",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403549": {
+        "city": "Houston",
+        "latitude": 29.79876,
+        "longitude": -95.435246,
+        "name": "Lazy Brook - Timbergrove",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403550": {
+        "city": "Houston",
+        "latitude": 29.762745,
+        "longitude": -95.292564,
+        "name": "Denver Harbor - Port Houston",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403551": {
+        "city": "Houston",
+        "latitude": 29.6405,
+        "longitude": -95.229537,
+        "name": "Edgebrook Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403552": {
+        "city": "Houston",
+        "latitude": 29.774044,
+        "longitude": -95.410446,
+        "name": "Washington Avenue Coalition - Memorial Park",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403553": {
+        "city": "Houston",
+        "latitude": 29.742083,
+        "longitude": -95.684234,
+        "name": "Eldridge - West Oaks",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403554": {
+        "city": "Houston",
+        "latitude": 29.748438,
+        "longitude": -95.24639,
+        "name": "Clinton Park Tri-Community",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403555": {
+        "city": "Houston",
+        "latitude": 29.617575,
+        "longitude": -95.377184,
+        "name": "South Acres - Crestmont Park",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403556": {
+        "city": "Houston",
+        "latitude": 29.751593,
+        "longitude": -95.572811,
+        "name": "Briarforest Area",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403557": {
+        "city": "Houston",
+        "latitude": 29.746891,
+        "longitude": -95.396128,
+        "name": "Montrose",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403558": {
+        "city": "Houston",
+        "latitude": 29.607413,
+        "longitude": -95.204136,
+        "name": "South Belt - Ellington",
+        "state": "TX",
+        "county": "Harris"
+    },
+    "403559": {
+        "city": "Houston",
+        "latitude": 29.745605,
+        "longitude": -95.434359,
+        "name": "Afton Oaks - River Oaks Area",
+        "state": "TX",
+        "county": "Harris"
+    }
+}
