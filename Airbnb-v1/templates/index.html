@@ -20,6 +20,9 @@
     <!-- Custom styles for this template-->
     <link href="../static/css/sb-admin-2.min.css" rel="stylesheet">
 
+
+    <!-- insert plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -66,8 +69,7 @@
                     aria-expanded="true" aria-controls="collapseHost">
                     <span>Host</span>
                 </a>
-                <div id="collapseHost" class="collapse" aria-labelledby="headingHost"
-                    data-parent="#accordionSidebar">
+                <div id="collapseHost" class="collapse" aria-labelledby="headingHost" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
                         <a class="collapse-item" href="Rates.html">Average Rates</a>
@@ -82,8 +84,7 @@
                     aria-expanded="true" aria-controls="collapseTrend">
                     <span>Analysis</span>
                 </a>
-                <div id="collapseTrend" class="collapse" aria-labelledby="headingTrend"
-                    data-parent="#accordionSidebar">
+                <div id="collapseTrend" class="collapse" aria-labelledby="headingTrend" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="RentalGrowthAndForecast.html">Trends and Forecast</a>
                     </div>
@@ -98,7 +99,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -155,7 +156,7 @@
                                         <div class="col mr-2">
                                             <div class="text-s font-weight-bold text-info text-uppercase mb-2">
                                                 Average Rates</div>
-                                            
+
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign text-gray-300"></i>
@@ -164,28 +165,30 @@
 
                                     <div class="row">
                                         <div class="col-xl-4 col-md-4 mb-4">
-                                            <div class="text-xs font-weight-bold fa-2x text-black-800 mb-1">Daily Rate </div>
-                                            
-                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">$75 
+                                            <div class="text-xs font-weight-bold fa-2x text-black-800 mb-1">Daily Rate
+                                            </div>
+
+                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">$75
                                                 <i id="daily_icon" class="fas fa-arrow-up fa-sm"></i>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-4 mb-4">
                                             <div class="text-xs font-weight-bold text-black-800 mb-1">Weekly Rate </div>
-                                            
-                                            <div id="weekly" class="h6 mb-0 font-weight-bold text-success-500">$1500 
+
+                                            <div id="weekly" class="h6 mb-0 font-weight-bold text-success-500">$1500
                                                 <i id="weekly_icon" class="fas fa-arrows-alt-h fa-sm"></i>
                                             </div>
                                         </div>
 
                                         <div class="col-xl-4 col-md-4 mb-4">
-                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Monthly Rate </div>
-                                            
-                                            <div id="weekly" class="h6 mb-0 font-weight-bold text-success-500">$4975 
+                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Monthly Rate
+                                            </div>
+
+                                            <div id="weekly" class="h6 mb-0 font-weight-bold text-success-500">$4975
                                                 <i id="weekly_icon" class="fas fa-arrow-down fa-sm"></i>
                                             </div>
                                         </div>
-                                        
+
 
                                     </div>
                                 </div>
@@ -208,15 +211,17 @@
 
                                     <div class="row">
                                         <div class="col-xl-4 col-md-4 mb-4">
-                                            <div class="text-xs font-weight-bold fa-2x text-black-800 mb-1"> Occupancy Rate</div>
-                                            
-                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">75% 
+                                            <div class="text-xs font-weight-bold fa-2x text-black-800 mb-1"> Occupancy
+                                                Rate</div>
+
+                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">75%
                                                 <i id="daily_icon" class="fas fa-arrow-down fa-sm"></i>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-4 mb-4">
-                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Availablity Rate </div>
-                                            
+                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Availablity Rate
+                                            </div>
+
                                             <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">50%
                                                 <i id="daily_icon" class="fas fa-arrow-up fa-sm"></i>
                                             </div>
@@ -224,12 +229,12 @@
 
                                         <div class="col-xl-4 col-md-4 mb-4">
                                             <div class="text-xs font-weight-bold text-black-800 mb-1">Review Rate </div>
-                                            
-                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">65% 
+
+                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">65%
                                                 <i id="daily_icon" class="fas fa-arrows-alt-h fa-sm"></i>
                                             </div>
                                         </div>
-                                        
+
 
                                     </div>
 
@@ -304,34 +309,34 @@
                                             <div class="">
                                                 <canvas id="Rental"></canvas>
                                             </div>
-                                        
+
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="col-xl-12 col-lg-12">
-                                        <div class="card shadow mb-1">
-                                         
-                                            <div
-                                                class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
-                                                <h6 class="m-0 font-weight-bold text-info">Neighborhood Watch</h6>
-                
-                                            </div>
-                                            <!-- Card Body -->
-                                            <div class="card-body">
-                                                <div class="">
-                                                    <canvas id="Neighborhood"></canvas>
-                                                </div>
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="card shadow mb-1">
+
+                                        <div
+                                            class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                            <h6 class="m-0 font-weight-bold text-info">Neighborhood Watch</h6>
+
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body">
+                                            <div class="">
+                                                <canvas id="Neighborhood"></canvas>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
 
                                 <div class="col-xl-12 col-lg-12">
                                     <div class="card shadow mb-3">
-                                     
+
                                         <div
                                             class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
                                             <h6 class="m-0 font-weight-bold text-info">Top 10 Amenities</h6>
-            
+
                                         </div>
                                         <!-- Card Body -->
                                         <div class="card-body">
@@ -341,21 +346,21 @@
                                         </div>
                                     </div>
                                 </div>
-                            
+
                             </div>
                         </div>
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
-                         <!-- Trends and Forecast -->
-                         <div class="col-xl-8 col-lg-8">
+                        <!-- Trends and Forecast -->
+                        <div class="col-xl-8 col-lg-8">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-info">Historical Trends and Forecast</h6>
-                                 
+
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -365,11 +370,11 @@
                                 </div>
                             </div>
                         </div>
-                         
+
 
                     </div>
 
-                
+
 
                 </div>
                 <!-- /.container-fluid -->
@@ -398,7 +403,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
- 
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="../static/js/jquery.min.js"></script>
@@ -410,6 +415,11 @@
     <script src="../static/js/navbar.js"></script>
 
 
+
+    <!-- sample test visualization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
+
+    <script src="../static/js/app2.js"></script>
 </body>
 
 </html>
