@@ -1,0 +1,527 @@
+{
+    "273471": {
+        "name": "Dignowity Hill-St. Paul Square",
+        "city": "San Antonio",
+        "state": "TX"
+    },
+    "271352": {
+        "name": "Downtown",
+        "city": "San Antonio",
+        "state": "TX"
+    },
+    "275804": {
+        "name": "United Homeowners",
+        "city": "San Antonio",
+        "state": "TX"
+    },
+    "271349": {
+        "name": "Dignowity Hill",
+        "city": "San Antonio",
+        "state": "TX"
+    },
+    "274033": {
+        "name": "Historic Gardens",
+        "city": "San Antonio",
+        "state": "TX"
+    },
+    "271360": {
+        "name": "East Cesar Chavez",
+        "city": "Austin",
+        "state": "TX"
+    },
+    "271303": {
+        "name": "Bouldin",
+        "city": "Austin",
+        "state": "TX"
+    },
+    "271325": {
+        "name": "Central East Austin",
+        "city": "Austin",
+        "state": "TX"
+    },
+    "271574": {
+        "name": "South River City",
+        "city": "Austin",
+        "state": "TX"
+    },
+    "271653": {
+        "name": "Windsor Road",
+        "city": "Austin",
+        "state": "TX"
+    },
+    "422770": {
+        "name": "Carter Park",
+        "city": "Fort Worth",
+        "state": "TX"
+    },
+    "233172": {
+        "name": "Fairmount",
+        "city": "Fort Worth",
+        "state": "TX"
+    },
+    "422844": {
+        "name": "North Hi Mount",
+        "city": "Fort Worth",
+        "state": "TX"
+    },
+    "422756": {
+        "name": "Berkeley Place",
+        "city": "Fort Worth",
+        "state": "TX"
+    },
+    "199281": {
+        "name": "Arlington Heights",
+        "city": "Fort Worth",
+        "state": "TX"
+    },
+    "276189": {
+        "name": "Arts District",
+        "city": "Dallas",
+        "state": "TX"
+    },
+    "273854": {
+        "name": "Government District",
+        "city": "Dallas",
+        "state": "TX"
+    },
+    "273707": {
+        "name": "Farmers Market District",
+        "city": "Dallas",
+        "state": "TX"
+    },
+    "273261": {
+        "name": "City Center District",
+        "city": "Dallas",
+        "state": "TX"
+    },
+    "272701": {
+        "name": "M Streets",
+        "city": "Dallas",
+        "state": "TX"
+    },
+    "271389": {
+        "name": "Fourth Ward",
+        "city": "Houston",
+        "state": "TX"
+    },
+    "403557": {
+        "name": "Montrose",
+        "city": "Houston",
+        "state": "TX"
+    },
+    "271469": {
+        "name": "Midtown",
+        "city": "Houston",
+        "state": "TX"
+    },
+    "271298": {
+        "name": "Binz",
+        "city": "Houston",
+        "state": "TX"
+    },
+    "274488": {
+        "name": "Medical Center Area",
+        "city": "Houston",
+        "state": "TX"
+    },
+    "274853": {
+        "name": "Oakland Ave-Harrison St",
+        "city": "Oakland",
+        "state": "CA"
+    },
+    "268153": {
+        "name": "Fairview Park",
+        "city": "Oakland",
+        "state": "CA"
+    },
+    "268456": {
+        "name": "Santa Fe",
+        "city": "Oakland",
+        "state": "CA"
+    },
+    "274232": {
+        "name": "Lake Merritt",
+        "city": "Oakland",
+        "state": "CA"
+    },
+    "275678": {
+        "name": "Temescal",
+        "city": "Oakland",
+        "state": "CA"
+    },
+    "115295": {
+        "name": "Glendale",
+        "city": "Los Angeles",
+        "state": "CA"
+    },
+    "32059": {
+        "name": "Hollywood",
+        "city": "Los Angeles",
+        "state": "CA"
+    },
+    "268404": {
+        "name": "Pico-Union",
+        "city": "Los Angeles",
+        "state": "CA"
+    },
+    "276450": {
+        "name": "Mid City West",
+        "city": "Los Angeles",
+        "state": "CA"
+    },
+    "275024": {
+        "name": "Pico-Robertson",
+        "city": "Los Angeles",
+        "state": "CA"
+    },
+    "417519": {
+        "name": "Corona Heights",
+        "city": "San Francisco",
+        "state": "CA"
+    },
+    "417522": {
+        "name": "North Panhandle",
+        "city": "San Francisco",
+        "state": "CA"
+    },
+    "118904": {
+        "name": "Western Addition",
+        "city": "San Francisco",
+        "state": "CA"
+    },
+    "268201": {
+        "name": "Haight Ashbury",
+        "city": "San Francisco",
+        "state": "CA"
+    },
+    "274552": {
+        "name": "Mission",
+        "city": "San Francisco",
+        "state": "CA"
+    },
+    "273808": {
+        "name": "Gaslamp Quarter",
+        "city": "San Diego",
+        "state": "CA"
+    },
+    "268215": {
+        "name": "Horton Plaza",
+        "city": "San Diego",
+        "state": "CA"
+    },
+    "273355": {
+        "name": "Cortez Hill",
+        "city": "San Diego",
+        "state": "CA"
+    },
+    "117156": {
+        "name": "Pacific Beach",
+        "city": "San Diego",
+        "state": "CA"
+    },
+    "268012": {
+        "name": "Balboa Park",
+        "city": "San Diego",
+        "state": "CA"
+    },
+    "416300": {
+        "name": "Freeman Island",
+        "city": "Long Beach",
+        "state": "CA"
+    },
+    "416314": {
+        "name": "Saint Mary's",
+        "city": "Long Beach",
+        "state": "CA"
+    },
+    "416306": {
+        "name": "East Village",
+        "city": "Long Beach",
+        "state": "CA"
+    },
+    "273486": {
+        "name": "Downtown",
+        "city": "Long Beach",
+        "state": "CA"
+    },
+    "416302": {
+        "name": "Alamitos Beach",
+        "city": "Long Beach",
+        "state": "CA"
+    },
+    "272845": {
+        "name": "Bal Harbour",
+        "city": "Fort Lauderdale",
+        "state": "FL"
+    },
+    "269088": {
+        "name": "Middle River Terrace",
+        "city": "Fort Lauderdale",
+        "state": "FL"
+    },
+    "269147": {
+        "name": "Poinsettia Heights",
+        "city": "Fort Lauderdale",
+        "state": "FL"
+    },
+    "269049": {
+        "name": "Lake Ridge",
+        "city": "Fort Lauderdale",
+        "state": "FL"
+    },
+    "269064": {
+        "name": "Laudergate Isles",
+        "city": "Fort Lauderdale",
+        "state": "FL"
+    },
+    "269011": {
+        "name": "Holiday Harbors",
+        "city": "Jacksonville",
+        "state": "FL"
+    },
+    "269165": {
+        "name": "Robinson's Addition",
+        "city": "Jacksonville",
+        "state": "FL"
+    },
+    "268927": {
+        "name": "College Gardens",
+        "city": "Jacksonville",
+        "state": "FL"
+    },
+    "273667": {
+        "name": "Fairfield",
+        "city": "Jacksonville",
+        "state": "FL"
+    },
+    "274173": {
+        "name": "Kennel Club",
+        "city": "Jacksonville",
+        "state": "FL"
+    },
+    "124197": {
+        "name": "Drew Park",
+        "city": "Tampa",
+        "state": "FL"
+    },
+    "269130": {
+        "name": "Palmetto Beach",
+        "city": "Tampa",
+        "state": "FL"
+    },
+    "272893": {
+        "name": "Beasley",
+        "city": "Tampa",
+        "state": "FL"
+    },
+    "273739": {
+        "name": "Florence",
+        "city": "Tampa",
+        "state": "FL"
+    },
+    "274847": {
+        "name": "Oakford Park",
+        "city": "Tampa",
+        "state": "FL"
+    },
+    "806852": {
+        "name": "Gulf Beach",
+        "city": "Pensacola",
+        "state": "FL"
+    },
+    "806850": {
+        "name": "Englewood",
+        "city": "Pensacola",
+        "state": "FL"
+    },
+    "806851": {
+        "name": "Palafox",
+        "city": "Pensacola",
+        "state": "FL"
+    },
+    "764088": {
+        "name": "Brittany Forge",
+        "city": "Pensacola",
+        "state": "FL"
+    },
+    "124368": {
+        "name": "Ferry Pass",
+        "city": "Pensacola",
+        "state": "FL"
+    },
+    "417159": {
+        "name": "Woodlawn Oaks",
+        "city": "Saint Petersburg",
+        "state": "FL"
+    },
+    "417189": {
+        "name": "Harbor Isle",
+        "city": "Saint Petersburg",
+        "state": "FL"
+    },
+    "417154": {
+        "name": "Methodist Town",
+        "city": "Saint Petersburg",
+        "state": "FL"
+    },
+    "417161": {
+        "name": "Crescent Lake",
+        "city": "Saint Petersburg",
+        "state": "FL"
+    },
+    "417160": {
+        "name": "Euclid-St Pauls",
+        "city": "Saint Petersburg",
+        "state": "FL"
+    },
+    "270895": {
+        "name": "NoHo",
+        "city": "New York",
+        "state": "NY"
+    },
+    "270842": {
+        "name": "Garment District",
+        "city": "New York",
+        "state": "NY"
+    },
+    "270953": {
+        "name": "Turtle Bay",
+        "city": "New York",
+        "state": "NY"
+    },
+    "403221": {
+        "name": "Prospect Lefferts Gardens",
+        "city": "New York",
+        "state": "NY"
+    },
+    "270946": {
+        "name": "Sutton Place",
+        "city": "New York",
+        "state": "NY"
+    },
+    "270798": {
+        "name": "Babcock",
+        "city": "Buffalo",
+        "state": "NY"
+    },
+    "270807": {
+        "name": "Bryant",
+        "city": "Buffalo",
+        "state": "NY"
+    },
+    "270840": {
+        "name": "Front Park",
+        "city": "Buffalo",
+        "state": "NY"
+    },
+    "272750": {
+        "name": "Allen",
+        "city": "Buffalo",
+        "state": "NY"
+    },
+    "273455": {
+        "name": "Delaware-West Ferry",
+        "city": "Buffalo",
+        "state": "NY"
+    },
+    "343878": {
+        "name": "Pearl-Meigs-Monroe",
+        "city": "Rochester",
+        "state": "NY"
+    },
+    "343912": {
+        "name": "South Wedge",
+        "city": "Rochester",
+        "state": "NY"
+    },
+    "343893": {
+        "name": "Swillburg",
+        "city": "Rochester",
+        "state": "NY"
+    },
+    "343894": {
+        "name": "Ellwanger-Barry",
+        "city": "Rochester",
+        "state": "NY"
+    },
+    "343908": {
+        "name": "Park Avenue",
+        "city": "Rochester",
+        "state": "NY"
+    },
+    "342690": {
+        "name": "Center Square",
+        "city": "Albany",
+        "state": "NY"
+    },
+    "342684": {
+        "name": "Park South",
+        "city": "Albany",
+        "state": "NY"
+    },
+    "342689": {
+        "name": "Central Avenue",
+        "city": "Albany",
+        "state": "NY"
+    },
+    "342678": {
+        "name": "Sheridan Hollow",
+        "city": "Albany",
+        "state": "NY"
+    },
+    "342685": {
+        "name": "Mansion Area",
+        "city": "Albany",
+        "state": "NY"
+    },
+    "274643": {
+        "name": "Near Eastside",
+        "city": "Syracuse",
+        "state": "NY"
+    },
+    "275818": {
+        "name": "University Hill",
+        "city": "Syracuse",
+        "state": "NY"
+    },
+    "274645": {
+        "name": "Near Northeast",
+        "city": "Syracuse",
+        "state": "NY"
+    },
+    "276644": {
+        "name": "Wescott",
+        "city": "Syracuse",
+        "state": "NY"
+    },
+    "274314": {
+        "name": "Lincoln Park",
+        "city": "Syracuse",
+        "state": "NY"
+    },
+    "403138": {
+        "name": "Lady Bird Johnson Park",
+        "city": "Washington",
+        "state": "DC"
+    },
+    "403491": {
+        "name": "Sursum Corda Cooperative",
+        "city": "Washington",
+        "state": "DC"
+    },
+    "121750": {
+        "name": "Ledroit Park",
+        "city": "Washington",
+        "state": "DC"
+    },
+    "403490": {
+        "name": "NoMa",
+        "city": "Washington",
+        "state": "DC"
+    },
+    "403492": {
+        "name": "Swampoodle",
+        "city": "Washington",
+        "state": "DC"
+    }
+}
