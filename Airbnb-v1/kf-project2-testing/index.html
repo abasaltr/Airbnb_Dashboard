@@ -12,13 +12,13 @@
     <title>Airbnb Analysis- Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="./static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../static/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="./static/css/sb-admin-2.min.css" rel="stylesheet">
 
 
     <!-- insert plotly -->
@@ -91,21 +91,23 @@
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 ">
                         <div class="input-group">
                             <label for="selCity"> City </label>
-                            <select id="selCity" class="ml-1 mr-2 text-secondary-100">
-                                <option value="1">New York</option>
+                            <select id="selCity" class="ml-1 mr-2 text-secondary-100"
+                                onchange="updateNeighborhood(this.value)">
+                                <!-- <option value="1">New York</option>
                                 <option value="2">Los Angeles</option>
-                                <option value="New York County">New York County</option>
+                                <option value="New York County">New York County</option> -->
                             </select>
 
                             <label for="selNeighborhood"> Neighborhood </label>
                             <select id="selNeighborhood" class="ml-1 mr-1 text-secondary-100">
-                                <option value="1">NoHo</option>
-                                <option value="2">Garment District</option>
+                                <!-- <option value="1">NoHo</option>
+                                <option value="2">Garment District</option> -->
                             </select>
 
                             <div class="input-group-append">
-                                <button class="btn btn-secondary" type="button" onclick='refreshSearch()'>
-                                    <i class="fas fa-search fa-sm"></i>
+                                <button class="btn btn-secondary" type="button"
+                                    onclick='refreshSearch($("#selCity").val(), $("#selNeighborhood").val())'>
+                                    <i class="fas fa-search fa-sm">Search</i>
                                 </button>
                             </div>
                         </div>
@@ -252,6 +254,31 @@
 
                         <!-- Rental Map -->
                         <div class="col-xl-8 col-lg-8">
+                            <div class="card shadow mb-1">
+
+                                <div
+                                    class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-info">Neighborhood Watch</h6>
+
+
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+
+                                    <table class="table table-striped">
+
+                                        <tbody id="census_table">
+                                            <!--  <tr>
+                                                <td>John</td>
+                                                <td>Doe</td>
+                                                <td>john@example.com</td>
+                                            </tr> -->
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
                             <div class="card shadow mb-4">
                                 <!-- Card Header -->
                                 <div
@@ -287,28 +314,70 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-12 col-lg-12">
-                                    <div class="card shadow mb-1">
 
+                                </div>
+                            </div>
+
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="card shadow mb-3">
+
+                                    <div
+                                        class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-info">Room Types</h6>
+
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="">
+                                            <canvas id="RoomType"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!-- Rental Map -->
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-info">Rental Map</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="">
+                                        <canvas id="map"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guest  -->
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="card shadow mb-1">
+                                        <!-- Card Header -->
                                         <div
                                             class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
-                                            <h6 class="m-0 font-weight-bold text-info">Neighborhood Watch</h6>
-
+                                            <h6 class="m-0 font-weight-bold text-info">Walkscore</h6>
                                         </div>
                                         <!-- Card Body -->
                                         <div class="card-body">
+                                            <div class="">
+                                                <canvas id="cleaning"></canvas>
+                                            </div>
 
-                                            <table id='demoid'>
-                                                <thead>
-                                                    <tr>
-                                                        <th colspan="2">Population</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id='demobodyid'>
-
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12">
+
                                 </div>
                             </div>
 
@@ -387,20 +456,20 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="../static/js/jquery.min.js"></script>
-    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/bootstrap.bundle.min.js"></script>
 
 
 
     <!-- Custom scripts for all pages-->
-    <script src="../static/js/navbar.js"></script>
+    <script src="./static/js/navbar.js"></script>
 
 
 
     <!-- sample test visualization -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="../static/js/app2.js"></script>
+    <script src="./static/js/app.js"></script>
 </body>
 
 </html>
