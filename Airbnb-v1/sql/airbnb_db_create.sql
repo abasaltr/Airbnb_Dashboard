@@ -119,6 +119,40 @@ CREATE TABLE "rental_rates_info" (
      )
 );
 
+CREATE TABLE "merged_census_crime" (
+    "crime_id" int NOT NULL,
+    "nbh_id" int NOT NULL,
+    "TotalPop" int NOT NULL,
+    "Men" int NOT NULL,
+    "Women" int NOT NULL,
+    "Hispanic" decimal NOT NULL,
+    "White" decimal NOT NULL,
+    "Black" decimal NOT NULL,
+    "Native" decimal NOT NULL,
+    "Asian" decimal NOT NULL,
+    "Pacific" decimal NOT NULL,
+    "IncomePerCap" int NOT NULL,
+    "Professional" decimal NOT NULL,
+    "Walk" decimal NOT NULL,
+    "OtherTransp" decimal NOT NULL,
+    "WorkAtHome" decimal NOT NULL,
+    "MeanCommute" decimal NOT NULL,
+    "Unemployment" decimal NOT NULL,
+    "Crime_RatePer100K" decimal NOT NULL,
+    "Murder" int NOT NULL,
+    "Rape" int NOT NULL,
+    "Robbery" int NOT NULL,
+    "Agg.Assault" int NOT NULL,
+    "Burglary" int NOT NULL,
+    "Larceny" int NOT NULL,
+    "MotorVeh" int NOT NULL,
+    "Theft" int NOT NULL,
+    "Arson" int NOT NULL,
+    CONSTRAINT "pk_merged_census_crime" PRIMARY KEY (
+        "crime_id"
+     )
+);
+
 ALTER TABLE "listings_info" ADD CONSTRAINT "fk_listings_info_nbh_id" FOREIGN KEY("nbh_id")
 REFERENCES "top_neighborhood_overview" ("nbh_id");
 
@@ -139,3 +173,6 @@ REFERENCES "top_neighborhood_overview" ("nbh_id");
 
 ALTER TABLE "city_nbh" ADD CONSTRAINT "fk_city_nbh_city_id" FOREIGN KEY("city_id")
 REFERENCES "top_airbnb_cities" ("city_id");
+
+ALTER TABLE "merged_census_crime" ADD CONSTRAINT "fk_merged_census_crime_nbh_id" FOREIGN KEY("nbh_id")
+REFERENCES "top_neighborhood_overview" ("nbh_id");
