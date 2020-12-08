@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +13,14 @@
     <title>Airbnb Analysis- Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../static/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="static/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
 
     <!-- insert plotly -->
@@ -44,7 +46,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Analysis Collapse Menu -->
+            <!-- Nav Item - Analysis Collapse Menu -->           
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnalysis"
@@ -80,7 +82,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -88,23 +90,21 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 ">
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-1 my-md-0 mw-100 ">
                         <div class="input-group">
                             <label for="selCity"> City </label>
                             <select id="selCity" class="ml-1 mr-2 text-secondary-100">
-                                <option value="1">New York</option>
-                                <option value="2">Los Angeles</option>
-                                <option value="New York County">New York County</option>
-                            </select>
+                               
+                              </select>
 
-                            <label for="selNeighborhood"> Neighborhood </label>
+                              <label for="selNeighborhood"> Neighborhood </label>
                             <select id="selNeighborhood" class="ml-1 mr-1 text-secondary-100">
-                                <option value="1">NoHo</option>
-                                <option value="2">Garment District</option>
-                            </select>
+                               
+                              </select>
 
                             <div class="input-group-append">
-                                <button class="btn btn-secondary" type="button" onclick='refreshSearch()'>
+                                <button class="btn btn-secondary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -128,12 +128,12 @@
                     <div class="row">
 
                         <!-- Average Rates -->
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-6 mb-2 infocard">
                             <div class="card border-left-info shadow h-100 ">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-s font-weight-bold text-info text-uppercase mb-2">
+                                            <div class="text-s font-weight-bold text-info  mb-2">
                                                 Average Rates</div>
 
                                         </div>
@@ -152,20 +152,18 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-4 mb-4">
-                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Nightly Rate
-                                            </div>
-
-                                            <div id="weekly" class="h6 mb-0 font-weight-bold text-success-500">$100
-                                                <i id="weekly_icon" class="fas fa-arrows-alt-h fa-sm"></i>
+                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Nightly Rate </div>
+                                            
+                                            <div id="nightly" class="h6 mb-0 font-weight-bold text-success-500">$100 
+                                                <i id="nightly_icon" class="fas fa-arrows-alt-h fa-sm"></i>
                                             </div>
                                         </div>
 
                                         <div class="col-xl-4 col-md-4 mb-4">
-                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Cleaning Rate
-                                            </div>
-
-                                            <div id="weekly" class="h6 mb-0 font-weight-bold text-success-500">$50
-                                                <i id="weekly_icon" class="fas fa-arrow-down fa-sm"></i>
+                                            <div class="text-xs font-weight-bold text-black-800 mb-1">Cleaning Rate </div>
+                                            
+                                            <div id="cleaning" class="h6 mb-0 font-weight-bold text-success-500">$50 
+                                                <i id="cleaning_icon" class="fas fa-arrow-down fa-sm"></i>
                                             </div>
                                         </div>
 
@@ -175,13 +173,13 @@
                             </div>
                         </div>
 
-                        <!-- Average Occupancy Card Example -->
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <!--Statistics Card -->
+                        <div class="col-xl-4 col-md-6 mb-2 infocard">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-s font-weight-bold text-info text-uppercase mb-2">
+                                            <div class="text-s font-weight-bold text-info  mb-2">
                                                 Statistics</div>
                                         </div>
                                         <div class="col-auto">
@@ -190,28 +188,28 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-xl-4 col-md-4 mb-4">
+                                        <div class="col-xl-4 col-md-4 mb-2">
                                             <div class="text-xs font-weight-bold fa-2x text-black-800 mb-1"> Occupancy
                                                 Rate</div>
 
-                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">75%
-                                                <i id="daily_icon" class="fas fa-arrow-down fa-sm"></i>
+                                            <div id="occupancy" class="h6 mb-0 font-weight-bold text-success-500">75%
+                                                <i id="occupancy_icon" class="fas fa-arrow-down fa-sm"></i>
                                             </div>
                                         </div>
                                         <div class="col-xl-4 col-md-4 mb-4">
                                             <div class="text-xs font-weight-bold text-black-800 mb-1">Availablity Rate
                                             </div>
 
-                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">50%
-                                                <i id="daily_icon" class="fas fa-arrow-up fa-sm"></i>
+                                            <div id="availablity" class="h6 mb-0 font-weight-bold text-success-500">50%
+                                                <i id="availablity_icon" class="fas fa-arrow-up fa-sm"></i>
                                             </div>
                                         </div>
 
                                         <div class="col-xl-4 col-md-4 mb-4">
                                             <div class="text-xs font-weight-bold text-black-800 mb-1">Review Rate </div>
 
-                                            <div id="daily" class="h6 mb-0 font-weight-bold text-success-500">65%
-                                                <i id="daily_icon" class="fas fa-arrows-alt-h fa-sm"></i>
+                                            <div id="review" class="h6 mb-0 font-weight-bold text-success-500">65%
+                                                <i id="review_icon" class="fas fa-arrows-alt-h fa-sm"></i>
                                             </div>
                                         </div>
 
@@ -223,16 +221,16 @@
                         </div>
 
                         <!-- Revenue Card Example -->
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-6 mb-2 infocard">
                             <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body ">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-s font-weight-bold text-info text-uppercase mb-1">ROI
+                                            <div class="text-s font-weight-bold text-info mb-1">ROI
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div id="ROI" class="col-auto">
-
+                                                  
                                                 </div>
                                             </div>
                                         </div>
@@ -255,19 +253,19 @@
                             <div class="card shadow mb-4">
                                 <!-- Card Header -->
                                 <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-info">Rental Map</h6>
+                                    class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-info">Heat Map</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="">
-                                        <canvas id="map"></canvas>
+                                    <div id= "map" class="centerElement" >
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Guest  -->
+                        <!-- neighborhood  -->
                         <div class="col-xl-4 col-lg-4">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12">
@@ -275,106 +273,147 @@
                                         <!-- Card Header -->
                                         <div
                                             class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
-                                            <h6 class="m-0 font-weight-bold text-info">Walkscore</h6>
+                                            <h6 class="m-0 font-weight-bold text-info">Neighborhood Facts & Key Metrics</h6>
                                         </div>
                                         <!-- Card Body -->
                                         <div class="card-body">
-                                            <div class="">
-                                                <canvas id="cleaning"></canvas>
+                                            <div id="neighborhood" class="centerElement">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4  neighborhoodCard">
+                                                        <div class="text-xs font-weight-bold text-secondary">Population
+                                                        </div>
+                                                        <div id="population" class="col-auto">
+                                                                      
+                                                        </div>                                                        
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4  neighborhoodCard">
+                                                        <div class="text-xs font-weight-bold text-secondary">Income Per Capita
+                                                        </div>
+                                                        <div id="capita" class="col-auto">
+                                                                      
+                                                        </div>                                                        
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4  neighborhoodCard">
+                                                        <div class="text-xs font-weight-bold text-secondary">Crime Rate
+                                                        </div>
+                                                        <div id="crime" class="col-auto">
+                                                                      
+                                                        </div>                                                        
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12  demoCard">
+                                                        <div class="text-xs font-weight-bold text-secondary">Demographics
+                                                        </div>
+                                                        <div id="demographic" class="col-auto">
+                                                                      
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 ">
+                                                        <div class="text-xs font-weight-bold text-secondary">Key Metrics
+                                                        </div>
+                                                        <div id="demographic" class="col-auto">
+                                                                      
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
                                             </div>
+                                            
 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-12 col-lg-12">
-                                    <div class="card shadow mb-1">
+                                
 
-                                        <div
-                                            class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
-                                            <h6 class="m-0 font-weight-bold text-info">Neighborhood Watch</h6>
-
-                                        </div>
-                                        <!-- Card Body -->
-                                        <div class="card-body">
-
-                                            <table id='demoid'>
-                                                <thead>
-                                                    <tr>
-                                                        <th colspan="2">Population</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id='demobodyid'>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-12 col-lg-12">
-                                <div class="card shadow mb-3">
-
-                                    <div
-                                        class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-info">Room Types</h6>
-
-                                    </div>
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="">
-                                            <canvas id="RoomType"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content Row -->
-                <div class="row">
-                    <!-- Trends and Forecast -->
-                    <div class="col-xl-8 col-lg-8">
-                        <div class="card shadow mb-4">
-                            <!-- Card Header - Dropdown -->
-                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-info">Historical Trends and Forecast</h6>
-
-                            </div>
-                            <!-- Card Body -->
-                            <div class="card-body">
-                                <div class="">
-                                    <canvas id="Trend"></canvas>
-                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Content Row -->
+                    <div class="row">
+                        <!-- Trends and Forecast -->
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-info">Rental Price by Room Type</h6>
+
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div id="Type" class="">
+                                        <canvas ></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="card shadow mb-4">
+
+                                <div
+                                    class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-info">Rental Income </h6>
+
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div id="income" class="">
+                                        <canvas ></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="card shadow mb-4">
+
+                                <div
+                                    class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-info">WalkScore</h6>
+    
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div id = "walkscore" class="">
+                                        <canvas ></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
 
                 </div>
-
-
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- /.container-fluid -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; </span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
+        <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -387,20 +426,20 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="../static/js/jquery.min.js"></script>
-    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
 
 
 
     <!-- Custom scripts for all pages-->
-    <script src="../static/js/navbar.js"></script>
+    <script src="static/js/navbar.js"></script>
 
 
 
-    <!-- sample test visualization -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="../static/js/app2.js"></script>
+<script src="static/js/app.js"></script>
+    
 </body>
 
 </html>
+
