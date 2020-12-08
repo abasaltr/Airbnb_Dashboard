@@ -67,11 +67,11 @@ class Nbh(db.Model):
         return '<Name %r>' % (self.name)
 ## end Nbh() class
 
-class city_nbh(db.Model):
+class City_Nbh(db.Model):
     __tablename__ = 'city_nbh'
 
-    city_id = db.Column(db.Integer, primary_key=True)
     nbh_id = db.Column(db.Integer, primary_key=True)
+    city_id = db.Column(db.Integer, primary_key=True)
 
     def __repr__(self):
         return '<city_nbh %r>' % (self.nbh_id)
@@ -99,17 +99,17 @@ def home():
 @app.route("/api/cities")
 def city():
     
-    results = db.session.query(Cities.city_id, Cities.city, Cities.state, city_nbh.nbh_id, Nbh.nbh_id, Nbh.name, Nbh.county)\
-        .join(city_nbh, Cities.city_id==city_nbh.city_id)\
-        .join(Nbh, city_nbh.nbh_id==Nbh.nbh_id)\
+    results = db.session.query(Cities.city_id, Cities.city, Cities.state, City_Nbh.city_id, City_Nbh.nbh_id, Nbh.nbh_id, Nbh.name, Nbh.county)\
+        .join(City_Nbh, Cities.city_id==City_Nbh.city_id)\
+        .join(Nbh, City_Nbh.nbh_id==Nbh.nbh_id)\
         .all()
 
     city_id = [result[0] for result in results]
     city = [result[1] for result in results]
     state = [result[2] for result in results]
-    nbh_id = [result[4] for result in results]
-    nbh_name = [result[5] for result in results]
-    county = [result[6] for result in results]
+    nbh_id = [result[5] for result in results]
+    nbh_name = [result[6] for result in results]
+    county = [result[7] for result in results]
 
     city_data = [{
         "city_id":city_id, 
@@ -146,6 +146,23 @@ def nbh_overview():
     }]
     return jsonify(nbh_overview_data)
 ## end nbh_overview() route
+
+
+#################################################
+@app.route("/api/city-nbh")
+def city_nbh():
+    results = db.session.query(City_Nbh.nbh_id, City_Nbh.city_id).all()
+
+    nbh_id = [result[0] for result in results]
+    city_id = [result[1] for result in results]
+
+    city_nbh_data = [{
+        "nbh_id": nbh_id,
+        "city_id": city_id
+    }]
+    return jsonify(city_nbh_data)
+## end nbh_overview() route
+
 
 #################################################
 if __name__ == "__main__":

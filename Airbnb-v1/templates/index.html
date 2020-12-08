@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Airbnb Analysis- Dashboard</title>
+    <link rel="shortcut icon" href="#" />
+
+    <title>Dashboard | Airbnb Analysis</title>
 
     <!-- Custom fonts for this template-->
     <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,7 +40,7 @@
                 <div class="sidebar-brand-icon ">
                     <i class="fas fa-tachometer-alt"></i>
                 </div>
-                <div class="sidebar-brand-text ">AnB DashBoard</div>
+                <div class="sidebar-brand-text ">Airbnb Dashboard</div>
             </a>
 
             <!-- Divider -->
@@ -91,16 +93,11 @@
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 ">
                         <div class="input-group">
                             <label for="selCity"> City </label>
-                            <select id="selCity" class="ml-1 mr-2 text-secondary-100">
-                                <option value="1">New York</option>
-                                <option value="2">Los Angeles</option>
-                                <option value="New York County">New York County</option>
+                            <select id="selCity" onchange="changeCity(this.value)" class="ml-1 mr-2 text-secondary-100">
                             </select>
 
                             <label for="selNeighborhood"> Neighborhood </label>
-                            <select id="selNeighborhood" class="ml-1 mr-1 text-secondary-100">
-                                <option value="1">NoHo</option>
-                                <option value="2">Garment District</option>
+                            <select id="selNeighborhood" onchange="changeNbh(this.value)" class="ml-1 mr-1 text-secondary-100">
                             </select>
 
                             <div class="input-group-append">
@@ -275,14 +272,13 @@
                                         <!-- Card Header -->
                                         <div
                                             class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
-                                            <h6 class="m-0 font-weight-bold text-info">Walkscore</h6>
+                                            <h6 class="m-0 font-weight-bold text-info">Neighborhood Walking Score</h6>
                                         </div>
                                         <!-- Card Body -->
                                         <div class="card-body">
                                             <div class="">
-                                                <canvas id="cleaning"></canvas>
+                                                <div id="walkScore"></canvas>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -400,7 +396,7 @@
     <!-- sample test visualization -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="../static/js/app2.js"></script>
+    <script src="../static/js/app.js"></script>
 </body>
 
 </html>
