@@ -10,7 +10,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Airbnb Analysis- Dashboard</title>
+    <link rel="shortcut icon" href="#" />
+
+    <title>Dashboard | Airbnb Analysis</title>
 
     <!-- Custom fonts for this template-->
     <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -40,7 +42,7 @@
                 <div class="sidebar-brand-icon ">
                     <i class="fas fa-tachometer-alt"></i>
                 </div>
-                <div class="sidebar-brand-text ">AnB DashBoard</div>
+                <div class="sidebar-brand-text ">Airbnb Dashboard</div>
             </a>
 
             <!-- Divider -->
@@ -94,14 +96,12 @@
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-1 my-md-0 mw-100 ">
                         <div class="input-group">
                             <label for="selCity"> City </label>
-                            <select id="selCity" class="ml-1 mr-2 text-secondary-100">
-                               
-                              </select>
+                            <select id="selCity" onchange="changeCity(this.value)" class="ml-1 mr-2 text-secondary-100">
+                            </select>
 
-                              <label for="selNeighborhood"> Neighborhood </label>
-                            <select id="selNeighborhood" class="ml-1 mr-1 text-secondary-100">
-                               
-                              </select>
+                            <label for="selNeighborhood"> Neighborhood </label>
+                            <select id="selNeighborhood" onchange="changeNbh(this.value)" class="ml-1 mr-1 text-secondary-100">
+                            </select>
 
                             <div class="input-group-append">
                                 <button class="btn btn-secondary" type="button">
