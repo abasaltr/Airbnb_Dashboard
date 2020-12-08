@@ -30,3 +30,22 @@ body {
   margin: 0;
   font-size: 16px;
 }
+
+.centerElement {
+  height: 500px;
+  overflow: hidden;
+
+}
+.infocard{
+  height : 125px;
+}
+
+.neighborhoodCard {
+  height :75px;
+  
+}
+
+.demoCard {
+  height :100px;
+  
+}
