@@ -367,7 +367,6 @@ def statistics(city_id, nbh_id):
     return jsonify(statList)
 ## end statistics() route
 
-
 #################################################
 @app.route("/api/rental_size/<city_id>/<nbh_id>")
 def rentalSize(city_id, nbh_id):
@@ -418,8 +417,50 @@ def rentalSize(city_id, nbh_id):
 ## end rental_rates() route
 
 
+###############################################
+@app.route("/api/rental_type/<city_id>/<nbh_id>")
+def rentalType(city_id, nbh_id):
 
+    # retrieve rental rates data 
+    if nbh_id != "0":
+        results =  db.session.query(
+                        Listing_Info.night_price,\
+                        Listing_Info.cleaning_fee,\
+                        Listing_Info.nights_booked,\
+                        Listing_Info.rental_income,\
+                        Listing_Info.property_type)\
+                        .filter(Listing_Info.nbh_id == nbh_id) 
+    else:
+        results =  db.session.query(
+                        Listing_Info.property_type.label("property_type"),\
+                        func.sum(Listing_Info.night_price).label("night_price"),\
+                        func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
+                        func.avg(Listing_Info.nights_booked).label("nights_booked"),\
+                        func.avg(Listing_Info.rental_income).label("rental_income"))\
+                    .join(City_Nbh, City_Nbh.nbh_id ==  Listing_Info.nbh_id)\
+                    .filter(City_Nbh.city_id == city_id)\
+                    .group_by(Listing_Info.property_type)
 
+    rentalTypeList = []
+    
+    for result in results :
+        rentalData = {
+            "Rentalinfo" :
+            {
+                "city_id" : city_id,
+                "nbh_id" : nbh_id,
+                "property_type": str(result[0]),
+                "night_price": str(result[1]),
+                "cleaning_fee": str(result[2]),
+                "nights_booked": str(result[3]),
+                "rental_income": str(result[4]) 
+            }
+        }
+        rentalTypeList.append(rentalData)
+    
+    return jsonify(rentalTypeList)
+
+## end rental_type() route
 
 #################################################
 if __name__ == "__main__":
