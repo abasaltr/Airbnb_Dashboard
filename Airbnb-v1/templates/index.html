@@ -119,7 +119,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Airbnb Market Analysis Dashboard</h1>
+                        <h1 id="heading" class="h3 mb-0 text-gray-800">Airbnb Market Analysis Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Get Latest Data</a>
                     </div>
@@ -279,12 +279,11 @@
                                         <div class="card-body">
                                             <div id="neighborhood" class="centerElement">
                                                 <div class="row">
-                                                    <div class="col-lg-4 col-md-4  neighborhoodCard">
+                                                    <div class="col-lg-5 col-md-4  neighborhoodCard">
                                                         <div class="text-xs font-weight-bold text-secondary">Population
+                                                            <p id ="population" class="text-xs"></p>
                                                         </div>
-                                                        <div id="population" class="col-auto">
-                                                                      
-                                                        </div>                                                        
+                                                                                                           
                                                     </div>
 
                                                     <div class="col-lg-4 col-md-4  neighborhoodCard">
@@ -295,7 +294,7 @@
                                                         </div>                                                        
                                                     </div>
 
-                                                    <div class="col-lg-4 col-md-4  neighborhoodCard">
+                                                    <div class="col-lg-3 col-md-4  neighborhoodCard">
                                                         <div class="text-xs font-weight-bold text-secondary">Crime Rate
                                                         </div>
                                                         <div id="crime" class="col-auto">
@@ -384,8 +383,7 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div id = "walkscore" class="">
-                                        <canvas ></canvas>
+                                    <div id = "walkScore" class="">
                                     </div>
                                 </div>
                             </div>

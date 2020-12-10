@@ -5,12 +5,14 @@ console.log('This is the Airbnb-v1 dashboard js file');
 var citiesIn = [];
 var overviewIn = [];
 var cityNbhIn = [];
+var censusCrimeIn = [];
 
 // Fetch the JSON data and call function init()
 var url_cities = "/api/cities";
 var url_overview = "/api/nbh-overview";
 var url_city_nbh = "/api/city-nbh";
-var urls = [url_cities, url_overview, url_city_nbh];
+var url_census_crime = "/api/census-crime"
+var urls = [url_cities, url_overview, url_city_nbh, url_census_crime];
 var promises = [];
 urls.forEach(function (url) { promises.push(d3.json(url)) });
 console.log(promises);
@@ -37,11 +39,20 @@ function addCityNbh(response) {
     return city_nbh;
 }//end addCities() function
 
+// function addCensusCrime
+function addCensusCrime(response) {
+    var census_crime = response;
+    
+    return census_crime;
+}//end addCensusCrime() function
+
 // function init
 function init(data) {
     citiesIn = addCities(data[0]);
     overviewIn = addNbhOverview(data[1]);
     cityNbhIn = addCityNbh(data[2]);
+    censusCrimeIn = addCensusCrime(data[3]);
+    createCensusPanel(censusCrimeIn[0], overviewIn[0], 274853);
 }//end init() function
 
 
@@ -180,11 +191,45 @@ function getCityNbh(name){
     return nbh_id;
 }
 
+function addCommas(number){
+    number += '';
+    var x = number.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)){
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1+x2;
+}
+
+function createCensusPanel(censusData, nbhData, nbh_id){
+   
+      /* 
+    Someone wants to search for a city with a neighborhood choice because they clicked the search button! 
+    _log(cityChoice);
+    _log(neighborhoodChoice);
+    */
+   //censusDataRecord = censusData.filter(obj=> obj["nbh_id"] == nbh_id);
+   for (i = 0; i < censusData['nbh_id'].length; i++) {
+        if (nbh_id == parseInt(censusData['nbh_id'][i])){
+            console.log(censusData["total_pop"][i]);
+
+            d3.select("#population").text(addCommas(censusData["total_pop"][i]));
+            break;
+        }
+   }
+
+
+}
+
+
 // from html 
 function changeNbh(nbh_name) {
     removeWalkScore();
     var nbh_index = getNbhIndex(nbh_name);
     buildGauge(overviewIn[0], nbh_index);
+    createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
 }
 
 // from html 
@@ -193,6 +238,8 @@ function changeCity(city_name) {
     var nbh_id = getCityNbh(city_name);
     var nbh_index = getNbhIndexId(nbh_id)
     buildGauge(overviewIn[0], nbh_index);
+    createCensusPanel(censusCrimeIn[0], overviewIn[0], nbh_id)
+    updateNeighborhoods(city_name)
 }
 
 // clear walking score visualization
@@ -236,3 +283,20 @@ function buildGauge(nbh_ovw,nbh_index) {
     };
     Plotly.newPlot('walkScore', data, layout);
 }
+
+//******************** */
+// update the neighborhoods based on the selection
+function updateNeighborhoods(cityName){
+
+    var neighborHoods = [];
+    for (i = 0; i < citiesIn[0]['city'].length; i++) {
+        if (cityName == citiesIn[0]['city'][i]){
+            neighborHoods.push(citiesIn[0]['nbh_name'][i])
+        }
+    }
+  
+    d3.select("#selNeighborhood").selectAll("option").remove()
+    createDropList(neighborHoods, "selNeighborhood", "Select Neighborhood", 2);    
+}
+
+//******************* */

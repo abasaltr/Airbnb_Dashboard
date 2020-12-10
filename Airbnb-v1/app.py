@@ -76,6 +76,21 @@ class City_Nbh(db.Model):
     def __repr__(self):
         return '<city_nbh %r>' % (self.nbh_id)
 ## end city_nbh() class
+
+
+class Census_Crime(db.Model):
+    __tablename__ = 'merged_census_crime'
+
+    crime_id = db.Column(db.Integer, primary_key=True)
+    nbh_id = db.Column(db.Integer)
+    TotalPop = db.Column(db.Integer)
+    IncomePerCap = db.Column(db.Integer)
+    Crime_RatePer100K = db.Column(db.Float)
+    
+    def __repr__(self):
+        return '<crime_id %r>' % (self.crime_id)
+## end Census_Crime() class
+
 #################################################
 
 # Query the database and send the jsonified results
@@ -163,6 +178,27 @@ def city_nbh():
     return jsonify(city_nbh_data)
 ## end nbh_overview() route
 
+
+#################################################
+@app.route("/api/census-crime")
+def census_crime():
+    results = db.session.query(Census_Crime.crime_id, Census_Crime.nbh_id, Census_Crime.TotalPop, Census_Crime.IncomePerCap, Census_Crime.Crime_RatePer100K).all()
+
+    crime_id = [result[0] for result in results]
+    nbh_id = [result[1] for result in results]
+    total_pop = [result[2] for result in results]
+    income_cap = [result[3] for result in results]
+    crime_rate = [result[4] for result in results]
+
+    census_crime_data = [{
+        "crime_id": crime_id,
+        "nbh_id": nbh_id,
+        "total_pop": total_pop,
+        "income_cap": income_cap,
+        "crime_rate": crime_rate
+    }]
+    return jsonify(census_crime_data)
+## end census_crime() route
 
 #################################################
 if __name__ == "__main__":
