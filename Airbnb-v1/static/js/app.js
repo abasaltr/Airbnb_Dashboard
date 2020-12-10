@@ -254,7 +254,7 @@ function buildGauge(nbh_ovw,nbh_index) {
     var trace1 = {
         domain: { x: [0, 1], y: [0, 1] },
         value: parseInt(walkscore[nbh_index]),
-        title: { text: "", font: { family: "Arial", size: 14, color: "#337AB7" } },
+        title: { text: "Walkscore", font: { family: "Arial", size: 14, color: "#337AB7" } },
         type: "indicator",
         mode: "gauge+delta",
         delta: { reference: 0, increasing: { color: "darkblue" }, font: { size: 18 } },
@@ -278,8 +278,8 @@ function buildGauge(nbh_ovw,nbh_index) {
     
     var data = [trace1];
     var layout = {
-        font: { family: "Arial", size: 12, color: "#337AB7" }, width: 275, height: 125, margin: { t: 0, b: 0 }, plot_bgcolor: "azure",
-        paper_bgcolor: "azure"
+        font: { family: "Arial", size: 12, color: "#337AB7" }, width: 275, height: 135, margin: { t: 0, b: 0 }, plot_bgcolor: "azure",
+        paper_bgcolor: "azure", 
     };
     Plotly.newPlot('walkScore', data, layout);
 }

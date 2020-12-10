@@ -296,24 +296,26 @@ def statistics(city_id, nbh_id):
                             func.sum(Nbh_Overview.other_count).label("other_count"),\
                             func.sum(Nbh_Overview.avg_occupancy).label("avg_occupancy"),\
                             func.sum(Nbh_Overview.median_price).label("median_price"),\
-                            func.avg(Nbh_Overview.sqft_price).label("sqft_price"),\
+                            func.sum(Nbh_Overview.sqft_price).label("sqft_price"),\
                             func.sum(Nbh_Insights.rental_income).label("rental_income"),\
                             func.sum(Nbh_Insights.rental_income_change_pct).label("rental_income_change_pct"),\
                             func.sum(Nbh_Insights.occupancy).label("occupancy"),\
                             func.sum(Nbh_Insights.occupancy_change_pct).label("occupancy_change_pct"),\
                             func.sum(Nbh_Insights.reviews_count_slope).label("reviews_count_slope"),\
                             func.sum(Nbh_Insights.reviews_count_rsquare).label("reviews_count_rsquare"),\
-                            func.sum(Listing_Info.night_price).label("night_price"),\
-                            func.sum(Listing_Info.cleaning_fee).label("cleaning_fee"),\
-                            func.sum(Listing_Info.nights_booked).label("nights_booked"),\
-                            func.sum(Listing_Info.rental_income).label("rental_income"),
-                            func.sum(Listing_Info.total_reviews).label("total_reviews"))\
+                            func.avg(Listing_Info.night_price).label("night_price"),\
+                            func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
+                            func.avg(Listing_Info.nights_booked).label("nights_booked"),\
+                            func.avg(Listing_Info.rental_income).label("rental_income"),
+                            func.avg(Listing_Info.total_reviews).label("total_reviews"),\
+                            func.count(Listing_Info.night_price).label("listing_count"))\
                     .join(Nbh_Insights, Nbh_Overview.nbh_id==Nbh_Insights.nbh_id)  \
                     .join(Listing_Info, Nbh_Overview.nbh_id==Listing_Info.nbh_id)  \
                     .filter(Nbh_Overview.nbh_id == nbh_id)\
                     .group_by(Nbh_Overview.nbh_id)
     else:
-        results =  db.session.query(City_Nbh.city_id.label("city_id"), func.sum(Nbh_Overview.airbnb_count).label("airbnb_count"),\
+        results =  db.session.query(City_Nbh.city_id.label("city_id"), 
+                            func.sum(Nbh_Overview.airbnb_count).label("airbnb_count"),\
                             func.sum(Nbh_Overview.other_count).label("other_count"),\
                             func.avg(Nbh_Overview.avg_occupancy).label("avg_occupancy"),\
                             func.avg(Nbh_Overview.median_price).label("median_price"),\
@@ -328,7 +330,8 @@ def statistics(city_id, nbh_id):
                             func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
                             func.avg(Listing_Info.nights_booked).label("nights_booked"),\
                             func.avg(Listing_Info.rental_income).label("rental_income"),
-                            func.sum(Listing_Info.total_reviews).label("total_reviews"))\
+                            func.avg(Listing_Info.total_reviews).label("total_reviews"),\
+                            func.count(Listing_Info.night_price).label("listing_count"))\
                     .join(Nbh_Insights, Nbh_Overview.nbh_id==Nbh_Insights.nbh_id)  \
                     .join(Listing_Info, Nbh_Overview.nbh_id==Listing_Info.nbh_id)  \
                     .join(City_Nbh, City_Nbh.nbh_id ==  Nbh_Overview.nbh_id)\
@@ -339,6 +342,7 @@ def statistics(city_id, nbh_id):
     statList = []
     
     for result in results :
+        daily_rate = (result[15] * 12) / result[14]
         StatData = {
             "statinfo" :
             {
@@ -346,20 +350,22 @@ def statistics(city_id, nbh_id):
                 "nbh_id" : nbh_id,
                 "airbnb_count": str(result[1]),
                 "other_count": str(result[2]),
-                "avg_occupancy": str(result[3]),
-                "median_price": str(result[4]),
-                "sqft_price": str(result[5]) ,
-                "rental_income" : str(result[6]),
-                "rental_income_change_pct" : str(result[7]),
-                "occupancy" : str(result[8]),
-                "occupancy_change_pct" : str(result[9]),
-                "reviews_count_slope" : str(result[10]),
-                "reviews_count_rsquare" : str(result[11]),
-                "night_price" : str(result[12]),
-                "cleaning_fee" : str(result[13]),
-                "nights_booked" : str(result[14]),
-                "rental_income" : str(result[15]),
-                "review_count" : str(result[16])
+                "avg_occupancy": str("{0:.2f}".format(result[3])),
+                "median_price": str("{0:.2f}".format(result[4])),
+                "sqft_price": str("{0:.2f}".format(result[5])),
+                "rental_income" : str("{0:.2f}".format(result[6])),
+                "rental_income_change_pct" : str("{0:.2f}".format(result[7])),
+                "occupancy" : str("{0:.2f}".format(result[8])),
+                "occupancy_change_pct" : str("{0:.2f}".format(result[9])),
+                "reviews_count_slope" : str("{0:.2f}".format(result[10])),
+                "reviews_count_rsquare" : str("{0:.2f}".format(result[11])),
+                "average_daily_price" : str("{0:.2f}".format(daily_rate)),
+                "night_price" : str("{0:.2f}".format(result[12])),
+                "cleaning_fee" : str("{0:.2f}".format(result[13])),
+                "nights_booked" : str("{0:.2f}".format(result[14])),
+                "rental_income" : str("{0:.2f}".format(result[15])),
+                "review_count" : str("{0:.2f}".format(result[16])),
+                "listing_count" : str("{0:.2f}".format(result[17]))
             }
         }
         statList.append(StatData)
