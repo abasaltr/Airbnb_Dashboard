@@ -30,10 +30,10 @@ function addCell(rowElem, cellData) {
     rowElem.appendChild(cellElem);
 }
 
-function refreshSearch() {
-    var countySelector = document.getElementById('selCity');
+function createCensusPanele(crimeData, nbhData, nbh_id) {
+   // var countySelector = document.getElementById('selCity');
     var county = countySelector.value;
-    var filteredRows = csvData.filter(row => row.County === county);
+    var filteredRows = nbhData.filter(row => row.County === county);
 
     var tbody = document.getElementById('demoid');
     tbody.textContent = '';

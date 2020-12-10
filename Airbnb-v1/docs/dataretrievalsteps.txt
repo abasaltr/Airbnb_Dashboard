@@ -1,0 +1,38 @@
+steps for retrieving data
+
+app.py
+1. in app.py, add the required attributes in the class definitions
+
+	class Cities(db.Model):
+    		__tablename__ = 'top_airbnb_cities'
+	
+    		city_id = db.Column(db.Integer, primary_key=True)
+    		city = db.Column(db.String(64))
+    		state = db.Column(db.String(64))
+
+    	def __repr__(self):
+        return '<City %r>' % (self.city)
+	## end Cities() class
+
+
+2. If the required table is not defined add the class model for the table
+	@app.route("/api/cities")
+		def city():
+    
+3. Check if the @app.route is available for your data, if not create a new route
+
+4. Update the session.query to add the new attributes
+      For eg:- add the additional columns 
+        results = db.session.query(City_Nbh.nbh_id, City_Nbh.city_id).all()
+
+5. create new variables to store the required data from the result
+ 	nbh_id = [result[0] for result in results]
+
+6. update the dictionary for the new attributes 
+  	  city_nbh_data = [{
+       		 "nbh_id": nbh_id,
+       		 "city_id": city_id
+    	}]
+
+app.js
+

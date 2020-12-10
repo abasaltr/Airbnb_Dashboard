@@ -150,4 +150,27 @@ def IncrementalLoad(city):
 
 # a method to pull all the data by city and neighbourbood
 def AllHistoricalDataByCityandNeighborhood(city, neighbourhood):
+
+     # creates an connection object
+    engine = create_engine(f'postgresql://{user}:{password}@localhost:5432/airbnb_db')
+
+    # build the relationships from the database
+    Base = automap_base()
+    Base.prepare(engine, reflect=True)
+
+    # map the class
+    cities = Base.classes.top_airbnb_cities
+    neighborhoods =  Base.classes.top_neighborhood_overview
+    history_agg =  Base.classes.historical_insights
+
+
+    #bind the session
+    session = Session(bind=engine)
+
+    # get the historical listings id
+    historical_df = pd.DataFrame(session.query(history_agg).filter(history_agg.id == city))
+
+
+
+
     return "0"
