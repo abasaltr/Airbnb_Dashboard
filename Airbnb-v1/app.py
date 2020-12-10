@@ -430,16 +430,17 @@ def rentalType(city_id, nbh_id):
     # retrieve rental rates data 
     if nbh_id != "0":
         results =  db.session.query(
-                        Listing_Info.night_price,\
-                        Listing_Info.cleaning_fee,\
-                        Listing_Info.nights_booked,\
-                        Listing_Info.rental_income,\
-                        Listing_Info.property_type)\
+                        Listing_Info.property_type.label("property_type"),\
+                        func.avg(Listing_Info.night_price).label("night_price"),\
+                        func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
+                        func.avg(Listing_Info.nights_booked).label("nights_booked"),\
+                        func.avg(Listing_Info.rental_income).label("rental_income"))\
                         .filter(Listing_Info.nbh_id == nbh_id) 
+                        .group_by(isting_Info.property_type)
     else:
         results =  db.session.query(
                         Listing_Info.property_type.label("property_type"),\
-                        func.sum(Listing_Info.night_price).label("night_price"),\
+                        func.avg(Listing_Info.night_price).label("night_price"),\
                         func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
                         func.avg(Listing_Info.nights_booked).label("nights_booked"),\
                         func.avg(Listing_Info.rental_income).label("rental_income"))\
@@ -456,10 +457,10 @@ def rentalType(city_id, nbh_id):
                 "city_id" : city_id,
                 "nbh_id" : nbh_id,
                 "property_type": str(result[0]),
-                "night_price": str(result[1]),
-                "cleaning_fee": str(result[2]),
-                "nights_booked": str(result[3]),
-                "rental_income": str(result[4]) 
+                "night_price": str("{0:.2f}".format(result[1])),
+                "cleaning_fee": str("{0:.2f}".format(result[2])),
+                "nights_booked": str("{0:.2f}".format(result[3])),
+                "rental_income": str("{0:.2f}".format(result[4]))
             }
         }
         rentalTypeList.append(rentalData)
