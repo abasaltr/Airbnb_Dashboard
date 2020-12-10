@@ -435,8 +435,8 @@ def rentalType(city_id, nbh_id):
                         func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
                         func.avg(Listing_Info.nights_booked).label("nights_booked"),\
                         func.avg(Listing_Info.rental_income).label("rental_income"))\
-                        .filter(Listing_Info.nbh_id == nbh_id) 
-                        .group_by(isting_Info.property_type)
+                        .filter(Listing_Info.nbh_id == nbh_id) \
+                        .group_by(Listing_Info.property_type)
     else:
         results =  db.session.query(
                         Listing_Info.property_type.label("property_type"),\
