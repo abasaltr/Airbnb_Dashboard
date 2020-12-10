@@ -1,0 +1,2879 @@
+[
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "TX",
+            "city": "San Antonio",
+            "neighborhoods": [
+                {
+                    "id": 273471,
+                    "name": "Dignowity Hill-St. Paul Square",
+                    "city": "San Antonio",
+                    "state": "TX",
+                    "occupancy": 51.6376,
+                    "total_listing": 1,
+                    "airbnb_listings": 229,
+                    "description": null,
+                    "single_home_value": 262500,
+                    "single_home_value_formatted": "$262,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -1.6581143141,
+                            "cap_rate": 10.906461126,
+                            "rental_income": 2385.7883713133
+                        },
+                        "traditional_rental": {
+                            "roi": -1.704480052,
+                            "cap_rate": 5.9994057143,
+                            "rental_income": 1312.37
+                        }
+                    },
+                    "mashMeter": 65.89
+                },
+                {
+                    "id": 271352,
+                    "name": "Downtown",
+                    "city": "San Antonio",
+                    "state": "TX",
+                    "occupancy": 52.68,
+                    "total_listing": 6,
+                    "airbnb_listings": 225,
+                    "description": null,
+                    "single_home_value": 605000,
+                    "single_home_value_formatted": "$605,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -2.5006822149,
+                            "cap_rate": 4.6953432707,
+                            "rental_income": 2367.2355656585
+                        },
+                        "traditional_rental": {
+                            "roi": -1.2123600741,
+                            "cap_rate": 3.8484545455,
+                            "rental_income": 1940.2625
+                        }
+                    },
+                    "mashMeter": 65.7
+                },
+                {
+                    "id": 275804,
+                    "name": "United Homeowners",
+                    "city": "San Antonio",
+                    "state": "TX",
+                    "occupancy": 56.5571,
+                    "total_listing": 1,
+                    "airbnb_listings": 210,
+                    "description": null,
+                    "single_home_value": 131000,
+                    "single_home_value_formatted": "$131,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 3.4153130054,
+                            "cap_rate": 17.5913105107,
+                            "rental_income": 1920.3847307546
+                        },
+                        "traditional_rental": {
+                            "roi": 4.0558013916,
+                            "cap_rate": 10.6259541985,
+                            "rental_income": 1160
+                        }
+                    },
+                    "mashMeter": 73.71
+                },
+                {
+                    "id": 271349,
+                    "name": "Dignowity Hill",
+                    "city": "San Antonio",
+                    "state": "TX",
+                    "occupancy": 53.5433,
+                    "total_listing": 20,
+                    "airbnb_listings": 208,
+                    "description": null,
+                    "single_home_value": 253750,
+                    "single_home_value_formatted": "$253,750",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.0019704141,
+                            "cap_rate": 10.3763759184,
+                            "rental_income": 2194.1711577383
+                        },
+                        "traditional_rental": {
+                            "roi": 3.2153959632,
+                            "cap_rate": 6.6674009852,
+                            "rental_income": 1409.8775
+                        }
+                    },
+                    "mashMeter": 67.33
+                },
+                {
+                    "id": 274033,
+                    "name": "Historic Gardens",
+                    "city": "San Antonio",
+                    "state": "TX",
+                    "occupancy": 51.794,
+                    "total_listing": 6,
+                    "airbnb_listings": 199,
+                    "description": null,
+                    "single_home_value": 269950,
+                    "single_home_value_formatted": "$269,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.9588939895,
+                            "cap_rate": 8.5476607061,
+                            "rental_income": 1922.8675063535
+                        },
+                        "traditional_rental": {
+                            "roi": 1.0283203411,
+                            "cap_rate": 4.2921837377,
+                            "rental_income": 965.5625
+                        }
+                    },
+                    "mashMeter": 68.45
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "TX",
+            "city": "Austin",
+            "neighborhoods": [
+                {
+                    "id": 271360,
+                    "name": "East Cesar Chavez",
+                    "city": "Austin",
+                    "state": "TX",
+                    "occupancy": 58.6152,
+                    "total_listing": 14,
+                    "airbnb_listings": 395,
+                    "description": "East Cesar Chavez is located on the north bank of the Colorado River and is bounded to the south by Lake Lady Bird and Festival Beach. The majority of the neighborhood is residential. Willow-Spence Streets Historic District is in the neighborhood and is part of the National Register of Historic Places. The neighborhood is diverse in its style of homes, businesses and residents. The neighborhood has a good combination of amenities for those looking for urban living or for nature seekers. ",
+                    "single_home_value": 647500,
+                    "single_home_value_formatted": "$647,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.0446833033,
+                            "cap_rate": 7.9907167668,
+                            "rental_income": 4311.6575887679
+                        },
+                        "traditional_rental": {
+                            "roi": -0.0190466398,
+                            "cap_rate": 3.8928787645,
+                            "rental_income": 2100.5325
+                        }
+                    },
+                    "mashMeter": 72.76
+                },
+                {
+                    "id": 271303,
+                    "name": "Bouldin",
+                    "city": "Austin",
+                    "state": "TX",
+                    "occupancy": 65.387,
+                    "total_listing": 8,
+                    "airbnb_listings": 323,
+                    "description": null,
+                    "single_home_value": 767350,
+                    "single_home_value_formatted": "$767,350",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.993695125,
+                            "cap_rate": 7.8882671731,
+                            "rental_income": 5044.2181794219
+                        },
+                        "traditional_rental": {
+                            "roi": 0.6763181873,
+                            "cap_rate": 4.3318889685,
+                            "rental_income": 2770.0625
+                        }
+                    },
+                    "mashMeter": 68.98
+                },
+                {
+                    "id": 271325,
+                    "name": "Central East Austin",
+                    "city": "Austin",
+                    "state": "TX",
+                    "occupancy": 60.7227,
+                    "total_listing": 2,
+                    "airbnb_listings": 321,
+                    "description": "<p>Central East Austin is an established Austin neighborhood dating back to the mid-Nineteenth Century. Historically this area was a central part of the city&#39;s African-American community. Many seniors and retirees have lived in their homes here for decades, but there has been an influx of newcomers including single young professionals, families, artists, and students attracted by the neighborhood&#39;s convenient location and inexpensive housing. Some of the rundown houses are being replaced by new construction, including new condos and housing developments, Which makes this neighborhood a great one for owning a rental property.</p>\r\n\r\n<p>Although there is relatively little in the way of upscale shopping or dining here, new businesses are opening regularly, and other activities are available.&nbsp;If you&#39;re a picnic lover, you can go to&nbsp;Chestnut Park, which has a picnic area, BBQ pits, playground, and splash pad. There&#39;s also&nbsp;Bennu Coffee, one of the few 24-hour coffee shops in town,&nbsp;French Litigation Museum and the Austin Film Festival which both have low-cost film screenings.</p>\r\n",
+                    "single_home_value": 1025000,
+                    "single_home_value_formatted": "$1,025,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.265716888,
+                            "cap_rate": 5.1177904308,
+                            "rental_income": 4371.4459929719
+                        },
+                        "traditional_rental": {
+                            "roi": -0.025134325,
+                            "cap_rate": 2.7261921951,
+                            "rental_income": 2328.6225
+                        }
+                    },
+                    "mashMeter": 71.34
+                },
+                {
+                    "id": 271574,
+                    "name": "South River City",
+                    "city": "Austin",
+                    "state": "TX",
+                    "occupancy": 61.6281,
+                    "total_listing": 6,
+                    "airbnb_listings": 320,
+                    "description": "<p>South River City was developed in the late 19th and early 20th century to be Austin&#39;s first planned urban communities south of the&nbsp;Colorado River. The first two attempted settlements in present-day South River City were troubled by the lack of transportation with&nbsp;Downtown Austin. However, after the Congress Avenue Bridge&nbsp;was completed in 1910, it caused the neighborhood to boom in the 1920s and 1930s. The Victorian-era&nbsp;structures are what remained from the many single-family homes built back then.You could find some incredible investment properties in this neighborhood.</p>\r\n",
+                    "single_home_value": 961500,
+                    "single_home_value_formatted": "$961,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.0520285716,
+                            "cap_rate": 5.8462267404,
+                            "rental_income": 4684.2891757667
+                        },
+                        "traditional_rental": {
+                            "roi": 0.3973624622,
+                            "cap_rate": 2.8687207488,
+                            "rental_income": 2298.5625
+                        }
+                    },
+                    "mashMeter": 69.86
+                },
+                {
+                    "id": 271653,
+                    "name": "Windsor Road",
+                    "city": "Austin",
+                    "state": "TX",
+                    "occupancy": 48.5781,
+                    "total_listing": 6,
+                    "airbnb_listings": 237,
+                    "description": null,
+                    "single_home_value": 1062000,
+                    "single_home_value_formatted": "$1,062,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.9649273256,
+                            "cap_rate": 4.547030717,
+                            "rental_income": 4024.1221845027
+                        },
+                        "traditional_rental": {
+                            "roi": 0.1328643213,
+                            "cap_rate": 2.6618418079,
+                            "rental_income": 2355.73
+                        }
+                    },
+                    "mashMeter": 66.12
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "TX",
+            "city": "Fort Worth",
+            "neighborhoods": [
+                {
+                    "id": 422770,
+                    "name": "Carter Park",
+                    "city": "Fort Worth",
+                    "state": "TX",
+                    "occupancy": 54.9712,
+                    "total_listing": 0,
+                    "airbnb_listings": 139,
+                    "description": null,
+                    "single_home_value": 139900,
+                    "single_home_value_formatted": "$139,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 12.4547059207,
+                            "cap_rate": 18.3441613716,
+                            "rental_income": 2138.6234799106
+                        },
+                        "traditional_rental": {
+                            "roi": 4.3334689064,
+                            "cap_rate": 9.3205646891,
+                            "rental_income": 1086.6225
+                        }
+                    },
+                    "mashMeter": 46.84
+                },
+                {
+                    "id": 233172,
+                    "name": "Fairmount",
+                    "city": "Fort Worth",
+                    "state": "TX",
+                    "occupancy": 53.0472,
+                    "total_listing": 32,
+                    "airbnb_listings": 106,
+                    "description": null,
+                    "single_home_value": 397000,
+                    "single_home_value_formatted": "$397,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.9788359976,
+                            "cap_rate": 5.9908150601,
+                            "rental_income": 1981.9613157242
+                        },
+                        "traditional_rental": {
+                            "roi": 1.2868221432,
+                            "cap_rate": 4.4242065491,
+                            "rental_income": 1463.675
+                        }
+                    },
+                    "mashMeter": 66.75
+                },
+                {
+                    "id": 422844,
+                    "name": "North Hi Mount",
+                    "city": "Fort Worth",
+                    "state": "TX",
+                    "occupancy": 58.6408,
+                    "total_listing": 29,
+                    "airbnb_listings": 103,
+                    "description": null,
+                    "single_home_value": 459750,
+                    "single_home_value_formatted": "$459,750",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 4.53254874,
+                            "cap_rate": 9.8011454983,
+                            "rental_income": 3755.0638690319
+                        },
+                        "traditional_rental": {
+                            "roi": 1.9104226778,
+                            "cap_rate": 5.0867928222,
+                            "rental_income": 1948.8775
+                        }
+                    },
+                    "mashMeter": 66.84
+                },
+                {
+                    "id": 422756,
+                    "name": "Berkeley Place",
+                    "city": "Fort Worth",
+                    "state": "TX",
+                    "occupancy": 53.1765,
+                    "total_listing": 7,
+                    "airbnb_listings": 102,
+                    "description": null,
+                    "single_home_value": 599000,
+                    "single_home_value_formatted": "$599,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.0969627808,
+                            "cap_rate": 4.496113612,
+                            "rental_income": 2244.3100446429
+                        },
+                        "traditional_rental": {
+                            "roi": 1.5427554079,
+                            "cap_rate": 3.76078798,
+                            "rental_income": 1877.26
+                        }
+                    },
+                    "mashMeter": 67.19
+                },
+                {
+                    "id": 199281,
+                    "name": "Arlington Heights",
+                    "city": "Fort Worth",
+                    "state": "TX",
+                    "occupancy": 61.6383,
+                    "total_listing": 20,
+                    "airbnb_listings": 94,
+                    "description": null,
+                    "single_home_value": 349950,
+                    "single_home_value_formatted": "$349,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 158.1781591527,
+                            "cap_rate": 13.2593732471,
+                            "rental_income": 3866.7647231762
+                        },
+                        "traditional_rental": {
+                            "roi": 76.9022675434,
+                            "cap_rate": 5.0717788255,
+                            "rental_income": 1479.0575
+                        }
+                    },
+                    "mashMeter": 66.89
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "TX",
+            "city": "Dallas",
+            "neighborhoods": [
+                {
+                    "id": 276189,
+                    "name": "Arts District",
+                    "city": "Dallas",
+                    "state": "TX",
+                    "occupancy": 57.0553,
+                    "total_listing": 116,
+                    "airbnb_listings": 253,
+                    "description": null,
+                    "single_home_value": 515000,
+                    "single_home_value_formatted": "$515,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.3315592237,
+                            "cap_rate": 5.9917155408,
+                            "rental_income": 2571.4445862736
+                        },
+                        "traditional_rental": {
+                            "roi": 0.4620916416,
+                            "cap_rate": 6.1415941748,
+                            "rental_income": 2635.7675
+                        }
+                    },
+                    "mashMeter": 71.02
+                },
+                {
+                    "id": 273854,
+                    "name": "Government District",
+                    "city": "Dallas",
+                    "state": "TX",
+                    "occupancy": 47.8559,
+                    "total_listing": 26,
+                    "airbnb_listings": 236,
+                    "description": null,
+                    "single_home_value": 254950,
+                    "single_home_value_formatted": "$254,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -1.1133085432,
+                            "cap_rate": 13.2414528031,
+                            "rental_income": 2813.2569934689
+                        },
+                        "traditional_rental": {
+                            "roi": 0.8616670063,
+                            "cap_rate": 11.9042753481,
+                            "rental_income": 2529.1625
+                        }
+                    },
+                    "mashMeter": 70.26
+                },
+                {
+                    "id": 273707,
+                    "name": "Farmers Market District",
+                    "city": "Dallas",
+                    "state": "TX",
+                    "occupancy": 50.026,
+                    "total_listing": 43,
+                    "airbnb_listings": 231,
+                    "description": null,
+                    "single_home_value": 420000,
+                    "single_home_value_formatted": "$420,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 8.2918584201,
+                            "cap_rate": 8.4368084856,
+                            "rental_income": 2952.8829699656
+                        },
+                        "traditional_rental": {
+                            "roi": 2.3919979222,
+                            "cap_rate": 3.7676857143,
+                            "rental_income": 1318.69
+                        }
+                    },
+                    "mashMeter": 68.78
+                },
+                {
+                    "id": 273261,
+                    "name": "City Center District",
+                    "city": "Dallas",
+                    "state": "TX",
+                    "occupancy": 60.1397,
+                    "total_listing": 13,
+                    "airbnb_listings": 229,
+                    "description": null,
+                    "single_home_value": 399000,
+                    "single_home_value_formatted": "$399,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.4753956012,
+                            "cap_rate": 8.3641130352,
+                            "rental_income": 2781.0675841956
+                        },
+                        "traditional_rental": {
+                            "roi": 0.856099789,
+                            "cap_rate": 6.4636691729,
+                            "rental_income": 2149.17
+                        }
+                    },
+                    "mashMeter": 81.11
+                },
+                {
+                    "id": 272701,
+                    "name": "M Streets",
+                    "city": "Dallas",
+                    "state": "TX",
+                    "occupancy": 47.1869,
+                    "total_listing": 369,
+                    "airbnb_listings": 198,
+                    "description": null,
+                    "single_home_value": 461000,
+                    "single_home_value_formatted": "$461,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.7367150947,
+                            "cap_rate": 9.2561347111,
+                            "rental_income": 3555.8984181894
+                        },
+                        "traditional_rental": {
+                            "roi": 1.3984199784,
+                            "cap_rate": 5.8334967462,
+                            "rental_income": 2241.035
+                        }
+                    },
+                    "mashMeter": 66.12
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "TX",
+            "city": "Houston",
+            "neighborhoods": [
+                {
+                    "id": 271389,
+                    "name": "Fourth Ward",
+                    "city": "Houston",
+                    "state": "TX",
+                    "occupancy": 49.5474,
+                    "total_listing": 23,
+                    "airbnb_listings": 190,
+                    "description": null,
+                    "single_home_value": 429000,
+                    "single_home_value_formatted": "$429,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.1638236826,
+                            "cap_rate": 13.4467018646,
+                            "rental_income": 4807.1959166065
+                        },
+                        "traditional_rental": {
+                            "roi": 3.1258187947,
+                            "cap_rate": 7.581048951,
+                            "rental_income": 2710.225
+                        }
+                    },
+                    "mashMeter": 67.92
+                },
+                {
+                    "id": 403557,
+                    "name": "Montrose",
+                    "city": "Houston",
+                    "state": "TX",
+                    "occupancy": 57.4595,
+                    "total_listing": 46,
+                    "airbnb_listings": 185,
+                    "description": null,
+                    "single_home_value": 661950,
+                    "single_home_value_formatted": "$661,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.4467655301,
+                            "cap_rate": 3.7127496173,
+                            "rental_income": 2048.0455076419
+                        },
+                        "traditional_rental": {
+                            "roi": 1.5356669158,
+                            "cap_rate": 4.2013460231,
+                            "rental_income": 2317.5675
+                        }
+                    },
+                    "mashMeter": 68.86
+                },
+                {
+                    "id": 271469,
+                    "name": "Midtown",
+                    "city": "Houston",
+                    "state": "TX",
+                    "occupancy": 59.6588,
+                    "total_listing": 15,
+                    "airbnb_listings": 170,
+                    "description": null,
+                    "single_home_value": 374900,
+                    "single_home_value_formatted": "$374,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.7571649219,
+                            "cap_rate": 6.2456869889,
+                            "rental_income": 1951.2567101006
+                        },
+                        "traditional_rental": {
+                            "roi": 3.9757157644,
+                            "cap_rate": 6.1235529475,
+                            "rental_income": 1913.1
+                        }
+                    },
+                    "mashMeter": 68.28
+                },
+                {
+                    "id": 271298,
+                    "name": "Binz",
+                    "city": "Houston",
+                    "state": "TX",
+                    "occupancy": 46.9571,
+                    "total_listing": 22,
+                    "airbnb_listings": 163,
+                    "description": null,
+                    "single_home_value": 425000,
+                    "single_home_value_formatted": "$425,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.5502510071,
+                            "cap_rate": 6.393055801,
+                            "rental_income": 2264.2072628658
+                        },
+                        "traditional_rental": {
+                            "roi": 3.3518157222,
+                            "cap_rate": 7.0093411765,
+                            "rental_income": 2482.475
+                        }
+                    },
+                    "mashMeter": 67.21
+                },
+                {
+                    "id": 274488,
+                    "name": "Medical Center Area",
+                    "city": "Houston",
+                    "state": "TX",
+                    "occupancy": 44.152,
+                    "total_listing": 2,
+                    "airbnb_listings": 125,
+                    "description": null,
+                    "single_home_value": 514950,
+                    "single_home_value_formatted": "$514,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 11.1633301377,
+                            "cap_rate": 7.9158237842,
+                            "rental_income": 3396.8778813802
+                        },
+                        "traditional_rental": {
+                            "roi": 1.9809485674,
+                            "cap_rate": 5.0812001165,
+                            "rental_income": 2180.47
+                        }
+                    },
+                    "mashMeter": 64.83
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "CA",
+            "city": "Oakland",
+            "neighborhoods": [
+                {
+                    "id": 274853,
+                    "name": "Oakland Ave-Harrison St",
+                    "city": "Oakland",
+                    "state": "CA",
+                    "occupancy": 62.2532,
+                    "total_listing": 4,
+                    "airbnb_listings": 154,
+                    "description": null,
+                    "single_home_value": 484000,
+                    "single_home_value_formatted": "$484,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.3885028735,
+                            "cap_rate": 9.017963064,
+                            "rental_income": 3637.2451024669
+                        },
+                        "traditional_rental": {
+                            "roi": 0.8929609768,
+                            "cap_rate": 7.0224855372,
+                            "rental_income": 2832.4025
+                        }
+                    },
+                    "mashMeter": 55.23
+                },
+                {
+                    "id": 268153,
+                    "name": "Fairview Park",
+                    "city": "Oakland",
+                    "state": "CA",
+                    "occupancy": 61.9545,
+                    "total_listing": 0,
+                    "airbnb_listings": 154,
+                    "description": null,
+                    "single_home_value": 650000,
+                    "single_home_value_formatted": "$650,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 3.0699173327,
+                            "cap_rate": 5.6708483184,
+                            "rental_income": 3071.709505811
+                        },
+                        "traditional_rental": {
+                            "roi": 2.552,
+                            "cap_rate": 5.0953846154,
+                            "rental_income": 2760
+                        }
+                    },
+                    "mashMeter": 68.99
+                },
+                {
+                    "id": 268456,
+                    "name": "Santa Fe",
+                    "city": "Oakland",
+                    "state": "CA",
+                    "occupancy": 66.9048,
+                    "total_listing": 1,
+                    "airbnb_listings": 147,
+                    "description": null,
+                    "single_home_value": 1398000,
+                    "single_home_value_formatted": "$1,398,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 3.6146841049,
+                            "cap_rate": 3.0292417412,
+                            "rental_income": 3529.0666284723
+                        },
+                        "traditional_rental": {
+                            "roi": 2.0066127181,
+                            "cap_rate": 2.364806867,
+                            "rental_income": 2755
+                        }
+                    },
+                    "mashMeter": 54.47
+                },
+                {
+                    "id": 274232,
+                    "name": "Lake Merritt",
+                    "city": "Oakland",
+                    "state": "CA",
+                    "occupancy": 63.269,
+                    "total_listing": 2,
+                    "airbnb_listings": 145,
+                    "description": null,
+                    "single_home_value": 743500,
+                    "single_home_value_formatted": "$743,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -1.1505918615,
+                            "cap_rate": 7.6875606519,
+                            "rental_income": 4763.0844538933
+                        },
+                        "traditional_rental": {
+                            "roi": 0.3422352076,
+                            "cap_rate": 5.3580242098,
+                            "rental_income": 3319.7425
+                        }
+                    },
+                    "mashMeter": 65.38
+                },
+                {
+                    "id": 275678,
+                    "name": "Temescal",
+                    "city": "Oakland",
+                    "state": "CA",
+                    "occupancy": 62.6207,
+                    "total_listing": 2,
+                    "airbnb_listings": 145,
+                    "description": null,
+                    "single_home_value": 1274000,
+                    "single_home_value_formatted": "$1,274,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.6405395269,
+                            "cap_rate": 3.0631700046,
+                            "rental_income": 3252.065488175
+                        },
+                        "traditional_rental": {
+                            "roi": 1.2336615622,
+                            "cap_rate": 2.568322606,
+                            "rental_income": 2726.7025
+                        }
+                    },
+                    "mashMeter": 89.36
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "CA",
+            "city": "Los Angeles",
+            "neighborhoods": [
+                {
+                    "id": 115295,
+                    "name": "Glendale",
+                    "city": "Los Angeles",
+                    "state": "CA",
+                    "occupancy": 69.5723,
+                    "total_listing": 5,
+                    "airbnb_listings": 498,
+                    "description": null,
+                    "single_home_value": 1899000,
+                    "single_home_value_formatted": "$1,899,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.6406752527,
+                            "cap_rate": 2.7000965103,
+                            "rental_income": 4272.9027276077
+                        },
+                        "traditional_rental": {
+                            "roi": 0.3851046935,
+                            "cap_rate": 1.8990663507,
+                            "rental_income": 3005.2725
+                        }
+                    },
+                    "mashMeter": 68.3
+                },
+                {
+                    "id": 32059,
+                    "name": "Hollywood",
+                    "city": "Los Angeles",
+                    "state": "CA",
+                    "occupancy": 64.3065,
+                    "total_listing": 130,
+                    "airbnb_listings": 310,
+                    "description": null,
+                    "single_home_value": 1199000,
+                    "single_home_value_formatted": "$1,199,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.1672949527,
+                            "cap_rate": 3.85816786,
+                            "rental_income": 3854.9527201098
+                        },
+                        "traditional_rental": {
+                            "roi": 1.2533081585,
+                            "cap_rate": 3.486557965,
+                            "rental_income": 3483.6525
+                        }
+                    },
+                    "mashMeter": 71.26
+                },
+                {
+                    "id": 268404,
+                    "name": "Pico-Union",
+                    "city": "Los Angeles",
+                    "state": "CA",
+                    "occupancy": 63.9481,
+                    "total_listing": 45,
+                    "airbnb_listings": 231,
+                    "description": null,
+                    "single_home_value": 1295000,
+                    "single_home_value_formatted": "$1,295,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.0378182575,
+                            "cap_rate": 7.1250851095,
+                            "rental_income": 7689.15434738
+                        },
+                        "traditional_rental": {
+                            "roi": 1.1681687477,
+                            "cap_rate": 2.7713235521,
+                            "rental_income": 2990.72
+                        }
+                    },
+                    "mashMeter": 72.73
+                },
+                {
+                    "id": 276450,
+                    "name": "Mid City West",
+                    "city": "Los Angeles",
+                    "state": "CA",
+                    "occupancy": 65.6233,
+                    "total_listing": 116,
+                    "airbnb_listings": 215,
+                    "description": null,
+                    "single_home_value": 1955000,
+                    "single_home_value_formatted": "$1,955,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.6961000521,
+                            "cap_rate": 3.3074812553,
+                            "rental_income": 5388.4382117456
+                        },
+                        "traditional_rental": {
+                            "roi": 1.328685047,
+                            "cap_rate": 3.1786388747,
+                            "rental_income": 5178.5325
+                        }
+                    },
+                    "mashMeter": 81.08
+                },
+                {
+                    "id": 275024,
+                    "name": "Pico-Robertson",
+                    "city": "Los Angeles",
+                    "state": "CA",
+                    "occupancy": 49.6096,
+                    "total_listing": 28,
+                    "airbnb_listings": 187,
+                    "description": null,
+                    "single_home_value": 1322000,
+                    "single_home_value_formatted": "$1,322,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.0690954797,
+                            "cap_rate": 4.0174675215,
+                            "rental_income": 4425.910052809
+                        },
+                        "traditional_rental": {
+                            "roi": 0.9399842758,
+                            "cap_rate": 3.026128593,
+                            "rental_income": 3333.785
+                        }
+                    },
+                    "mashMeter": 82.09
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "CA",
+            "city": "San Francisco",
+            "neighborhoods": [
+                {
+                    "id": 417519,
+                    "name": "Corona Heights",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "occupancy": 60.6148,
+                    "total_listing": 12,
+                    "airbnb_listings": 244,
+                    "description": null,
+                    "single_home_value": 1587000,
+                    "single_home_value_formatted": "$1,587,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.2357781123,
+                            "cap_rate": 4.374452658,
+                            "rental_income": 5785.213640264
+                        },
+                        "traditional_rental": {
+                            "roi": 1.170793049,
+                            "cap_rate": 3.2743553875,
+                            "rental_income": 4330.335
+                        }
+                    },
+                    "mashMeter": 73.06
+                },
+                {
+                    "id": 417522,
+                    "name": "North Panhandle",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "occupancy": 62.9535,
+                    "total_listing": 7,
+                    "airbnb_listings": 215,
+                    "description": "<p><a href=\"https://www.mashvisor.com/app/#!/neighborhood/North%20Panhandle-San%20Francisco-CA/417522/demographics\">North Panhandle</a> is a high-demand neighborhood and is located north of the <a href=\"http://www.tripadvisor.com/Attraction_Review-g60713-d3510297-Reviews-Panhandle_Golden_Gate_Park-San_Francisco_California.html\">Golden Gate Park</a> and next to <a href=\"http://divisaderocorridor.com/\">Divisadero Corridor</a>. In this neighborhood, you&rsquo;ll always have something to do as the neighborhood is central to everything and can be accessed within walking distance. If you&rsquo;re unable to walk, there is easy access to the freeway, public transportation, and navigable bike routes.</p>\r\n\r\n<p>The neighborhood also has lots of green space yet a lot of amenities, allowing residents to easily live without a car. You can grocery shop at the Lucky Center on Fulton and at the The Fallaetti Food at Broderick Place which has specialty deli goods. &nbsp;There are plenty of hip restaurants, clubs, and shops to enjoy as well. You can easily connect with neighbors in this community either at Sunday&rsquo;s Divisadero Famer&rsquo;s Market or at the bi-monthly Divisadero Art Walk.</p>\r\n",
+                    "single_home_value": 1180000,
+                    "single_home_value_formatted": "$1,180,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.9380726772,
+                            "cap_rate": 5.9749679907,
+                            "rental_income": 5875.3851908752
+                        },
+                        "traditional_rental": {
+                            "roi": 2.2793877721,
+                            "cap_rate": 4.7741822034,
+                            "rental_income": 4694.6125
+                        }
+                    },
+                    "mashMeter": 88.84
+                },
+                {
+                    "id": 118904,
+                    "name": "Western Addition",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "occupancy": 63.5888,
+                    "total_listing": 3,
+                    "airbnb_listings": 214,
+                    "description": "Western Addition is a collection of small, multicultural neighborhoods united by a loose confederation of geography at the center of San Francisco.  Today, the Western Addition is predominantly working-class and is seen as the City's first multicultural neighborhood. The area includes the Fillmore, Japantown, Alamo Square and the Western Addition proper.  From the beautiful views at Alamo Square to the historic Fillmore area to the always changing Divisadero Street, you can experience several distinct moods in the space of a few blocks.  In 1948, San Francisco declared the Western Addition a slum and planned to tear it down in the name of urban renewal (or \"urban removal\u201d as it also became known for). New housing attracted young professionals, and the African-American community was pushed south toward Market Street.  \r\n\r\nAmong the locals, the area is known for its jazz age past, it's musically happening rich Fillmore neighborhood, the low rents of the area bordering the Tenderloin, the Eastern feel of Japantown, and the charm of the Painted Ladies in Alamo square.  The Jazz scene on Fillmore became very popular in this area, with the likes of Duke Ellington and Billie Holiday frequently playing clubs here. Close knit African-American church congregations were also joining together to worship on every block.  The Fillmore has always been viewed as the first full-fledged African-American community. Before World War II it was home to Japanese-Americans as well, but internment resulted in drastic changes leading to the arrival of Jewish immigrants and African-American GIs returning from the war.  \r\n",
+                    "single_home_value": 828000,
+                    "single_home_value_formatted": "$828,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.5096848408,
+                            "cap_rate": 8.6717807714,
+                            "rental_income": 5983.5287322444
+                        },
+                        "traditional_rental": {
+                            "roi": 1.1564444204,
+                            "cap_rate": 5.8768115942,
+                            "rental_income": 4055
+                        }
+                    },
+                    "mashMeter": 85.32
+                },
+                {
+                    "id": 268201,
+                    "name": "Haight Ashbury",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "occupancy": 61.8657,
+                    "total_listing": 5,
+                    "airbnb_listings": 201,
+                    "description": "Years ago, the Haight-Ashbury of San Francisco scene had a long-gone '60s and \u201870s hippie culture.  However, over time the Haight has changed.  But save for a few hippie memorabilia, today the Haight has a whole new vibe.  Although there are some fragments of flower-power, incense-burning, acid-dropping, peace-and-love-vibing era that can be purchased at smoke shops along the neighborhood, today the neighborhood is different. With exclusive boutiques, high-end vintage-clothing shops, second-hand stores, Internet caf\u00e9s and hip restaurants having all settled in, this reinvented area stands out as one of San Francisco's commercial centers.  \r\n\r\nWhat makes the Haight unique is its just-rolled-out-of-bed vibe during the day, which provides a perfect opportunity for lazing around in caf\u00e9s and bookstores.  Weekends can get quite crowded with shoppers and brunch seekers during the day and club-goers at night. Neo-punks, club kids, fashionistas, tourists and neighborhood locals also fit in here, whether they have come to get a new piercing, grab a burrito or just enjoy some fun people-watching from a caf\u00e9.  But there are two distinct areas of the Haight: The Upper Haight, which stretches from Stanyan to Masonic, which is known as the shopping zone, though it deteriorates a bit where it stretches toward Golden Gate Park. While, the Lower Haight, roughly Divisidero to Webster is a more diverse neighborhood with a stony feel. While it has been an alternate nightlife hub for years, the Lower Haight has become a main attraction for DJs and ravers with an attraction to dance-music and clubs.",
+                    "single_home_value": 1475000,
+                    "single_home_value_formatted": "$1,475,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.4951720955,
+                            "cap_rate": 4.364763929,
+                            "rental_income": 5365.0223293554
+                        },
+                        "traditional_rental": {
+                            "roi": 1.4947293758,
+                            "cap_rate": 3.8193457627,
+                            "rental_income": 4694.6125
+                        }
+                    },
+                    "mashMeter": 85.32
+                },
+                {
+                    "id": 274552,
+                    "name": "Mission",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "occupancy": 60.9202,
+                    "total_listing": 32,
+                    "airbnb_listings": 188,
+                    "description": "<p>The Mission District, also commonly referred to as the &ldquo;The Mission&rdquo; was named for Mission Dolores in 1776. Although this is one of San Francisco&rsquo;s oldest neighborhoods, it is known for having some of the hottest restaurants, shops and galleries. Neighborhoods of Bernal Heights and Potrero Hill boast some of the best weather in town with an abundance of sunshine. A great place to visit is Mission Dolores, 16th and Dolores streets, which is home to the oldest original intact mission in California and the city&rsquo;s historic center. Throughout the District, there is a large number of murals which are decorating buildings, fences and walls. The Potrero Hill neighborhood is ideal for&nbsp;buying an investment property, as it is&nbsp;one of 11 historic districts in the city and is home to the second crookedest street in the city, Lombard being the first. In the 90&rsquo;s, this neighborhood was home mostly to Latin American working-class families. However, in recent years, younger locals are flocking to the Mission for its hip bars and excellent taquerias. The cuisine in the Mission neighborhood, especially Mexican cuisine, might very well be the richest in a city that is already obsessed with food. Head to La Taqueria, a 50-year-old San Francisco institution that practically invented the local taco and that brags a long list of burrito styles. Make sure to try the taco dorado, a freshly deep-fried taco shell wrapped in a soft corn tortilla and filled with your choice of meat and all the extras you can add. Today, the Mission is home to the city&rsquo;s hipster generation in addition to its fancy cupcakeries, cool music shops and boutique clothing stores. For an authentic experience, head toward 24th Street, or across Cesar Chavez toward 30th St. More than just a park, Dolores Park San Francisco is located in the heart of the the Mission. On a sunny day, the young come here to tan, hobnob, and take unbeatable views of the San Francisco bay and skyline. Don&rsquo;t want to tan? Bring a picnic and a bottle of wine to enjoy the day and hang out.</p>\r\n",
+                    "single_home_value": 1449000,
+                    "single_home_value_formatted": "$1,449,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.5214420915,
+                            "cap_rate": 4.8343030821,
+                            "rental_income": 5837.4209716619
+                        },
+                        "traditional_rental": {
+                            "roi": 1.1270821841,
+                            "cap_rate": 3.206873706,
+                            "rental_income": 3872.3
+                        }
+                    },
+                    "mashMeter": 82.88
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "CA",
+            "city": "San Diego",
+            "neighborhoods": [
+                {
+                    "id": 273808,
+                    "name": "Gaslamp Quarter",
+                    "city": "San Diego",
+                    "state": "CA",
+                    "occupancy": 46.4372,
+                    "total_listing": 34,
+                    "airbnb_listings": 247,
+                    "description": null,
+                    "single_home_value": 695000,
+                    "single_home_value_formatted": "$695,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.4133529823,
+                            "cap_rate": 5.9066253123,
+                            "rental_income": 3420.9204933627
+                        },
+                        "traditional_rental": {
+                            "roi": 1.3788698654,
+                            "cap_rate": 6.4441510791,
+                            "rental_income": 3732.2375
+                        }
+                    },
+                    "mashMeter": 86.82
+                },
+                {
+                    "id": 268215,
+                    "name": "Horton Plaza",
+                    "city": "San Diego",
+                    "state": "CA",
+                    "occupancy": 47.6966,
+                    "total_listing": 11,
+                    "airbnb_listings": 234,
+                    "description": null,
+                    "single_home_value": 1000000,
+                    "single_home_value_formatted": "$1,000,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.7772371254,
+                            "cap_rate": 4.1412122029,
+                            "rental_income": 3451.0101690567
+                        },
+                        "traditional_rental": {
+                            "roi": 1.3070573685,
+                            "cap_rate": 4.854195,
+                            "rental_income": 4045.1625
+                        }
+                    },
+                    "mashMeter": 67.91
+                },
+                {
+                    "id": 273355,
+                    "name": "Cortez Hill",
+                    "city": "San Diego",
+                    "state": "CA",
+                    "occupancy": 60.8868,
+                    "total_listing": 14,
+                    "airbnb_listings": 212,
+                    "description": null,
+                    "single_home_value": 414500,
+                    "single_home_value_formatted": "$414,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.8352497896,
+                            "cap_rate": 10.6791923222,
+                            "rental_income": 3688.7710146417
+                        },
+                        "traditional_rental": {
+                            "roi": 3.1401651065,
+                            "cap_rate": 10.1244028951,
+                            "rental_income": 3497.1375
+                        }
+                    },
+                    "mashMeter": 82.2
+                },
+                {
+                    "id": 117156,
+                    "name": "Pacific Beach",
+                    "city": "San Diego",
+                    "state": "CA",
+                    "occupancy": 52.4716,
+                    "total_listing": 29,
+                    "airbnb_listings": 176,
+                    "description": null,
+                    "single_home_value": 999000,
+                    "single_home_value_formatted": "$999,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.3513960372,
+                            "cap_rate": 5.8172025741,
+                            "rental_income": 4842.8211429208
+                        },
+                        "traditional_rental": {
+                            "roi": 1.5094114753,
+                            "cap_rate": 3.5121231231,
+                            "rental_income": 2923.8425
+                        }
+                    },
+                    "mashMeter": 70
+                },
+                {
+                    "id": 268012,
+                    "name": "Balboa Park",
+                    "city": "San Diego",
+                    "state": "CA",
+                    "occupancy": 49.8981,
+                    "total_listing": 3,
+                    "airbnb_listings": 157,
+                    "description": null,
+                    "single_home_value": 529999,
+                    "single_home_value_formatted": "$529,999",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.5668096021,
+                            "cap_rate": 9.4587005389,
+                            "rental_income": 4177.58485575
+                        },
+                        "traditional_rental": {
+                            "roi": 0.1473307212,
+                            "cap_rate": 6.6811201531,
+                            "rental_income": 2950.8225
+                        }
+                    },
+                    "mashMeter": 84.66
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "CA",
+            "city": "Long Beach",
+            "neighborhoods": [
+                {
+                    "id": 416300,
+                    "name": "Freeman Island",
+                    "city": "Long Beach",
+                    "state": "CA",
+                    "occupancy": 71.4561,
+                    "total_listing": 0,
+                    "airbnb_listings": 296,
+                    "description": null,
+                    "single_home_value": 519757,
+                    "single_home_value_formatted": "$519,757",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 5.981192659,
+                            "cap_rate": 8.8484164563,
+                            "rental_income": 3832.5219933877
+                        },
+                        "traditional_rental": {
+                            "roi": 3.6694897808,
+                            "cap_rate": 6.2798577027,
+                            "rental_income": 2720
+                        }
+                    },
+                    "mashMeter": 58.05
+                },
+                {
+                    "id": 416314,
+                    "name": "Saint Mary's",
+                    "city": "Long Beach",
+                    "state": "CA",
+                    "occupancy": 53.1535,
+                    "total_listing": 17,
+                    "airbnb_listings": 241,
+                    "description": null,
+                    "single_home_value": 999500,
+                    "single_home_value_formatted": "$999,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.5276014224,
+                            "cap_rate": 3.7074743057,
+                            "rental_income": 3088.0171404358
+                        },
+                        "traditional_rental": {
+                            "roi": 3.140368416,
+                            "cap_rate": 2.0572346173,
+                            "rental_income": 1713.505
+                        }
+                    },
+                    "mashMeter": 70.12
+                },
+                {
+                    "id": 416306,
+                    "name": "East Village",
+                    "city": "Long Beach",
+                    "state": "CA",
+                    "occupancy": 56.4519,
+                    "total_listing": 21,
+                    "airbnb_listings": 239,
+                    "description": null,
+                    "single_home_value": 389900,
+                    "single_home_value_formatted": "$389,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.8810772843,
+                            "cap_rate": 10.2437086408,
+                            "rental_income": 3328.3516658635
+                        },
+                        "traditional_rental": {
+                            "roi": 2.2606758475,
+                            "cap_rate": 8.0079764042,
+                            "rental_income": 2601.925
+                        }
+                    },
+                    "mashMeter": 81.96
+                },
+                {
+                    "id": 273486,
+                    "name": "Downtown",
+                    "city": "Long Beach",
+                    "state": "CA",
+                    "occupancy": 51.3561,
+                    "total_listing": 31,
+                    "airbnb_listings": 205,
+                    "description": null,
+                    "single_home_value": 499999,
+                    "single_home_value_formatted": "$499,999",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.1893693401,
+                            "cap_rate": 7.9267572981,
+                            "rental_income": 3302.8089352583
+                        },
+                        "traditional_rental": {
+                            "roi": 2.3598324071,
+                            "cap_rate": 5.5873371747,
+                            "rental_income": 2328.0525
+                        }
+                    },
+                    "mashMeter": 67.97
+                },
+                {
+                    "id": 416302,
+                    "name": "Alamitos Beach",
+                    "city": "Long Beach",
+                    "state": "CA",
+                    "occupancy": 56.8844,
+                    "total_listing": 35,
+                    "airbnb_listings": 199,
+                    "description": null,
+                    "single_home_value": 869000,
+                    "single_home_value_formatted": "$869,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.9987139987,
+                            "cap_rate": 6.2153975677,
+                            "rental_income": 4500.9837385965
+                        },
+                        "traditional_rental": {
+                            "roi": 2.3037227946,
+                            "cap_rate": 3.4974096663,
+                            "rental_income": 2532.7075
+                        }
+                    },
+                    "mashMeter": 66.09
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "FL",
+            "city": "Fort Lauderdale",
+            "neighborhoods": [
+                {
+                    "id": 272845,
+                    "name": "Bal Harbour",
+                    "city": "Fort Lauderdale",
+                    "state": "FL",
+                    "occupancy": 48.3846,
+                    "total_listing": 2,
+                    "airbnb_listings": 117,
+                    "description": null,
+                    "single_home_value": 769400,
+                    "single_home_value_formatted": "$769,400",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.0634300709,
+                            "cap_rate": 5.2620906237,
+                            "rental_income": 3373.8771048817
+                        },
+                        "traditional_rental": {
+                            "roi": 0.3367584888,
+                            "cap_rate": 2.547231609,
+                            "rental_income": 1633.2
+                        }
+                    },
+                    "mashMeter": 69.44
+                },
+                {
+                    "id": 269088,
+                    "name": "Middle River Terrace",
+                    "city": "Fort Lauderdale",
+                    "state": "FL",
+                    "occupancy": 49.3596,
+                    "total_listing": 12,
+                    "airbnb_listings": 114,
+                    "description": null,
+                    "single_home_value": 414600,
+                    "single_home_value_formatted": "$414,600",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 3.3579805459,
+                            "cap_rate": 9.172641504,
+                            "rental_income": 3169.1476396158
+                        },
+                        "traditional_rental": {
+                            "roi": 2.952826367,
+                            "cap_rate": 5.0122720695,
+                            "rental_income": 1731.74
+                        }
+                    },
+                    "mashMeter": 73.62
+                },
+                {
+                    "id": 269147,
+                    "name": "Poinsettia Heights",
+                    "city": "Fort Lauderdale",
+                    "state": "FL",
+                    "occupancy": 45.6216,
+                    "total_listing": 17,
+                    "airbnb_listings": 111,
+                    "description": null,
+                    "single_home_value": 499000,
+                    "single_home_value_formatted": "$499,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.5244084327,
+                            "cap_rate": 7.6016117869,
+                            "rental_income": 3161.0035680619
+                        },
+                        "traditional_rental": {
+                            "roi": 2.9715966706,
+                            "cap_rate": 6.1051803607,
+                            "rental_income": 2538.7375
+                        }
+                    },
+                    "mashMeter": 72.2
+                },
+                {
+                    "id": 269049,
+                    "name": "Lake Ridge",
+                    "city": "Fort Lauderdale",
+                    "state": "FL",
+                    "occupancy": 46.8515,
+                    "total_listing": 26,
+                    "airbnb_listings": 101,
+                    "description": null,
+                    "single_home_value": 448750,
+                    "single_home_value_formatted": "$448,750",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.6400760074,
+                            "cap_rate": 8.8800213784,
+                            "rental_income": 3320.7579946179
+                        },
+                        "traditional_rental": {
+                            "roi": 1.380434553,
+                            "cap_rate": 4.6369805014,
+                            "rental_income": 1734.0375
+                        }
+                    },
+                    "mashMeter": 70.93
+                },
+                {
+                    "id": 269064,
+                    "name": "Laudergate Isles",
+                    "city": "Fort Lauderdale",
+                    "state": "FL",
+                    "occupancy": 45.8866,
+                    "total_listing": 28,
+                    "airbnb_listings": 97,
+                    "description": null,
+                    "single_home_value": 569950,
+                    "single_home_value_formatted": "$569,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.0298862021,
+                            "cap_rate": 7.506992729,
+                            "rental_income": 3565.5087548979
+                        },
+                        "traditional_rental": {
+                            "roi": 3.6973234995,
+                            "cap_rate": 7.8240336872,
+                            "rental_income": 3716.09
+                        }
+                    },
+                    "mashMeter": 71.67
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "FL",
+            "city": "Jacksonville",
+            "neighborhoods": [
+                {
+                    "id": 269011,
+                    "name": "Holiday Harbors",
+                    "city": "Jacksonville",
+                    "state": "FL",
+                    "occupancy": 59.4504,
+                    "total_listing": 8,
+                    "airbnb_listings": 131,
+                    "description": null,
+                    "single_home_value": 359000,
+                    "single_home_value_formatted": "$359,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 8.2129591363,
+                            "cap_rate": 12.0655082079,
+                            "rental_income": 3609.5978721983
+                        },
+                        "traditional_rental": {
+                            "roi": 2.2505089376,
+                            "cap_rate": 4.3593091922,
+                            "rental_income": 1304.16
+                        }
+                    },
+                    "mashMeter": 65.79
+                },
+                {
+                    "id": 269165,
+                    "name": "Robinson's Addition",
+                    "city": "Jacksonville",
+                    "state": "FL",
+                    "occupancy": 67.9675,
+                    "total_listing": 5,
+                    "airbnb_listings": 123,
+                    "description": null,
+                    "single_home_value": 89900,
+                    "single_home_value_formatted": "$89,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 12.7730392456,
+                            "cap_rate": 26.0381604703,
+                            "rental_income": 1950.6921885665
+                        },
+                        "traditional_rental": {
+                            "roi": 5.0021644115,
+                            "cap_rate": 9.4603414905,
+                            "rental_income": 708.73725
+                        }
+                    },
+                    "mashMeter": 67.43
+                },
+                {
+                    "id": 268927,
+                    "name": "College Gardens",
+                    "city": "Jacksonville",
+                    "state": "FL",
+                    "occupancy": 68.9815,
+                    "total_listing": 3,
+                    "airbnb_listings": 108,
+                    "description": null,
+                    "single_home_value": 75000,
+                    "single_home_value_formatted": "$75,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 17.6424986521,
+                            "cap_rate": 31.411325295,
+                            "rental_income": 1963.2078309394
+                        },
+                        "traditional_rental": {
+                            "roi": 7.1477934519,
+                            "cap_rate": 11.48664,
+                            "rental_income": 717.915
+                        }
+                    },
+                    "mashMeter": 66.1
+                },
+                {
+                    "id": 273667,
+                    "name": "Fairfield",
+                    "city": "Jacksonville",
+                    "state": "FL",
+                    "occupancy": 67.3803,
+                    "total_listing": 3,
+                    "airbnb_listings": 71,
+                    "description": null,
+                    "single_home_value": 70000,
+                    "single_home_value_formatted": "$70,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 18.5899721781,
+                            "cap_rate": 43.9798437248,
+                            "rental_income": 2565.4908839463
+                        },
+                        "traditional_rental": {
+                            "roi": 6.9098127683,
+                            "cap_rate": 13.6742142857,
+                            "rental_income": 797.6625
+                        }
+                    },
+                    "mashMeter": 75.39
+                },
+                {
+                    "id": 274173,
+                    "name": "Kennel Club",
+                    "city": "Jacksonville",
+                    "state": "FL",
+                    "occupancy": 67.2424,
+                    "total_listing": 4,
+                    "airbnb_listings": 66,
+                    "description": null,
+                    "single_home_value": 82500,
+                    "single_home_value_formatted": "$82,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 12.0476107597,
+                            "cap_rate": 28.7209363588,
+                            "rental_income": 1974.5643746692
+                        },
+                        "traditional_rental": {
+                            "roi": 5.230174005,
+                            "cap_rate": 12.1781818182,
+                            "rental_income": 837.25
+                        }
+                    },
+                    "mashMeter": 59.98
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "FL",
+            "city": "Tampa",
+            "neighborhoods": [
+                {
+                    "id": 124197,
+                    "name": "Drew Park",
+                    "city": "Tampa",
+                    "state": "FL",
+                    "occupancy": 58.6091,
+                    "total_listing": 13,
+                    "airbnb_listings": 197,
+                    "description": null,
+                    "single_home_value": 264000,
+                    "single_home_value_formatted": "$264,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 4.0120930076,
+                            "cap_rate": 8.9878578082,
+                            "rental_income": 1977.3287178027
+                        },
+                        "traditional_rental": {
+                            "roi": 4.2352797815,
+                            "cap_rate": 6.2381590909,
+                            "rental_income": 1372.395
+                        }
+                    },
+                    "mashMeter": 67.49
+                },
+                {
+                    "id": 269130,
+                    "name": "Palmetto Beach",
+                    "city": "Tampa",
+                    "state": "FL",
+                    "occupancy": 52.6122,
+                    "total_listing": 0,
+                    "airbnb_listings": 98,
+                    "description": null,
+                    "single_home_value": 199000,
+                    "single_home_value_formatted": "$199,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 19.9404411316,
+                            "cap_rate": 13.3453287111,
+                            "rental_income": 2213.1003445917
+                        },
+                        "traditional_rental": {
+                            "roi": 15.9811210632,
+                            "cap_rate": 6.6864572864,
+                            "rental_income": 1108.8375
+                        }
+                    },
+                    "mashMeter": 48.01
+                },
+                {
+                    "id": 272893,
+                    "name": "Beasley",
+                    "city": "Tampa",
+                    "state": "FL",
+                    "occupancy": 57.4675,
+                    "total_listing": 2,
+                    "airbnb_listings": 77,
+                    "description": null,
+                    "single_home_value": 142500,
+                    "single_home_value_formatted": "$142,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 8.0870714188,
+                            "cap_rate": 18.6338008901,
+                            "rental_income": 2212.7638556985
+                        },
+                        "traditional_rental": {
+                            "roi": 4.0260699987,
+                            "cap_rate": 9.0148736842,
+                            "rental_income": 1070.51625
+                        }
+                    },
+                    "mashMeter": 68.6
+                },
+                {
+                    "id": 273739,
+                    "name": "Florence",
+                    "city": "Tampa",
+                    "state": "FL",
+                    "occupancy": 54.5395,
+                    "total_listing": 1,
+                    "airbnb_listings": 76,
+                    "description": null,
+                    "single_home_value": 203000,
+                    "single_home_value_formatted": "$203,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 11.9941482544,
+                            "cap_rate": 12.6769384306,
+                            "rental_income": 2144.5154178504
+                        },
+                        "traditional_rental": {
+                            "roi": 7.1283693314,
+                            "cap_rate": 7.3533251232,
+                            "rental_income": 1243.9375
+                        }
+                    },
+                    "mashMeter": 15.1
+                },
+                {
+                    "id": 274847,
+                    "name": "Oakford Park",
+                    "city": "Tampa",
+                    "state": "FL",
+                    "occupancy": 49.4933,
+                    "total_listing": 5,
+                    "airbnb_listings": 75,
+                    "description": null,
+                    "single_home_value": 544600,
+                    "single_home_value_formatted": "$544,600",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.5687695503,
+                            "cap_rate": 3.7931159308,
+                            "rental_income": 1721.4424466112
+                        },
+                        "traditional_rental": {
+                            "roi": 4.0023219109,
+                            "cap_rate": 3.8232372383,
+                            "rental_income": 1735.1125
+                        }
+                    },
+                    "mashMeter": 67.37
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "FL",
+            "city": "Pensacola",
+            "neighborhoods": [
+                {
+                    "id": 806852,
+                    "name": "Gulf Beach",
+                    "city": "Pensacola",
+                    "state": "FL",
+                    "occupancy": 58.2033,
+                    "total_listing": 91,
+                    "airbnb_listings": 246,
+                    "description": null,
+                    "single_home_value": 575000,
+                    "single_home_value_formatted": "$575,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 3.8579935899,
+                            "cap_rate": 8.0118261676,
+                            "rental_income": 3839.000038649
+                        },
+                        "traditional_rental": {
+                            "roi": 0.8611881473,
+                            "cap_rate": 2.7226043478,
+                            "rental_income": 1304.58125
+                        }
+                    },
+                    "mashMeter": null
+                },
+                {
+                    "id": 806850,
+                    "name": "Englewood",
+                    "city": "Pensacola",
+                    "state": "FL",
+                    "occupancy": 67.6768,
+                    "total_listing": 0,
+                    "airbnb_listings": 198,
+                    "description": null,
+                    "single_home_value": 115000,
+                    "single_home_value_formatted": "$115,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 22.3307560491,
+                            "cap_rate": 26.8892458517,
+                            "rental_income": 2576.8860607854
+                        },
+                        "traditional_rental": {
+                            "roi": 8.0852173913,
+                            "cap_rate": 11.0608695652,
+                            "rental_income": 1060
+                        }
+                    },
+                    "mashMeter": null
+                },
+                {
+                    "id": 806851,
+                    "name": "Palafox",
+                    "city": "Pensacola",
+                    "state": "FL",
+                    "occupancy": 66.8649,
+                    "total_listing": 4,
+                    "airbnb_listings": 185,
+                    "description": null,
+                    "single_home_value": 81250,
+                    "single_home_value_formatted": "$81,250",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 24.4530262947,
+                            "cap_rate": 35.1326192033,
+                            "rental_income": 2378.7710918923
+                        },
+                        "traditional_rental": {
+                            "roi": 13.1975038052,
+                            "cap_rate": 15.6553846154,
+                            "rental_income": 1060
+                        }
+                    },
+                    "mashMeter": null
+                },
+                {
+                    "id": 764088,
+                    "name": "Brittany Forge",
+                    "city": "Pensacola",
+                    "state": "FL",
+                    "occupancy": 67.8409,
+                    "total_listing": 8,
+                    "airbnb_listings": 132,
+                    "description": null,
+                    "single_home_value": 276950,
+                    "single_home_value_formatted": "$276,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 6.3573331535,
+                            "cap_rate": 10.8509752633,
+                            "rental_income": 2504.314665969
+                        },
+                        "traditional_rental": {
+                            "roi": 2.7046088502,
+                            "cap_rate": 4.8448673046,
+                            "rental_income": 1118.155
+                        }
+                    },
+                    "mashMeter": null
+                },
+                {
+                    "id": 124368,
+                    "name": "Ferry Pass",
+                    "city": "Pensacola",
+                    "state": "FL",
+                    "occupancy": 64.1613,
+                    "total_listing": 12,
+                    "airbnb_listings": 124,
+                    "description": null,
+                    "single_home_value": 444900,
+                    "single_home_value_formatted": "$444,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 14.0436564885,
+                            "cap_rate": 6.6346904172,
+                            "rental_income": 2459.8114721806
+                        },
+                        "traditional_rental": {
+                            "roi": 6.5733524737,
+                            "cap_rate": 2.7934369521,
+                            "rental_income": 1035.66675
+                        }
+                    },
+                    "mashMeter": 86.05
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "FL",
+            "city": "Saint Petersburg",
+            "neighborhoods": [
+                {
+                    "id": 417159,
+                    "name": "Woodlawn Oaks",
+                    "city": "Saint Petersburg",
+                    "state": "FL",
+                    "occupancy": 61.0392,
+                    "total_listing": 0,
+                    "airbnb_listings": 51,
+                    "description": null,
+                    "single_home_value": 147000,
+                    "single_home_value_formatted": "$147,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 12.064077265,
+                            "cap_rate": 16.3826104154,
+                            "rental_income": 2006.8697758837
+                        },
+                        "traditional_rental": {
+                            "roi": 6.0404064626,
+                            "cap_rate": 9.6896428571,
+                            "rental_income": 1186.98125
+                        }
+                    },
+                    "mashMeter": 57.47
+                },
+                {
+                    "id": 417189,
+                    "name": "Harbor Isle",
+                    "city": "Saint Petersburg",
+                    "state": "FL",
+                    "occupancy": 61.7609,
+                    "total_listing": 0,
+                    "airbnb_listings": 46,
+                    "description": null,
+                    "single_home_value": 820000,
+                    "single_home_value_formatted": "$820,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.7099734322,
+                            "cap_rate": 3.1465829463,
+                            "rental_income": 2150.1650133027
+                        },
+                        "traditional_rental": {
+                            "roi": -0.1328414634,
+                            "cap_rate": 2.2101219512,
+                            "rental_income": 1510.25
+                        }
+                    },
+                    "mashMeter": 1.69
+                },
+                {
+                    "id": 417154,
+                    "name": "Methodist Town",
+                    "city": "Saint Petersburg",
+                    "state": "FL",
+                    "occupancy": 58.2222,
+                    "total_listing": 1,
+                    "airbnb_listings": 45,
+                    "description": null,
+                    "single_home_value": 712000,
+                    "single_home_value_formatted": "$712,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.5404564738,
+                            "cap_rate": 3.4995471481,
+                            "rental_income": 2076.3979745371
+                        },
+                        "traditional_rental": {
+                            "roi": -0.3878370821,
+                            "cap_rate": 2.281011236,
+                            "rental_income": 1353.4
+                        }
+                    },
+                    "mashMeter": 78.93
+                },
+                {
+                    "id": 417161,
+                    "name": "Crescent Lake",
+                    "city": "Saint Petersburg",
+                    "state": "FL",
+                    "occupancy": 60.3636,
+                    "total_listing": 0,
+                    "airbnb_listings": 44,
+                    "description": null,
+                    "single_home_value": 939000,
+                    "single_home_value_formatted": "$939,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.5190256922,
+                            "cap_rate": 2.9172466276,
+                            "rental_income": 2282.7454861112
+                        },
+                        "traditional_rental": {
+                            "roi": -0.2713445154,
+                            "cap_rate": 2.039057508,
+                            "rental_income": 1595.5625
+                        }
+                    },
+                    "mashMeter": 53.89
+                },
+                {
+                    "id": 417160,
+                    "name": "Euclid-St Pauls",
+                    "city": "Saint Petersburg",
+                    "state": "FL",
+                    "occupancy": 58.9767,
+                    "total_listing": 0,
+                    "airbnb_listings": 43,
+                    "description": null,
+                    "single_home_value": 525000,
+                    "single_home_value_formatted": "$525,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.7840449084,
+                            "cap_rate": 4.4161345543,
+                            "rental_income": 1932.0588675213
+                        },
+                        "traditional_rental": {
+                            "roi": 1.374516381,
+                            "cap_rate": 3.9611028571,
+                            "rental_income": 1732.9825
+                        }
+                    },
+                    "mashMeter": 54.39
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "NY",
+            "city": "New York",
+            "neighborhoods": [
+                {
+                    "id": 270895,
+                    "name": "NoHo",
+                    "city": "New York",
+                    "state": "NY",
+                    "occupancy": 63.9451,
+                    "total_listing": 23,
+                    "airbnb_listings": 364,
+                    "description": null,
+                    "single_home_value": 1995000,
+                    "single_home_value_formatted": "$1,995,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.3530545745,
+                            "cap_rate": 2.5475594914,
+                            "rental_income": 4235.3176544402
+                        },
+                        "traditional_rental": {
+                            "roi": 0.4786257944,
+                            "cap_rate": 2.8977443609,
+                            "rental_income": 4817.5
+                        }
+                    },
+                    "mashMeter": 55.96
+                },
+                {
+                    "id": 270842,
+                    "name": "Garment District",
+                    "city": "New York",
+                    "state": "NY",
+                    "occupancy": 60.6013,
+                    "total_listing": 15,
+                    "airbnb_listings": 301,
+                    "description": null,
+                    "single_home_value": 1650000,
+                    "single_home_value_formatted": "$1,650,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.6882041097,
+                            "cap_rate": 3.1365076768,
+                            "rental_income": 4312.6980555554
+                        },
+                        "traditional_rental": {
+                            "roi": 0.3931075498,
+                            "cap_rate": 2.9688,
+                            "rental_income": 4082.1
+                        }
+                    },
+                    "mashMeter": 80.46
+                },
+                {
+                    "id": 270953,
+                    "name": "Turtle Bay",
+                    "city": "New York",
+                    "state": "NY",
+                    "occupancy": 54.4055,
+                    "total_listing": 70,
+                    "airbnb_listings": 254,
+                    "description": null,
+                    "single_home_value": 905000,
+                    "single_home_value_formatted": "$905,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.4099061459,
+                            "cap_rate": 4.8238113515,
+                            "rental_income": 3637.9577275817
+                        },
+                        "traditional_rental": {
+                            "roi": 0.8325531067,
+                            "cap_rate": 5.821558011,
+                            "rental_income": 4390.425
+                        }
+                    },
+                    "mashMeter": 81.59
+                },
+                {
+                    "id": 403221,
+                    "name": "Prospect Lefferts Gardens",
+                    "city": "New York",
+                    "state": "NY",
+                    "occupancy": 36.6301,
+                    "total_listing": 44,
+                    "airbnb_listings": 246,
+                    "description": null,
+                    "single_home_value": 1100000,
+                    "single_home_value_formatted": "$1,100,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.7646604286,
+                            "cap_rate": 2.2260996995,
+                            "rental_income": 2040.591391226
+                        },
+                        "traditional_rental": {
+                            "roi": 0.8290376973,
+                            "cap_rate": 2.8941572727,
+                            "rental_income": 2652.9775
+                        }
+                    },
+                    "mashMeter": 85.37
+                },
+                {
+                    "id": 270946,
+                    "name": "Sutton Place",
+                    "city": "New York",
+                    "state": "NY",
+                    "occupancy": 48.2305,
+                    "total_listing": 111,
+                    "airbnb_listings": 243,
+                    "description": null,
+                    "single_home_value": 1350000,
+                    "single_home_value_formatted": "$1,350,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.8201799565,
+                            "cap_rate": 3.5933071935,
+                            "rental_income": 4042.4705927235
+                        },
+                        "traditional_rental": {
+                            "roi": 0.6075687029,
+                            "cap_rate": 3.8170688889,
+                            "rental_income": 4294.2025
+                        }
+                    },
+                    "mashMeter": 81.06
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "NY",
+            "city": "Buffalo",
+            "neighborhoods": [
+                {
+                    "id": 270798,
+                    "name": "Babcock",
+                    "city": "Buffalo",
+                    "state": "NY",
+                    "occupancy": 54.1366,
+                    "total_listing": 2,
+                    "airbnb_listings": 183,
+                    "description": null,
+                    "single_home_value": 84950,
+                    "single_home_value_formatted": "$84,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 33.0766944885,
+                            "cap_rate": 28.7440062509,
+                            "rental_income": 2034.8361091785
+                        },
+                        "traditional_rental": {
+                            "roi": 9.2014186382,
+                            "cap_rate": 12.1130076516,
+                            "rental_income": 857.5
+                        }
+                    },
+                    "mashMeter": 68.6
+                },
+                {
+                    "id": 270807,
+                    "name": "Bryant",
+                    "city": "Buffalo",
+                    "state": "NY",
+                    "occupancy": 56.4667,
+                    "total_listing": 7,
+                    "airbnb_listings": 180,
+                    "description": null,
+                    "single_home_value": 199900,
+                    "single_home_value_formatted": "$199,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.3407900147,
+                            "cap_rate": 12.9597694401,
+                            "rental_income": 2158.8815925635
+                        },
+                        "traditional_rental": {
+                            "roi": 2.6584850032,
+                            "cap_rate": 7.7438644322,
+                            "rental_income": 1289.99875
+                        }
+                    },
+                    "mashMeter": 65.64
+                },
+                {
+                    "id": 270840,
+                    "name": "Front Park",
+                    "city": "Buffalo",
+                    "state": "NY",
+                    "occupancy": 56.6188,
+                    "total_listing": 9,
+                    "airbnb_listings": 160,
+                    "description": null,
+                    "single_home_value": 199000,
+                    "single_home_value_formatted": "$199,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.9388404489,
+                            "cap_rate": 13.0779813106,
+                            "rental_income": 2168.7652340069
+                        },
+                        "traditional_rental": {
+                            "roi": 2.3896395829,
+                            "cap_rate": 5.6970407035,
+                            "rental_income": 944.75925
+                        }
+                    },
+                    "mashMeter": 79.38
+                },
+                {
+                    "id": 272750,
+                    "name": "Allen",
+                    "city": "Buffalo",
+                    "state": "NY",
+                    "occupancy": 54.9718,
+                    "total_listing": 3,
+                    "airbnb_listings": 142,
+                    "description": null,
+                    "single_home_value": 219900,
+                    "single_home_value_formatted": "$219,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -0.7920620888,
+                            "cap_rate": 11.9886922383,
+                            "rental_income": 2196.9278526729
+                        },
+                        "traditional_rental": {
+                            "roi": 0.8684587826,
+                            "cap_rate": 7.037585266,
+                            "rental_income": 1289.6375
+                        }
+                    },
+                    "mashMeter": 81.02
+                },
+                {
+                    "id": 273455,
+                    "name": "Delaware-West Ferry",
+                    "city": "Buffalo",
+                    "state": "NY",
+                    "occupancy": 52.7597,
+                    "total_listing": 10,
+                    "airbnb_listings": 129,
+                    "description": null,
+                    "single_home_value": 289900,
+                    "single_home_value_formatted": "$289,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.2879033254,
+                            "cap_rate": 9.2026819146,
+                            "rental_income": 2223.2145725256
+                        },
+                        "traditional_rental": {
+                            "roi": 1.541612041,
+                            "cap_rate": 8.2026146947,
+                            "rental_income": 1981.615
+                        }
+                    },
+                    "mashMeter": 61.9
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "NY",
+            "city": "Rochester",
+            "neighborhoods": [
+                {
+                    "id": 343878,
+                    "name": "Pearl-Meigs-Monroe",
+                    "city": "Rochester",
+                    "state": "NY",
+                    "occupancy": 61.2245,
+                    "total_listing": 2,
+                    "airbnb_listings": 98,
+                    "description": null,
+                    "single_home_value": 191950,
+                    "single_home_value_formatted": "$191,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 5.8426337242,
+                            "cap_rate": 13.366799076,
+                            "rental_income": 2138.130902199
+                        },
+                        "traditional_rental": {
+                            "roi": 1.8992648721,
+                            "cap_rate": 7.3827491534,
+                            "rental_income": 1180.93225
+                        }
+                    },
+                    "mashMeter": 79.14
+                },
+                {
+                    "id": 343912,
+                    "name": "South Wedge",
+                    "city": "Rochester",
+                    "state": "NY",
+                    "occupancy": 62.8182,
+                    "total_listing": 5,
+                    "airbnb_listings": 88,
+                    "description": null,
+                    "single_home_value": 209900,
+                    "single_home_value_formatted": "$209,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 4.7006058693,
+                            "cap_rate": 11.8933463089,
+                            "rental_income": 2080.344491865
+                        },
+                        "traditional_rental": {
+                            "roi": 1.9585951567,
+                            "cap_rate": 6.7912053359,
+                            "rental_income": 1187.895
+                        }
+                    },
+                    "mashMeter": 67.95
+                },
+                {
+                    "id": 343893,
+                    "name": "Swillburg",
+                    "city": "Rochester",
+                    "state": "NY",
+                    "occupancy": 60.3544,
+                    "total_listing": 11,
+                    "airbnb_listings": 79,
+                    "description": null,
+                    "single_home_value": 200000,
+                    "single_home_value_formatted": "$200,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 5.6521753208,
+                            "cap_rate": 12.6489718006,
+                            "rental_income": 2108.1619667658
+                        },
+                        "traditional_rental": {
+                            "roi": 2.9541262497,
+                            "cap_rate": 6.09063,
+                            "rental_income": 1015.105
+                        }
+                    },
+                    "mashMeter": 69.7
+                },
+                {
+                    "id": 343894,
+                    "name": "Ellwanger-Barry",
+                    "city": "Rochester",
+                    "state": "NY",
+                    "occupancy": 59.9494,
+                    "total_listing": 9,
+                    "airbnb_listings": 79,
+                    "description": null,
+                    "single_home_value": 189900,
+                    "single_home_value_formatted": "$189,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 4.0863684246,
+                            "cap_rate": 12.8323399935,
+                            "rental_income": 2030.7178039702
+                        },
+                        "traditional_rental": {
+                            "roi": 3.7579715749,
+                            "cap_rate": 7.6434913112,
+                            "rental_income": 1209.5825
+                        }
+                    },
+                    "mashMeter": 56.18
+                },
+                {
+                    "id": 343908,
+                    "name": "Park Avenue",
+                    "city": "Rochester",
+                    "state": "NY",
+                    "occupancy": 60.3684,
+                    "total_listing": 9,
+                    "airbnb_listings": 76,
+                    "description": null,
+                    "single_home_value": 299900,
+                    "single_home_value_formatted": "$299,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.6378819176,
+                            "cap_rate": 9.2431611602,
+                            "rental_income": 2310.0200266204
+                        },
+                        "traditional_rental": {
+                            "roi": -0.9385370215,
+                            "cap_rate": 4.4406452151,
+                            "rental_income": 1109.79125
+                        }
+                    },
+                    "mashMeter": 51.39
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "NY",
+            "city": "Albany",
+            "neighborhoods": [
+                {
+                    "id": 342690,
+                    "name": "Center Square",
+                    "city": "Albany",
+                    "state": "NY",
+                    "occupancy": 62.64,
+                    "total_listing": 18,
+                    "airbnb_listings": 75,
+                    "description": null,
+                    "single_home_value": 272500,
+                    "single_home_value_formatted": "$272,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 3.6646484137,
+                            "cap_rate": 14.7306872215,
+                            "rental_income": 3345.0935565475
+                        },
+                        "traditional_rental": {
+                            "roi": 0.467107823,
+                            "cap_rate": 5.3067027523,
+                            "rental_income": 1205.06375
+                        }
+                    },
+                    "mashMeter": 81.58
+                },
+                {
+                    "id": 342684,
+                    "name": "Park South",
+                    "city": "Albany",
+                    "state": "NY",
+                    "occupancy": 64.7432,
+                    "total_listing": 6,
+                    "airbnb_listings": 74,
+                    "description": null,
+                    "single_home_value": 255950,
+                    "single_home_value_formatted": "$255,950",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 13.9706179301,
+                            "cap_rate": 16.4943497963,
+                            "rental_income": 3518.107358631
+                        },
+                        "traditional_rental": {
+                            "roi": 2.1858291005,
+                            "cap_rate": 5.6818675523,
+                            "rental_income": 1211.895
+                        }
+                    },
+                    "mashMeter": 80.44
+                },
+                {
+                    "id": 342689,
+                    "name": "Central Avenue",
+                    "city": "Albany",
+                    "state": "NY",
+                    "occupancy": 59.2466,
+                    "total_listing": 8,
+                    "airbnb_listings": 73,
+                    "description": null,
+                    "single_home_value": 154500,
+                    "single_home_value_formatted": "$154,500",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 19.2709539936,
+                            "cap_rate": 25.3754936499,
+                            "rental_income": 3267.0948074229
+                        },
+                        "traditional_rental": {
+                            "roi": 6.0866608918,
+                            "cap_rate": 8.6345048544,
+                            "rental_income": 1111.6925
+                        }
+                    },
+                    "mashMeter": 83.72
+                },
+                {
+                    "id": 342678,
+                    "name": "Sheridan Hollow",
+                    "city": "Albany",
+                    "state": "NY",
+                    "occupancy": 60,
+                    "total_listing": 10,
+                    "airbnb_listings": 66,
+                    "description": null,
+                    "single_home_value": 217450,
+                    "single_home_value_formatted": "$217,450",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 5.2996998072,
+                            "cap_rate": 14.0016805488,
+                            "rental_income": 2537.2211961206
+                        },
+                        "traditional_rental": {
+                            "roi": 5.1703366637,
+                            "cap_rate": 7.8302966199,
+                            "rental_income": 1418.915
+                        }
+                    },
+                    "mashMeter": 81.38
+                },
+                {
+                    "id": 342685,
+                    "name": "Mansion Area",
+                    "city": "Albany",
+                    "state": "NY",
+                    "occupancy": 62.5938,
+                    "total_listing": 11,
+                    "airbnb_listings": 64,
+                    "description": null,
+                    "single_home_value": 149900,
+                    "single_home_value_formatted": "$149,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 4.6554177999,
+                            "cap_rate": 20.9947883241,
+                            "rental_income": 2622.598974814
+                        },
+                        "traditional_rental": {
+                            "roi": 6.0655164171,
+                            "cap_rate": 8.2863242161,
+                            "rental_income": 1035.1
+                        }
+                    },
+                    "mashMeter": 84.41
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "NY",
+            "city": "Syracuse",
+            "neighborhoods": [
+                {
+                    "id": 274643,
+                    "name": "Near Eastside",
+                    "city": "Syracuse",
+                    "state": "NY",
+                    "occupancy": 59.8444,
+                    "total_listing": 2,
+                    "airbnb_listings": 45,
+                    "description": null,
+                    "single_home_value": 175000,
+                    "single_home_value_formatted": "$175,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": -2.7040650845,
+                            "cap_rate": 11.9844110455,
+                            "rental_income": 1747.7266107979
+                        },
+                        "traditional_rental": {
+                            "roi": 3.371871829,
+                            "cap_rate": 7.767,
+                            "rental_income": 1132.6875
+                        }
+                    },
+                    "mashMeter": 67.71
+                },
+                {
+                    "id": 275818,
+                    "name": "University Hill",
+                    "city": "Syracuse",
+                    "state": "NY",
+                    "occupancy": 58.9333,
+                    "total_listing": 0,
+                    "airbnb_listings": 45,
+                    "description": null,
+                    "single_home_value": 441585,
+                    "single_home_value_formatted": "$441,585",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 0.4966835441,
+                            "cap_rate": 4.9257233799,
+                            "rental_income": 1812.60463226
+                        },
+                        "traditional_rental": {
+                            "roi": -1.4287187971,
+                            "cap_rate": 2.7863874452,
+                            "rental_income": 1025.35575
+                        }
+                    },
+                    "mashMeter": 51.38
+                },
+                {
+                    "id": 274645,
+                    "name": "Near Northeast",
+                    "city": "Syracuse",
+                    "state": "NY",
+                    "occupancy": 59.5238,
+                    "total_listing": 9,
+                    "airbnb_listings": 42,
+                    "description": null,
+                    "single_home_value": 84900,
+                    "single_home_value_formatted": "$84,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 17.5168361664,
+                            "cap_rate": 26.0724095341,
+                            "rental_income": 1844.6229745371
+                        },
+                        "traditional_rental": {
+                            "roi": 7.3748365879,
+                            "cap_rate": 13.7488515901,
+                            "rental_income": 972.73125
+                        }
+                    },
+                    "mashMeter": 71.51
+                },
+                {
+                    "id": 276644,
+                    "name": "Wescott",
+                    "city": "Syracuse",
+                    "state": "NY",
+                    "occupancy": 60.3077,
+                    "total_listing": 18,
+                    "airbnb_listings": 39,
+                    "description": null,
+                    "single_home_value": 177400,
+                    "single_home_value_formatted": "$177,400",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 3.3110594253,
+                            "cap_rate": 11.9976518461,
+                            "rental_income": 1773.6528645833
+                        },
+                        "traditional_rental": {
+                            "roi": 3.365663908,
+                            "cap_rate": 6.3253664036,
+                            "rental_income": 935.1
+                        }
+                    },
+                    "mashMeter": 67.8
+                },
+                {
+                    "id": 274314,
+                    "name": "Lincoln Park",
+                    "city": "Syracuse",
+                    "state": "NY",
+                    "occupancy": 58.5405,
+                    "total_listing": 11,
+                    "airbnb_listings": 37,
+                    "description": null,
+                    "single_home_value": 120000,
+                    "single_home_value_formatted": "$120,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 9.7216897673,
+                            "cap_rate": 17.6648815538,
+                            "rental_income": 1766.4881553819
+                        },
+                        "traditional_rental": {
+                            "roi": 10.0481670698,
+                            "cap_rate": 12.397125,
+                            "rental_income": 1239.7125
+                        }
+                    },
+                    "mashMeter": 79.29
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    },
+    {
+        "status": "success",
+        "content": {
+            "total_results": 5,
+            "current_page": "1",
+            "state": "DC",
+            "city": "Washington",
+            "neighborhoods": [
+                {
+                    "id": 403138,
+                    "name": "Lady Bird Johnson Park",
+                    "city": "Washington",
+                    "state": "DC",
+                    "occupancy": 68.6897,
+                    "total_listing": 0,
+                    "airbnb_listings": 477,
+                    "description": null,
+                    "single_home_value": 529000,
+                    "single_home_value_formatted": "$529,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 7.2254806019,
+                            "cap_rate": 9.9850435589,
+                            "rental_income": 4401.7400355413
+                        },
+                        "traditional_rental": {
+                            "roi": 4.8093173913,
+                            "cap_rate": 7.3004177694,
+                            "rental_income": 3218.2675
+                        }
+                    },
+                    "mashMeter": 75.3463
+                },
+                {
+                    "id": 403491,
+                    "name": "Sursum Corda Cooperative",
+                    "city": "Washington",
+                    "state": "DC",
+                    "occupancy": 69.5791,
+                    "total_listing": 25,
+                    "airbnb_listings": 316,
+                    "description": null,
+                    "single_home_value": 749900,
+                    "single_home_value_formatted": "$749,900",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.4978665292,
+                            "cap_rate": 6.9785742556,
+                            "rental_income": 4361.0273619027
+                        },
+                        "traditional_rental": {
+                            "roi": 2.713414526,
+                            "cap_rate": 5.92364982,
+                            "rental_income": 3701.7875
+                        }
+                    },
+                    "mashMeter": 84.56
+                },
+                {
+                    "id": 121750,
+                    "name": "Ledroit Park",
+                    "city": "Washington",
+                    "state": "DC",
+                    "occupancy": 69.6396,
+                    "total_listing": 23,
+                    "airbnb_listings": 283,
+                    "description": null,
+                    "single_home_value": 875000,
+                    "single_home_value_formatted": "$875,000",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.1906231428,
+                            "cap_rate": 5.4736329563,
+                            "rental_income": 3991.1906972777
+                        },
+                        "traditional_rental": {
+                            "roi": 3.0959458792,
+                            "cap_rate": 4.8688731429,
+                            "rental_income": 3550.22
+                        }
+                    },
+                    "mashMeter": 71.85
+                },
+                {
+                    "id": 403490,
+                    "name": "NoMa",
+                    "city": "Washington",
+                    "state": "DC",
+                    "occupancy": 69.8051,
+                    "total_listing": 6,
+                    "airbnb_listings": 272,
+                    "description": null,
+                    "single_home_value": 862450,
+                    "single_home_value_formatted": "$862,450",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 1.2809105814,
+                            "cap_rate": 5.9950741304,
+                            "rental_income": 4308.7097364417
+                        },
+                        "traditional_rental": {
+                            "roi": 1.5031013382,
+                            "cap_rate": 3.9146269349,
+                            "rental_income": 2813.475
+                        }
+                    },
+                    "mashMeter": 86.8
+                },
+                {
+                    "id": 403492,
+                    "name": "Swampoodle",
+                    "city": "Washington",
+                    "state": "DC",
+                    "occupancy": 69.9882,
+                    "total_listing": 3,
+                    "airbnb_listings": 255,
+                    "description": null,
+                    "single_home_value": 299985,
+                    "single_home_value_formatted": "$299,985",
+                    "investment_rentals": {
+                        "airbnb_rental": {
+                            "roi": 2.5939348936,
+                            "cap_rate": 18.2838267062,
+                            "rental_income": 4570.7281287169
+                        },
+                        "traditional_rental": {
+                            "roi": 3.7407389084,
+                            "cap_rate": 12.5593279664,
+                            "rental_income": 3139.675
+                        }
+                    },
+                    "mashMeter": 84.5
+                }
+            ]
+        },
+        "message": "City Overview fetched successfully"
+    }
+]
