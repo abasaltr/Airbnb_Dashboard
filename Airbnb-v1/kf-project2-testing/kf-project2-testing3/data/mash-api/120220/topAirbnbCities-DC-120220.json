@@ -1,0 +1,1 @@
+{"status": "success", "content": {"input": {"page": "1", "items": "5", "state": "DC"}, "total_page_results": 1, "cities": [{"city": "Washington", "state": "DC", "occupancy": 53.70082593, "total_listing": 7025, "occ_listing": 377248.30212313}]}}
