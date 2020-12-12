@@ -28,13 +28,15 @@ app = Flask(__name__)
 try:
     db_uri = os.environ['DATABASE_URL']
 except KeyError:
-    db_uri = f'postgres://{user}:{password}@localhost:5432/airbnb_db'
+    db_uri = f'postgres://{user}:unicorn@localhost:5432/airbnb_db'
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 db = SQLAlchemy(app)
 
 #################################################
 # Create classes to frame database table instance
 #################################################
+
+
 class Cities(db.Model):
     __tablename__ = 'top_airbnb_cities'
 
@@ -44,7 +46,8 @@ class Cities(db.Model):
 
     def __repr__(self):
         return '<City %r>' % (self.city)
-## end Cities() class
+# end Cities() class
+
 
 class Nbh_Overview(db.Model):
     __tablename__ = 'neighborhood_overview'
@@ -61,7 +64,8 @@ class Nbh_Overview(db.Model):
 
     def __repr__(self):
         return '<Walkscore %r>' % (self.walkscore)
-## end Nbh_Overview() class
+# end Nbh_Overview() class
+
 
 class Nbh(db.Model):
     __tablename__ = 'top_neighborhood_overview'
@@ -73,7 +77,8 @@ class Nbh(db.Model):
 
     def __repr__(self):
         return '<Name %r>' % (self.name)
-## end Nbh() class
+# end Nbh() class
+
 
 class City_Nbh(db.Model):
     __tablename__ = 'city_nbh'
@@ -83,7 +88,8 @@ class City_Nbh(db.Model):
 
     def __repr__(self):
         return '<city_nbh %r>' % (self.nbh_id)
-## end city_nbh() class
+# end city_nbh() class
+
 
 class Nbh_Insights(db.Model):
     __tablename__ = 'neighborhood_insights'
@@ -93,13 +99,15 @@ class Nbh_Insights(db.Model):
     rental_income_change = db.Column(db.String(64))
     rental_income_change_pct = db.Column(db.Float)
     occupancy = db.Column(db.Float)
-    occupancy_change  = db.Column(db.String(64))
+    occupancy_change = db.Column(db.String(64))
     occupancy_change_pct = db.Column(db.Float)
     reviews_count_slope = db.Column(db.Float)
     reviews_count_rsquare = db.Column(db.Float)
+
     def __repr__(self):
         return '<nbh_id %r>' % (self.nbh_id)
-## end Nbh_Insights() class
+# end Nbh_Insights() class
+
 
 class Listing_Info(db.Model):
     __tablename__ = 'listings_info'
@@ -108,24 +116,22 @@ class Listing_Info(db.Model):
     nbh_id = db.Column(db.Integer)
     lat = db.Column(db.Float)
     lon = db.Column(db.Float)
-    city  = db.Column(db.String(64))
-    state  = db.Column(db.String(64))
+    city = db.Column(db.String(64))
+    state = db.Column(db.String(64))
     night_price = db.Column(db.Float)
     cleaning_fee = db.Column(db.Float)
     nights_booked = db.Column(db.Float)
     rental_income = db.Column(db.Float)
-    property_type  = db.Column(db.String(64))
+    property_type = db.Column(db.String(64))
     room_count = db.Column(db.Integer)
     bed_count = db.Column(db.Integer)
     max_capacity = db.Column(db.Integer)
     star_rating = db.Column(db.Float)
     total_reviews = db.Column(db.Integer)
 
-
     def __repr__(self):
         return '<airbnb_id %r>' % (self.airbnb_id)
-## end Listing_Info() class
-
+# end Listing_Info() class
 
 
 class Rental_Rates(db.Model):
@@ -139,8 +145,9 @@ class Rental_Rates(db.Model):
     four_room = db.Column(db.Integer)
 
     def __repr__(self):
-         return '<nbh_id %r>' % (self.nbh_id)
-## end  Rental_Rates() class
+        return '<nbh_id %r>' % (self.nbh_id)
+# end  Rental_Rates() class
+
 
 class Rental_Rates_Info(db.Model):
     __tablename__ = 'rental_rates_info'
@@ -155,8 +162,8 @@ class Rental_Rates_Info(db.Model):
     median_occupancy = db.Column(db.Float)
 
     def __repr__(self):
-         return '<nbh_id %r>' % (self.nbh_id)
-## end  Rental_Rates_Info() class
+        return '<nbh_id %r>' % (self.nbh_id)
+# end  Rental_Rates_Info() class
 
 
 class Census_Crime(db.Model):
@@ -167,11 +174,10 @@ class Census_Crime(db.Model):
     TotalPop = db.Column(db.Integer)
     IncomePerCap = db.Column(db.Integer)
     Crime_RatePer100K = db.Column(db.Float)
-    
+
     def __repr__(self):
         return '<crime_id %r>' % (self.crime_id)
-## end Census_Crime() class
-
+# end Census_Crime() class
 
 
 #################################################
@@ -185,21 +191,25 @@ def send():
         city = Cities(city=city, state=state)
         return redirect("/", code=302)
     return render_template("form.html")
-## end send() route
+# end send() route
 
 # create route that renders index.html template
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
-## end home() route
+# end home() route
 
 #################################################
+
+
 @app.route("/api/cities")
 def city():
-    
+
     results = db.session.query(Cities.city_id, Cities.city, Cities.state, City_Nbh.city_id, City_Nbh.nbh_id, Nbh.nbh_id, Nbh.name, Nbh.county)\
-        .join(City_Nbh, Cities.city_id==City_Nbh.city_id)\
-        .join(Nbh, City_Nbh.nbh_id==Nbh.nbh_id)\
+        .join(City_Nbh, Cities.city_id == City_Nbh.city_id)\
+        .join(Nbh, City_Nbh.nbh_id == Nbh.nbh_id)\
         .all()
 
     city_id = [result[0] for result in results]
@@ -210,7 +220,7 @@ def city():
     county = [result[7] for result in results]
 
     city_data = [{
-        "city_id":city_id, 
+        "city_id": city_id,
         "city": city,
         "state": state,
         "county": county,
@@ -218,13 +228,15 @@ def city():
         "nbh_name": nbh_name
     }]
     return jsonify(city_data)
-## end city() route
+# end city() route
 
 #################################################
+
+
 @app.route("/api/nbh-overview")
 def nbh_overview():
     results = db.session.query(Nbh_Overview.nbh_id, Nbh_Overview.latitude, Nbh_Overview.longitude, Nbh_Overview.walkscore, Nbh.name, Nbh.county)\
-        .join(Nbh, Nbh_Overview.nbh_id==Nbh.nbh_id)\
+        .join(Nbh, Nbh_Overview.nbh_id == Nbh.nbh_id)\
         .all()
 
     nbh_id = [result[0] for result in results]
@@ -243,7 +255,7 @@ def nbh_overview():
         "county": county
     }]
     return jsonify(nbh_overview_data)
-## end nbh_overview() route
+# end nbh_overview() route
 
 
 #################################################
@@ -259,13 +271,14 @@ def city_nbh():
         "city_id": city_id
     }]
     return jsonify(city_nbh_data)
-## end nbh_overview() route
+# end nbh_overview() route
 
 
 #################################################
 @app.route("/api/census-crime")
 def census_crime():
-    results = db.session.query(Census_Crime.crime_id, Census_Crime.nbh_id, Census_Crime.TotalPop, Census_Crime.IncomePerCap, Census_Crime.Crime_RatePer100K).all()
+    results = db.session.query(Census_Crime.crime_id, Census_Crime.nbh_id, Census_Crime.TotalPop,
+                               Census_Crime.IncomePerCap, Census_Crime.Crime_RatePer100K).all()
 
     crime_id = [result[0] for result in results]
     nbh_id = [result[1] for result in results]
@@ -281,181 +294,214 @@ def census_crime():
         "crime_rate": crime_rate
     }]
     return jsonify(census_crime_data)
-## end census_crime() route
+# end census_crime() route
 
 
 #################################################
 @app.route("/api/statistics/<city_id>/<nbh_id>")
 def statistics(city_id, nbh_id):
     print("inside")
-    
-    # retrieve overview and insights data 
-    if nbh_id != "0":
-        results =  db.session.query(Nbh_Overview.nbh_id.label("nbh_id"), \
-                            func.sum(Nbh_Overview.airbnb_count).label("airbnb_count"),\
-                            func.sum(Nbh_Overview.other_count).label("other_count"),\
-                            func.sum(Nbh_Overview.avg_occupancy).label("avg_occupancy"),\
-                            func.sum(Nbh_Overview.median_price).label("median_price"),\
-                            func.sum(Nbh_Overview.sqft_price).label("sqft_price"),\
-                            func.sum(Nbh_Insights.rental_income).label("rental_income"),\
-                            func.sum(Nbh_Insights.rental_income_change_pct).label("rental_income_change_pct"),\
-                            func.sum(Nbh_Insights.occupancy).label("occupancy"),\
-                            func.sum(Nbh_Insights.occupancy_change_pct).label("occupancy_change_pct"),\
-                            func.sum(Nbh_Insights.reviews_count_slope).label("reviews_count_slope"),\
-                            func.sum(Nbh_Insights.reviews_count_rsquare).label("reviews_count_rsquare"),\
-                            func.avg(Listing_Info.night_price).label("night_price"),\
-                            func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
-                            func.avg(Listing_Info.nights_booked).label("nights_booked"),\
-                            func.avg(Listing_Info.rental_income).label("rental_income"),
-                            func.avg(Listing_Info.total_reviews).label("total_reviews"),\
-                            func.count(Listing_Info.night_price).label("listing_count"))\
-                    .join(Nbh_Insights, Nbh_Overview.nbh_id==Nbh_Insights.nbh_id)  \
-                    .join(Listing_Info, Nbh_Overview.nbh_id==Listing_Info.nbh_id)  \
-                    .filter(Nbh_Overview.nbh_id == nbh_id)\
-                    .group_by(Nbh_Overview.nbh_id)
-    else:
-        results =  db.session.query(City_Nbh.city_id.label("city_id"), 
-                            func.sum(Nbh_Overview.airbnb_count).label("airbnb_count"),\
-                            func.sum(Nbh_Overview.other_count).label("other_count"),\
-                            func.avg(Nbh_Overview.avg_occupancy).label("avg_occupancy"),\
-                            func.avg(Nbh_Overview.median_price).label("median_price"),\
-                            func.avg(Nbh_Overview.sqft_price).label("sqft_price"),\
-                            func.avg(Nbh_Insights.rental_income).label("rental_income"),\
-                            func.avg(Nbh_Insights.rental_income_change_pct).label("rental_income_change_pct"),\
-                            func.avg(Nbh_Insights.occupancy).label("occupancy"),\
-                            func.avg(Nbh_Insights.occupancy_change_pct).label("occupancy_change_pct"),\
-                            func.avg(Nbh_Insights.reviews_count_slope).label("reviews_count_slope"),\
-                            func.avg(Nbh_Insights.reviews_count_rsquare).label("reviews_count_rsquare"),\
-                            func.avg(Listing_Info.night_price).label("night_price"),\
-                            func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
-                            func.avg(Listing_Info.nights_booked).label("nights_booked"),\
-                            func.avg(Listing_Info.rental_income).label("rental_income"),
-                            func.avg(Listing_Info.total_reviews).label("total_reviews"),\
-                            func.count(Listing_Info.night_price).label("listing_count"))\
-                    .join(Nbh_Insights, Nbh_Overview.nbh_id==Nbh_Insights.nbh_id)  \
-                    .join(Listing_Info, Nbh_Overview.nbh_id==Listing_Info.nbh_id)  \
-                    .join(City_Nbh, City_Nbh.nbh_id ==  Nbh_Overview.nbh_id)\
-                    .filter(City_Nbh.city_id == city_id)\
-                    .group_by(City_Nbh.city_id)
 
- 
+    # retrieve overview and insights data
+    if nbh_id != "0":
+        results = db.session.query(Nbh_Overview.nbh_id.label("nbh_id"),
+                                   func.sum(Nbh_Overview.airbnb_count).label(
+                                       "airbnb_count"),
+                                   func.sum(Nbh_Overview.other_count).label(
+                                       "other_count"),
+                                   func.sum(Nbh_Overview.avg_occupancy).label(
+                                       "avg_occupancy"),
+                                   func.sum(Nbh_Overview.median_price).label(
+                                       "median_price"),
+                                   func.sum(Nbh_Overview.sqft_price).label(
+                                       "sqft_price"),
+                                   func.sum(Nbh_Insights.rental_income).label(
+                                       "rental_income"),
+                                   func.sum(Nbh_Insights.rental_income_change_pct).label(
+                                       "rental_income_change_pct"),
+                                   func.sum(Nbh_Insights.occupancy).label(
+                                       "occupancy"),
+                                   func.sum(Nbh_Insights.occupancy_change_pct).label(
+                                       "occupancy_change_pct"),
+                                   func.sum(Nbh_Insights.reviews_count_slope).label(
+                                       "reviews_count_slope"),
+                                   func.sum(Nbh_Insights.reviews_count_rsquare).label(
+                                       "reviews_count_rsquare"),
+                                   func.avg(Listing_Info.night_price).label(
+                                       "night_price"),
+                                   func.avg(Listing_Info.cleaning_fee).label(
+                                       "cleaning_fee"),
+                                   func.avg(Listing_Info.nights_booked).label(
+                                       "nights_booked"),
+                                   func.avg(Listing_Info.rental_income).label(
+            "rental_income"),
+            func.avg(Listing_Info.total_reviews).label(
+                                       "total_reviews"),
+            func.count(Listing_Info.night_price).label("listing_count"))\
+            .join(Nbh_Insights, Nbh_Overview.nbh_id == Nbh_Insights.nbh_id)  \
+            .join(Listing_Info, Nbh_Overview.nbh_id == Listing_Info.nbh_id)  \
+            .filter(Nbh_Overview.nbh_id == nbh_id)\
+            .group_by(Nbh_Overview.nbh_id)
+    else:
+        results = db.session.query(City_Nbh.city_id.label("city_id"),
+                                   func.sum(Nbh_Overview.airbnb_count).label(
+                                       "airbnb_count"),
+                                   func.sum(Nbh_Overview.other_count).label(
+                                       "other_count"),
+                                   func.avg(Nbh_Overview.avg_occupancy).label(
+                                       "avg_occupancy"),
+                                   func.avg(Nbh_Overview.median_price).label(
+                                       "median_price"),
+                                   func.avg(Nbh_Overview.sqft_price).label(
+                                       "sqft_price"),
+                                   func.avg(Nbh_Insights.rental_income).label(
+                                       "rental_income"),
+                                   func.avg(Nbh_Insights.rental_income_change_pct).label(
+                                       "rental_income_change_pct"),
+                                   func.avg(Nbh_Insights.occupancy).label(
+                                       "occupancy"),
+                                   func.avg(Nbh_Insights.occupancy_change_pct).label(
+                                       "occupancy_change_pct"),
+                                   func.avg(Nbh_Insights.reviews_count_slope).label(
+                                       "reviews_count_slope"),
+                                   func.avg(Nbh_Insights.reviews_count_rsquare).label(
+                                       "reviews_count_rsquare"),
+                                   func.avg(Listing_Info.night_price).label(
+                                       "night_price"),
+                                   func.avg(Listing_Info.cleaning_fee).label(
+                                       "cleaning_fee"),
+                                   func.avg(Listing_Info.nights_booked).label(
+                                       "nights_booked"),
+                                   func.avg(Listing_Info.rental_income).label(
+            "rental_income"),
+            func.avg(Listing_Info.total_reviews).label(
+                                       "total_reviews"),
+            func.count(Listing_Info.night_price).label("listing_count"))\
+            .join(Nbh_Insights, Nbh_Overview.nbh_id == Nbh_Insights.nbh_id)  \
+            .join(Listing_Info, Nbh_Overview.nbh_id == Listing_Info.nbh_id)  \
+            .join(City_Nbh, City_Nbh.nbh_id == Nbh_Overview.nbh_id)\
+            .filter(City_Nbh.city_id == city_id)\
+            .group_by(City_Nbh.city_id)
+
     statList = []
-    
-    for result in results :
+
+    for result in results:
         daily_rate = (result[15] * 12) / result[14]
         StatData = {
-            "statinfo" :
+            "statinfo":
             {
-                "city_id" : city_id,
-                "nbh_id" : nbh_id,
+                "city_id": city_id,
+                "nbh_id": nbh_id,
                 "airbnb_count": str(result[1]),
                 "other_count": str(result[2]),
                 "avg_occupancy": str("{0:.2f}".format(result[3])),
                 "median_price": str("{0:.2f}".format(result[4])),
                 "sqft_price": str("{0:.2f}".format(result[5])),
-                "rental_income" : str("{0:.2f}".format(result[6])),
-                "rental_income_change_pct" : str("{0:.2f}".format(result[7])),
-                "occupancy" : str("{0:.2f}".format(result[8])),
-                "occupancy_change_pct" : str("{0:.2f}".format(result[9])),
-                "reviews_count_slope" : str("{0:.2f}".format(result[10])),
-                "reviews_count_rsquare" : str("{0:.2f}".format(result[11])),
-                "average_daily_price" : str("{0:.2f}".format(daily_rate)),
-                "night_price" : str("{0:.2f}".format(result[12])),
-                "cleaning_fee" : str("{0:.2f}".format(result[13])),
-                "nights_booked" : str("{0:.2f}".format(result[14])),
-                "rental_income" : str("{0:.2f}".format(result[15])),
-                "review_count" : str("{0:.2f}".format(result[16])),
-                "listing_count" : str("{0:.2f}".format(result[17]))
+                "rental_income": str("{0:.2f}".format(result[6])),
+                "rental_income_change_pct": str("{0:.2f}".format(result[7])),
+                "occupancy": str("{0:.2f}".format(result[8])),
+                "occupancy_change_pct": str("{0:.2f}".format(result[9])),
+                "reviews_count_slope": str("{0:.2f}".format(result[10])),
+                "reviews_count_rsquare": str("{0:.2f}".format(result[11])),
+                "average_daily_price": str("{0:.2f}".format(daily_rate)),
+                "night_price": str("{0:.2f}".format(result[12])),
+                "cleaning_fee": str("{0:.2f}".format(result[13])),
+                "nights_booked": str("{0:.2f}".format(result[14])),
+                "rental_income": str("{0:.2f}".format(result[15])),
+                "review_count": str("{0:.2f}".format(result[16])),
+                "listing_count": str("{0:.2f}".format(result[17]))
             }
         }
         statList.append(StatData)
-    
+
     return jsonify(statList)
-## end statistics() route
+# end statistics() route
 
 #################################################
+
+
 @app.route("/api/rental_size/<city_id>/<nbh_id>")
 def rentalSize(city_id, nbh_id):
-  
-      # retrieve rental rates data 
-    if nbh_id != "0":
-        results =  db.session.query(
-                        Rental_Rates_Info.bed_number, \
-                        Rental_Rates_Info.count,\
-                        Rental_Rates_Info.rental_income,\
-                        Rental_Rates_Info.median_value,\
-                        Rental_Rates_Info.median_night_rate,\
-                        Rental_Rates_Info.median_occupancy)\
-                        .filter(Rental_Rates_Info.nbh_id == nbh_id) 
-    else:
-        results =  db.session.query(
-                        Rental_Rates_Info.bed_number.label("bed_number"),\
-                        func.sum(Rental_Rates_Info.count).label("count"),\
-                        func.avg(Rental_Rates_Info.rental_income).label("rental_income"),\
-                        func.avg(Rental_Rates_Info.median_value).label("median_value"),\
-                        func.avg(Rental_Rates_Info.median_night_rate).label("median_night_rate"),\
-                        func.avg(Rental_Rates_Info.median_occupancy).label("median_occupancy"))\
-                    .join(City_Nbh, City_Nbh.nbh_id ==  Rental_Rates_Info.nbh_id)\
-                    .filter(City_Nbh.city_id == city_id)\
-                    .group_by(Rental_Rates_Info.bed_number)
 
+    # retrieve rental rates data
+    if nbh_id != "0":
+        results = db.session.query(
+            Rental_Rates_Info.bed_number,
+            Rental_Rates_Info.count,
+            Rental_Rates_Info.rental_income,
+            Rental_Rates_Info.median_value,
+            Rental_Rates_Info.median_night_rate,
+            Rental_Rates_Info.median_occupancy)\
+            .filter(Rental_Rates_Info.nbh_id == nbh_id)
+    else:
+        results = db.session.query(
+            Rental_Rates_Info.bed_number.label("bed_number"),
+            func.sum(Rental_Rates_Info.count).label("count"),
+            func.avg(Rental_Rates_Info.rental_income).label("rental_income"),
+            func.avg(Rental_Rates_Info.median_value).label("median_value"),
+            func.avg(Rental_Rates_Info.median_night_rate).label(
+                "median_night_rate"),
+            func.avg(Rental_Rates_Info.median_occupancy).label("median_occupancy"))\
+            .join(City_Nbh, City_Nbh.nbh_id == Rental_Rates_Info.nbh_id)\
+            .filter(City_Nbh.city_id == city_id)\
+            .group_by(Rental_Rates_Info.bed_number)
 
     rentalInfoList = []
-    
-    for result in results :
+
+    for result in results:
         rentalData = {
-            "Rentalinfo" :
+            "Rentalinfo":
             {
-                "city_id" : city_id,
-                "nbh_id" : nbh_id,
+                "city_id": city_id,
+                "nbh_id": nbh_id,
                 "bed_number": str(result[0]),
                 "count": str(result[1]),
                 "rental_income": str(result[2]),
                 "median_value": str(result[3]),
-                "median_night_rate": str(result[4]) ,
-                "median_occupancy" : str(result[5])
+                "median_night_rate": str(result[4]),
+                "median_occupancy": str(result[5])
             }
         }
         rentalInfoList.append(rentalData)
-    
+
     return jsonify(rentalInfoList)
 
-## end rental_rates() route
+# end rental_rates() route
 
 
 ###############################################
 @app.route("/api/rental_type/<city_id>/<nbh_id>")
 def rentalType(city_id, nbh_id):
 
-    # retrieve rental rates data 
+    # retrieve rental rates data
     if nbh_id != "0":
-        results =  db.session.query(
-                        Listing_Info.property_type.label("property_type"),\
-                        func.avg(Listing_Info.night_price).label("night_price"),\
-                        func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
-                        func.avg(Listing_Info.nights_booked).label("nights_booked"),\
-                        func.avg(Listing_Info.rental_income).label("rental_income"))\
-                        .filter(Listing_Info.nbh_id == nbh_id) \
-                        .group_by(Listing_Info.property_type)
+        results = db.session.query(
+            Listing_Info.property_type.label("property_type"),
+            func.avg(Listing_Info.night_price).label("night_price"),
+            func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),
+            func.avg(Listing_Info.nights_booked).label("nights_booked"),
+            func.avg(Listing_Info.rental_income).label("rental_income"))\
+            .filter(Listing_Info.nbh_id == nbh_id) \
+            .group_by(Listing_Info.property_type)
     else:
-        results =  db.session.query(
-                        Listing_Info.property_type.label("property_type"),\
-                        func.avg(Listing_Info.night_price).label("night_price"),\
-                        func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),\
-                        func.avg(Listing_Info.nights_booked).label("nights_booked"),\
-                        func.avg(Listing_Info.rental_income).label("rental_income"))\
-                    .join(City_Nbh, City_Nbh.nbh_id ==  Listing_Info.nbh_id)\
-                    .filter(City_Nbh.city_id == city_id)\
-                    .group_by(Listing_Info.property_type)
+        results = db.session.query(
+            Listing_Info.property_type.label("property_type"),
+            func.avg(Listing_Info.night_price).label("night_price"),
+            func.avg(Listing_Info.cleaning_fee).label("cleaning_fee"),
+            func.avg(Listing_Info.nights_booked).label("nights_booked"),
+            func.avg(Listing_Info.rental_income).label("rental_income"))\
+            .join(City_Nbh, City_Nbh.nbh_id == Listing_Info.nbh_id)\
+            .filter(City_Nbh.city_id == city_id)\
+            .group_by(Listing_Info.property_type)
 
     rentalTypeList = []
-    
-    for result in results :
+
+    for result in results:
         rentalData = {
-            "Rentalinfo" :
+            "Rentalinfo":
             {
-                "city_id" : city_id,
-                "nbh_id" : nbh_id,
+                "city_id": city_id,
+                "nbh_id": nbh_id,
                 "property_type": str(result[0]),
                 "night_price": str("{0:.2f}".format(result[1])),
                 "cleaning_fee": str("{0:.2f}".format(result[2])),
@@ -464,10 +510,11 @@ def rentalType(city_id, nbh_id):
             }
         }
         rentalTypeList.append(rentalData)
-    
+
     return jsonify(rentalTypeList)
 
-## end rental_type() route
+# end rental_type() route
+
 
 #################################################
 if __name__ == "__main__":
