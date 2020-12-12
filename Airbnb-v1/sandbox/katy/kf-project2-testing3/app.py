@@ -180,6 +180,14 @@ class Census_Crime(db.Model):
     Native = db.Column(db.Float)
     Asian = db.Column(db.Float)
     Pacific = db.Column(db.Float)
+    Murder = db.Column(db.Integer)
+    Rape = db.Column(db.Integer)
+    Robbery = db.Column(db.Integer)
+    #Agg.Assault = db.Column(db.Integer)
+    Burglary = db.Column(db.Integer)
+    Larceny = db.Column(db.Integer)
+    MotorVeh = db.Column(db.Integer)
+    Arson = db.Column(db.Integer)
 
     def __repr__(self):
         return '<crime_id %r>' % (self.crime_id)
@@ -314,6 +322,43 @@ def census_crime():
     }]
     return jsonify(census_crime_data)
 # end census_crime() route
+
+
+#################################################
+
+@app.route("/api/crime_stats")
+def crime_stats():
+    results = db.session.query(Census_Crime.crime_id, Census_Crime.nbh_id, Census_Crime.Crime_RatePer100K,
+                               Census_Crime.Murder, Census_Crime.Rape, Census_Crime.Robbery,  Census_Crime.Burglary, Census_Crime.Larceny, Census_Crime.MotorVeh, Census_Crime.Arson
+                               ).all()
+# Census_Crime.Agg.Assault,
+    crime_id = [result[0] for result in results]
+    nbh_id = [result[1] for result in results]
+    crime_rate = [result[2] for result in results]
+    crime_murder = [result[3] for result in results]
+    crime_rape = [result[4] for result in results]
+    crime_robbery = [result[5] for result in results]
+    #crime_aggassault = [result[6] for result in results]
+    crime_burglary = [result[6] for result in results]
+    crime_larceny = [result[7] for result in results]
+    crime_motorvehicle = [result[8] for result in results]
+    crime_arson = [result[9] for result in results]
+
+    crime_data = [{
+        "crime_id": crime_id,
+        "nbh_id": nbh_id,
+        "crime_rate": crime_rate,
+        'crime_murder': crime_murder,
+        'crime_rape': crime_rape,
+        'crime_robbery': crime_robbery,
+        # 'crime_aggassault': crime_aggassault,
+        'crime_burglary': crime_burglary,
+        'crime_larceny': crime_larceny,
+        'crime_motorvehicle': crime_motorvehicle,
+        'crime_arson': crime_arson
+    }]
+    return jsonify(crime_data)
+# end crime_stats() route
 
 
 #################################################

@@ -7,6 +7,7 @@ var overviewIn = [];
 var cityNbhIn = [];
 var censusCrimeIn = [];
 var rentalIncomeIn = [];
+var crimeStatsIn = [];
 
 // Fetch the JSON data and call function init()
 var url_cities = "/api/cities";
@@ -14,7 +15,8 @@ var url_overview = "/api/nbh-overview";
 var url_city_nbh = "/api/city-nbh";
 var url_census_crime = "/api/census-crime"
 var url_rental_income = "/api/income_change"
-var urls = [url_cities, url_overview, url_city_nbh, url_census_crime, url_rental_income];
+var url_crime_stats = "/api/crime_stats"
+var urls = [url_cities, url_overview, url_city_nbh, url_census_crime, url_rental_income, url_crime_stats];
 var promises = [];
 urls.forEach(function (url) { promises.push(d3.json(url)) });
 console.log(promises);
@@ -54,6 +56,13 @@ function addRentalIncome(response) {
     return cities;
 }//end addCities() function
 
+function addCrimeStats(response) {
+    var crime_stats = response;
+
+    return crime_stats;
+
+}//end addCities() function
+
 // function init
 function init(data) {
     citiesIn = addCities(data[0]);
@@ -61,7 +70,9 @@ function init(data) {
     cityNbhIn = addCityNbh(data[2]);
     censusCrimeIn = addCensusCrime(data[3]);
     rentalIncomeIn = addRentalIncome(data[4]);
+    crimeStatsIn = addCrimeStats(data[5]);
     createCensusPanel(censusCrimeIn[0], overviewIn[0], 274853);
+    createCrimeTable(crimeStatsIn[0], overviewIn[0], 274853);
 }//end init() function
 
 
@@ -274,7 +285,58 @@ function createCensusPanel(censusData, nbhData, nbh_id) {
     }
 }
 
+//function to  crime stats
+function createCrimeTable(crimeData, nbhData, nbh_id) {
 
+    j = 0;
+
+    //d3.select("#demographic").text(tblElement)
+    d3.select("#crime-stats").selectAll("table").remove();
+    let table = d3.select("#crime-stats").append('table').attr('class', 'table table-striped')
+    let header = table.append('thead')
+    let headers = ['Murder', 'Rape', 'Robbery', 'Burglary', 'Larceny', 'MotorVehicle', 'Arson']
+    headers.forEach(function (d) {
+        let colHeader = header.append('th')
+        colHeader.text(d)
+        //'Agg.Assault', 
+    })
+
+    for (i = 0; i < crimeData['nbh_id'].length; i++) {
+        if (nbh_id == parseInt(crimeData['nbh_id'][i])) {
+
+
+            tblElement = "<table><tr>";
+            tblElement = tblElement + "<th>Murder</th>" + "<th>Rape</th>" + "<th>Robbery</th>"
+                + "<th>Burglary</th>" + "<th>Larceny</th>" + "<th>MotorVehicle</th>" + "<th>Arson</th>";
+            tblElement = tblElement + "</tr></table>"
+            //   + "<th>Agg.Assault</th>"
+
+            var row = table.append('tr')
+            let murder_row = row.append('td')
+            let rape_row = row.append('td')
+            let robb_row = row.append('td')
+            //let assault_row = row.append('td')
+            let burg_row = row.append('td')
+            let larceny_row = row.append('td')
+            let car_row = row.append('td')
+            let arson_row = row.append('td')
+
+            murder_row.text(addCommas(crimeData["crime_murder"][i]))
+            rape_row.text(addCommas(crimeData["crime_rape"][i]))
+            robb_row.text(addCommas(crimeData["crime_robbery"][i]))
+            //assault_row.text(crimeData["crime_aggassault"][i])
+            burg_row.text(addCommas(crimeData["crime_burglary"][i]))
+            larceny_row.text(addCommas(crimeData["crime_larceny"][i]))
+            car_row.text(addCommas(crimeData["crime_motorvehicle"][i]))
+            arson_row.text(addCommas(crimeData["crime_arson"][i]))
+
+        }
+    }
+}
+
+function removeCrimetable() {
+    d3.select("#crime-stats").selectAll("table").remove();;
+}
 
 // from html 
 function changeNbh(nbh_name) {
@@ -283,6 +345,7 @@ function changeNbh(nbh_name) {
     var nbh_index = getNbhIndex(nbh_name);
     buildGauge(overviewIn[0], nbh_index);
     buildBulletIncome(rentalIncomeIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
+    createCrimeTable(crimeData[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
     createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
 }
 
@@ -293,6 +356,7 @@ function changeCity(city_name) {
     var nbh_index = getNbhIndexId(nbh_id)
     buildGauge(overviewIn[0], nbh_index);
     createCensusPanel(censusCrimeIn[0], overviewIn[0], nbh_id)
+    createCrimeTable(crimeData[0], overviewIn[0], nbh_id)
     updateNeighborhoods(city_name)
 }
 
@@ -358,7 +422,7 @@ function updateNeighborhoods(cityName) {
 
 //build bullet chart for rental income section
 function buildBulletIncome(nbh_insights_data, nbh_index) {
-    console.log("iam here")
+    console.log("i am here")
 
 
     for (i = 0; i < nbh_insights_data['nbh_id'].length; i++) {
