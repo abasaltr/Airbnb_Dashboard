@@ -59,6 +59,7 @@ function init(data) {
     overviewIn = addNbhOverview(data[1]);
     cityNbhIn = addCityNbh(data[2]);
     topNbhIn = addTopNbh(data[3]);
+
 }//end init() function
 
 

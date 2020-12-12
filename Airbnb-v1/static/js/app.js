@@ -6,18 +6,33 @@ var citiesIn = [];
 var overviewIn = [];
 var cityNbhIn = [];
 var censusCrimeIn = [];
+var rentalIncomeIn = [];
+var crimeStatsIn = [];
+var topNbhIn = [];
 
 // Fetch the JSON data and call function init()
 var url_cities = "/api/cities";
 var url_overview = "/api/nbh-overview";
 var url_city_nbh = "/api/city-nbh";
 var url_census_crime = "/api/census-crime"
-var urls = [url_cities, url_overview, url_city_nbh, url_census_crime];
+var url_rental_income = "/api/income_change"
+var url_crime_stats = "/api/crime_stats"
+var url_top_nbh = "/api/top-nbh";
+var urls = [url_cities, url_overview, url_city_nbh, url_census_crime, url_rental_income, url_crime_stats, url_top_nbh];
+
 var promises = [];
 urls.forEach(function (url) { promises.push(d3.json(url)) });
 console.log(promises);
 Promise.all(promises).then(data => init(data));
 // end JSON Fetch
+
+
+// add event listener to the heatmap button
+d3.select("#heatbtn").on("click", function(){
+    // Use D3 to select the dropdown menu value
+    var nbh_id = getTopNbhId(d3.select('#selNeighborhood option:checked').text());
+    window.open("/map/" + nbh_id);    
+})
 
 // function addCities
 function addCities(response) {
@@ -29,7 +44,7 @@ function addCities(response) {
 // functon addNbhOverview
 function addNbhOverview(response) {
     var overview = response;
-    buildGauge(response[0],0);
+    buildGauge(response[0],31);
     return overview;
 }//end addNbhOverview() function
 
@@ -46,13 +61,43 @@ function addCensusCrime(response) {
     return census_crime;
 }//end addCensusCrime() function
 
+function addCrimeStats(response) {
+    var crime_stats = response;
+
+    return crime_stats;
+
+}//end addCities() function
+
+
+// function addTopNbh
+function addTopNbh(response) {
+    var top_nbh = response;
+    return top_nbh;
+}//end addTopNbh() function
+
+
+function addRentalIncome(response) {
+    var cities = response;
+    buildBulletIncome(response[0], 271298);
+    return cities;
+}//end addRentalIncome() function
+
+
+
+
 // function init
 function init(data) {
     citiesIn = addCities(data[0]);
     overviewIn = addNbhOverview(data[1]);
     cityNbhIn = addCityNbh(data[2]);
     censusCrimeIn = addCensusCrime(data[3]);
-    createCensusPanel(censusCrimeIn[0], overviewIn[0], 274853);
+    rentalIncomeIn = addRentalIncome(data[4]);
+    crimeStatsIn = addCrimeStats(data[5]);
+    topNbhIn = addTopNbh(data[6]);
+    createCensusPanel(censusCrimeIn[0], overviewIn[0], 271298);
+    createCrimeTable(crimeStatsIn[0], overviewIn[0], 274853);
+    d3.select('#selCity').property('value', 'Houston');
+    d3.select("#heading").text("Houston")
 }//end init() function
 
 
@@ -191,6 +236,19 @@ function getCityNbh(name){
     return nbh_id;
 }
 
+// getCityId function
+function getCityId(name){
+    city_id = 0
+    nbh_id = 0
+    for (i = 0; i < citiesIn[0]['city'].length; i++) {
+        if (name == citiesIn[0]['city'][i]){
+            city_id = parseInt(citiesIn[0]['city_id'][i]);
+            break;
+        }
+    }
+    return city_id;
+}
+
 function addCommas(number){
     number += '';
     var x = number.split('.');
@@ -203,24 +261,120 @@ function addCommas(number){
     return x1+x2;
 }
 
+//function to ease data cleaning into 2 decimals
+function decimalRound(number) {
+    var formatInteger = d3.format(",");
+    var formatDecimal = d3.format(",.2f");
+
+    var number1 = 10101;
+    var number2 = 12334.2;
+    return !(number % 1) ? formatInteger(number) : formatDecimal(number)
+}
+
 function createCensusPanel(censusData, nbhData, nbh_id){
    
-      /* 
-    Someone wants to search for a city with a neighborhood choice because they clicked the search button! 
-    _log(cityChoice);
-    _log(neighborhoodChoice);
-    */
-   //censusDataRecord = censusData.filter(obj=> obj["nbh_id"] == nbh_id);
-   for (i = 0; i < censusData['nbh_id'].length; i++) {
-        if (nbh_id == parseInt(censusData['nbh_id'][i])){
+    d3.select("#demographic").selectAll("table").remove();
+    let table = d3.select("#demographic").append('table').attr('class', 'table table-striped')
+    let header = table.append('thead')
+    let headers = ['Hispanic', 'White', 'Black', 'Native', 'Asian', 'Pacific']
+    headers.forEach(function (d) {
+        let colHeader = header.append('th')
+        colHeader.text(d)
+    })
+
+    for (i = 0; i < censusData['nbh_id'].length; i++) {
+        if (nbh_id == parseInt(censusData['nbh_id'][i])) {
             console.log(censusData["total_pop"][i]);
 
             d3.select("#population").text(addCommas(censusData["total_pop"][i]));
-            break;
+            d3.select("#capita").text(addCommas(censusData["income_cap"][i]));
+            d3.select("#crime").text(decimalRound(censusData["crime_rate"][i]));
+
+            tblElement = "<table><tr>";
+            tblElement = tblElement + "<th>Hispanic</th>" + "<th>White</th>" + "<th>Black</th>" + "<th>Native</th>" + "<th>Asian</th>" + "<th>Pacific</th>";
+            tblElement = tblElement + "</tr></table>"
+
+            var row = table.append('tr')
+            let hisp_row = row.append('td')
+            let white_row = row.append('td')
+            let black_row = row.append('td')
+            let native_row = row.append('td')
+            let asian_row = row.append('td')
+            let pacific_row = row.append('td')
+
+            hisp_row.text(censusData["demo_Hispanic"][i])
+            white_row.text(censusData["demo_White"][i])
+            black_row.text(censusData["demo_Black"][i])
+            native_row.text(censusData["demo_Native"][i])
+            asian_row.text(censusData["demo_Asian"][i])
+            pacific_row.text(censusData["demo_Pacific"][i])
+
         }
-   }
+    }
 
 
+}
+
+
+// getTopNbhId function
+function getTopNbhId(name){
+    nbh_id = 0
+    console.log(topNbhIn[0]['name'])
+    for (i = 0; i < topNbhIn[0]['name'].length; i++) {
+        if (name == topNbhIn[0]['name'][i]){
+            nbh_id = parseInt(topNbhIn[0]['nbh_id'][i]);
+        }
+    }
+    return nbh_id;
+}
+
+//function to  crime stats
+function createCrimeTable(crimeData, nbhData, nbh_id) {
+
+    j = 0;
+
+    //d3.select("#demographic").text(tblElement)
+    d3.select("#crimeStat").selectAll("table").remove();
+    let table = d3.select("#crimeStat").append('table').attr('class', 'table table-striped')
+    let header = table.append('thead')
+    let headers = ['Murder', 'Rape', 'Robbery', 'Burglary', 'Larceny', 'MotorVehicle', 'Arson']
+    headers.forEach(function (d) {
+        let colHeader = header.append('th')
+        colHeader.text(d)
+        //'Agg.Assault', 
+    })
+
+    for (i = 0; i < crimeData['nbh_id'].length; i++) {
+        if (nbh_id == parseInt(crimeData['nbh_id'][i])) {
+
+
+            tblElement = "<table><tr>";
+            tblElement = tblElement + "<th>Murder</th>" + "<th>Rape</th>" + "<th>Robbery</th>"
+                + "<th>Burglary</th>" + "<th>Larceny</th>" + "<th>MotorVehicle</th>" + "<th>Arson</th>";
+            tblElement = tblElement + "</tr></table>"
+            //   + "<th>Agg.Assault</th>"
+
+            var row = table.append('tr')
+            let murder_row = row.append('td')
+            let rape_row = row.append('td')
+            let robb_row = row.append('td')
+            //let assault_row = row.append('td')
+            let burg_row = row.append('td')
+            let larceny_row = row.append('td')
+            let car_row = row.append('td')
+            let arson_row = row.append('td')
+
+            murder_row.text(addCommas(crimeData["crime_murder"][i]))
+            rape_row.text(addCommas(crimeData["crime_rape"][i]))
+            robb_row.text(addCommas(crimeData["crime_robbery"][i]))
+            //assault_row.text(crimeData["crime_aggassault"][i])
+            burg_row.text(addCommas(crimeData["crime_burglary"][i]))
+            larceny_row.text(addCommas(crimeData["crime_larceny"][i]))
+            car_row.text(addCommas(crimeData["crime_motorvehicle"][i]))
+            arson_row.text(addCommas(crimeData["crime_arson"][i]))
+
+        }
+    }
 }
 
 
@@ -230,6 +384,24 @@ function changeNbh(nbh_name) {
     var nbh_index = getNbhIndex(nbh_name);
     buildGauge(overviewIn[0], nbh_index);
     createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
+    createCrimeTable(crimeStatsIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
+    buildBulletIncome(rentalIncomeIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
+    Update_statistics("0", overviewIn[0]['nbh_id'][nbh_index])
+    ROIstat("0", overviewIn[0]['nbh_id'][nbh_index])
+    BuildRental_incomeChart("0", overviewIn[0]['nbh_id'][nbh_index])
+    rentalTypeChart("0", overviewIn[0]['nbh_id'][nbh_index])
+    name = d3.select('#selCity option:checked').text();
+    if (name != null)
+    {
+        name = (name.concat(", ")).concat(nbh_name)
+
+    }
+    else
+    {
+        name = nbh_name
+    }
+    console.log(name)
+    d3.select("#heading").text(name)
 }
 
 // from html 
@@ -237,9 +409,20 @@ function changeCity(city_name) {
     removeWalkScore();
     var nbh_id = getCityNbh(city_name);
     var nbh_index = getNbhIndexId(nbh_id)
+    var city_id = getCityId(city_name)
     buildGauge(overviewIn[0], nbh_index);
     createCensusPanel(censusCrimeIn[0], overviewIn[0], nbh_id)
+    createCrimeTable(crimeStatsIn[0], overviewIn[0], nbh_id);
+    buildBulletIncome(rentalIncomeIn[0], nbh_id)
+    Update_statistics(city_id, "0")
+    ROIstat(city_id, "0")
+    rentalTypeChart(city_id, "0")
+    BuildRental_incomeChart(city_id, "0")
     updateNeighborhoods(city_name)
+    
+    city_name = d3.select('#selCity option:checked').text();
+    d3.select("#heading").text(city_name)
+
 }
 
 // clear walking score visualization
@@ -254,7 +437,7 @@ function buildGauge(nbh_ovw,nbh_index) {
     var trace1 = {
         domain: { x: [0, 1], y: [0, 1] },
         value: parseInt(walkscore[nbh_index]),
-        title: { text: "Walkscore", font: { family: "Arial", size: 14, color: "#337AB7" } },
+        title: { text: "", font: { family: "Arial", size: 14, color: "#337AB7" } },
         type: "indicator",
         mode: "gauge+delta",
         delta: { reference: 0, increasing: { color: "darkblue" }, font: { size: 18 } },
@@ -278,7 +461,7 @@ function buildGauge(nbh_ovw,nbh_index) {
     
     var data = [trace1];
     var layout = {
-        font: { family: "Arial", size: 12, color: "#337AB7" }, width: 275, height: 135, margin: { t: 0, b: 0 }, plot_bgcolor: "azure",
+        font: { family: "Arial", size: 12, color: "#337AB7" }, width: 275, height: 100, margin: { t: 0, b: 0 }, plot_bgcolor: "azure",
         paper_bgcolor: "azure", 
     };
     Plotly.newPlot('walkScore', data, layout);
@@ -298,5 +481,43 @@ function updateNeighborhoods(cityName){
     d3.select("#selNeighborhood").selectAll("option").remove()
     createDropList(neighborHoods, "selNeighborhood", "Select Neighborhood", 2);    
 }
+
+
+//build bullet chart for rental income section
+function buildBulletIncome(nbh_insights_data, nbh_index) {
+    console.log("iam here")
+
+
+    for (i = 0; i < nbh_insights_data['nbh_id'].length; i++) {
+        if (nbh_index == parseInt(nbh_insights_data['nbh_id'][i])) {
+            rental_income = nbh_insights_data["rental_income"][i]
+            rental_income_change_pct = rental_income + ((rental_income * nbh_insights_data["rental_income_change_pct"][i]) / 100)
+            console.log(nbh_insights_data["rental_income"][i]);
+            console.log(nbh_insights_data["rental_income_change_pct"][i]);
+
+        }
+    }
+
+    var data = [
+        {
+            type: "indicator",
+            mode: "number+gauge+delta",
+            gauge: { shape: "bullet" ,  bar: { color: "darkblue" }},
+            delta: { reference: rental_income_change_pct },
+            value: rental_income,
+            domain: { x: [0, 1], y: [0, 1] },
+            title: { text: "Avg Monthly",
+            font: { size: 12 }}
+        }
+    ];
+
+    var layout = { width: 400, height: 75,  margin: { l: 100,  r: 10, b: 25,  t: 5 }};
+    Plotly.newPlot('income', data, layout);
+
+}
+function removeBulletIncome() {
+d3.select("income").selectAll("div").remove();
+}
+//******************* */
 
 //******************* */

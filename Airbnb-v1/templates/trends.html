@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="#" />
+
+    <title>Dashboard | Airbnb Analysis</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="static/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <!-- insert plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon ">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="sidebar-brand-text ">Airbnb Dashboard</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Analysis Collapse Menu -->           
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnalysis"
+                    aria-expanded="true" aria-controls="collapseAnalysis">
+                    <span>Analysis</span>
+                </a>
+                <div id="collapseAnalysis" class="collapse" aria-labelledby="headingAnalysis"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="heatMap.html">Rental Map</a>
+                        <a class="collapse-item" href="trends.html">Trends and Forecast</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-1 my-md-0 mw-100 ">
+                        <div class="input-group">
+                            <label for="selCity"> City </label>
+                            <select id="selCity" onchange="changeCity(this.value)" class="ml-1 mr-2 text-secondary-100">
+                            </select>
+
+                            <label for="selNeighborhood"> Neighborhood </label>
+                            <select id="selNeighborhood" onchange="changeNbh(this.value)" class="ml-1 mr-1 text-secondary-100">
+                            </select>
+                        </div>
+                    </form>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-3">
+                        <h2 class="h3 mb-0 text-gray-600">Airbnb Market Analysis Dashboard</h2>
+                        <h4 id="heading" class="h6 mb-0 text-info-250"> </h4>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Get Latest Data</a>
+                    </div>
+
+                    <!-- Content Row -->
+                    
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Rental Map -->
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header -->
+                                <div
+                                    class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-info">Rental Analysis</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body centerElement">
+                                    <div class="row">
+                                        <div class="col-xl-10 col-lg-10 col-md-10">
+                                            <div id= "trends" class="centerElement" >
+                                            
+                                            </div>
+                                        </div>
+                                        
+                                    </div>      
+                            
+                            
+
+                                
+                        </div>
+
+                        <!-- income score  -->
+                        <div class="col-xl-4 col-lg-4">
+                            
+                    </div>           
+
+                       
+
+
+
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+    </div>
+            <!-- End of Main Content -->
+
+         
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Custom scripts for all pages-->
+    <script src="static/js/navbar.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/statistics.js"></script>
+    <script src="static/js/roistats.js"></script>
+    <script src="static/js/rentalTypes.js"></script>
+    <script src="static/js/rentalIncome.js"></script>
+</body>
+
+</html>
+
