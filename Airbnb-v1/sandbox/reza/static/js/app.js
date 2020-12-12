@@ -23,7 +23,8 @@ Promise.all(promises).then(data => init(data));
 d3.select("#heatbtn").on("click", function(){
     // Use D3 to select the dropdown menu value
     var nbh_id = getTopNbhId(d3.select('#selNeighborhood option:checked').text());
-    window.open("/map/" + nbh_id);    
+    window.open("/map/" + nbh_id);
+       
 })
 
 // function addCities

@@ -1,12 +1,15 @@
 # import necessary libraries
 import os
+import glob
 import numpy as np
 
 from flask import (
     Flask,
+    flash,
     render_template,
     jsonify,
     request,
+    url_for,
     redirect)
 
 from flask_sqlalchemy import SQLAlchemy
@@ -18,7 +21,7 @@ from db_key import user, password
 # Flask Setup
 #################################################
 app = Flask(__name__)
-
+#APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 #################################################
 # Database Setup
 #################################################
@@ -32,6 +35,8 @@ db = SQLAlchemy(app)
 #################################################
 # Create classes to frame database table instance
 #################################################
+
+
 class Cities(db.Model):
     __tablename__ = 'top_airbnb_cities'
 
@@ -41,7 +46,8 @@ class Cities(db.Model):
 
     def __repr__(self):
         return '<City %r>' % (self.city)
-## end Cities() class
+# end Cities() class
+
 
 class Nbh_Overview(db.Model):
     __tablename__ = 'neighborhood_overview'
@@ -53,7 +59,8 @@ class Nbh_Overview(db.Model):
 
     def __repr__(self):
         return '<Walkscore %r>' % (self.walkscore)
-## end Nbh_Overview() class
+# end Nbh_Overview() class
+
 
 class Nbh(db.Model):
     __tablename__ = 'top_neighborhood_overview'
@@ -65,7 +72,8 @@ class Nbh(db.Model):
 
     def __repr__(self):
         return '<Name %r>' % (self.name)
-## end Nbh() class
+# end Nbh() class
+
 
 class City_Nbh(db.Model):
     __tablename__ = 'city_nbh'
@@ -75,7 +83,8 @@ class City_Nbh(db.Model):
 
     def __repr__(self):
         return '<city_nbh %r>' % (self.nbh_id)
-## end city_nbh() class
+# end city_nbh() class
+
 
 class Listings_Info(db.Model):
     __tablename__ = 'listings_info'
@@ -101,7 +110,7 @@ class Listings_Info(db.Model):
 
     def __repr__(self):
         return '<airbnb_id %r>' % (self.airbnb_id)
-## end city_nbh() class
+# end city_nbh() class
 
 
 #################################################
@@ -115,20 +124,27 @@ def send():
         city = Cities(city=city, state=state)
         return redirect("/", code=302)
     return render_template("heatmap.html")
-## end send() route
+# end send() route
 
 # create route that renders index.html template
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
-## end home() route
+# end home() route
 
 # create route that renders index.html template
 @app.route("/map/<nbh_id>")
 def openHeatMap(nbh_id):
+    #print(nbh_id)
     jdata = getHeatData(nbh_id)
     return render_template("heatmap.html")
-## end openHeatMap() route
+# end openHeatMap() route
+
+@app.route("/icon/<filename>") 
+def getIcon(filename):
+    return render_template("icon.html", user_image = filename)
 
 @app.route("/api/map/<nbh_id>")
 def getHeatData(nbh_id):
@@ -188,7 +204,7 @@ def getHeatData(nbh_id):
     }]
 
     return jsonify(listings_data)
-## end getHeatData() route
+# end getHeatData() route
 
 
 #################################################
@@ -216,7 +232,7 @@ def city():
         "nbh_name": nbh_name
     }]
     return jsonify(city_data)
-## end city() route
+# end city() route
 
 #################################################
 @app.route("/api/nbh-overview")
@@ -241,7 +257,7 @@ def nbh_overview():
         "county": county
     }]
     return jsonify(nbh_overview_data)
-## end nbh_overview() route
+# end nbh_overview() route
 
 
 #################################################
@@ -257,7 +273,7 @@ def city_nbh():
         "city_id": city_id
     }]
     return jsonify(city_nbh_data)
-## end nbh_overview() route
+# end nbh_overview() route
 
 
 #################################################
@@ -275,7 +291,7 @@ def top_nbh():
         "county":county
     }]
     return jsonify(top_nbh_data)
-## end top_nbh() route
+# end top_nbh() route
 
 
 
