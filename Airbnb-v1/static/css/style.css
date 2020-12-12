@@ -8,6 +8,7 @@ body {
   /* Padding bottom by footer height */
   padding-bottom: 80px;
   background-color: azure;
+  height:100%;
 }
 
 .iframeContainer {
@@ -32,7 +33,7 @@ body {
 }
 
 .centerElement {
-  height: 300px;
+  height: 350px;
   overflow: hidden;
 
 }
@@ -86,4 +87,8 @@ body {
 
 .table{
   font-size :12px;
+}
+
+.container-fluid {
+  min-height: 100%;
 }

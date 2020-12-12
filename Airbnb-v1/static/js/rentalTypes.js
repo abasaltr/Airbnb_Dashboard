@@ -48,7 +48,7 @@ function rentalTypeChart(city_id, nbh_id){
       yaxis: { title: "Avgerage"},
       
     };
-    var config = { responsive: true ,  height: 300,  margin: { l: 60,  r: 10, b: 25,  t: 5 } };
+    var config = { responsive: true ,  height: 300,  margin: { l: 60,  r: 10, b: 5,  t: 2 } };
     Plotly.newPlot("map", data, layout, config);
   });
 }

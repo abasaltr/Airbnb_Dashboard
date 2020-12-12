@@ -33,9 +33,10 @@ console.log(dataPoints)
 var chart = new CanvasJS.Chart("incomeChart", {
 	animationEnabled: true,
     height:300,
-    width :500,
+    width :600,
 	title:{
-		text:"Rental income by Property"
+        text:"Rental income by Property",
+        fontSize: 15
 	},
 	axisX:{
 		interval: 1
@@ -43,7 +44,7 @@ var chart = new CanvasJS.Chart("incomeChart", {
 	axisY2:{
 		interlacedColor: "rgba(1,77,101,.2)",
 		gridColor: "rgba(1,77,101,.1)",
-		title: "Property Type"
+		title: "Rental Income"
 	},
 	data: [{
 		type: "bar",

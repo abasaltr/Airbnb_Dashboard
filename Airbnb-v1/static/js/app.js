@@ -98,6 +98,7 @@ function init(data) {
     createCrimeTable(crimeStatsIn[0], overviewIn[0], 274853);
     d3.select('#selCity').property('value', 'Houston');
     d3.select("#heading").text("Houston")
+    updateNeighborhoods("Houston")
 }//end init() function
 
 
