@@ -51,8 +51,19 @@ body {
   }
   
   .legend {
-    height: 120px;
-    width: 80px;
+    height: 140px;
+    width: 90px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color:azure;
+  }
+
+  .legendLeaf {
+    height: 100px;
+    width: 100px;
     padding-top: 10px;
     padding-left: 10px;
     border-radius: 10px;

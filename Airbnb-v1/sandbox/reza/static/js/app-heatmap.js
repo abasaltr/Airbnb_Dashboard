@@ -73,13 +73,15 @@ Promise.all(promises).then(data => init(data));
 // function to initialize data read and bridge between layers
 function init(data) {
 
-    console.log(data[0][0]);
+    //console.log(data[0][0]);
 
     var cleaningLayer = addCleaningFees(data[0][0]);
+    var reviewLayer = addReviews(data[0][0]);
 
     var overlayMaps = {
         "Cleaning Fees": L.layerGroup(cleaningLayer[0]),
-        "Listings Heat": L.layerGroup(cleaningLayer[1])
+        "Nights Booked": L.layerGroup(reviewLayer),
+        "Airbnb Listings": L.layerGroup(cleaningLayer[1])
     };
     // Only one base layer can be shown at a time
     var baseMaps = {
@@ -243,9 +245,15 @@ function addCleaningFees(data) {
 
     // Set up the legend
     var legend = L.control({ position: "bottomright" });
+
+    
+
     legend.onAdd = function (map) {
         var div = L.DomUtil.create("div", "legend");
-        var limits = ["0—25", "25—50", "50—100", "100—150", "150—250", "250+"];
+
+        div.innerHTML = 'Cleaning Fees<br>';
+
+        var limits = ["$0—25", "$25—50", "$50—100", "$100—150", "$150—250", "$250+"];
         var colors = ["lime", "#CCFF00", "#FFCC00", "#FF9900", "#FF6600", "#BF0000"];
         var labels = [];
 
@@ -282,3 +290,134 @@ function addCleaningFees(data) {
 
     return cleaningLayers;
 }; //end addCleaningFees()
+
+
+// function adds airbnb review layers to a list array and returns back to init()
+// Size of the leaf will be the total reviews
+// Color of the leaf will be the star rating
+function addReviews(data) {
+  
+    //console.log(data);
+  
+    var listings = []
+    var lat = []
+    var lon = []
+    var property = []
+    var nightsBooked = []
+    var totalReviews = []
+    var county = []
+    var city = []
+    var nbh_name = []
+    var rentalIncome = []
+    var starRating = []
+ 
+    for (x in data){
+        //console.log(x);
+        if (x == "airbnb_id"){
+            listings.push(data[x]);
+        }
+        if (x == "lat"){
+            lat.push(data[x]);
+        }
+        if (x == "lon"){
+            lon.push(data[x]);
+        }
+        if (x == "property_type"){
+            property.push(data[x]);
+        }
+        if (x == "nights_booked"){
+            nightsBooked.push(data[x]);
+        }
+        if (x == "total_reviews"){
+            totalReviews.push(data[x]);
+        }
+        if (x == "star_rating"){
+            starRating.push(data[x]);
+        }
+        if (x == "rental_income"){
+            rentalIncome.push(data[x]);
+        }
+    }
+
+    // Define a markerSize function that will give each earthquake a different radius based on its magnitude
+    function leafSize(reviews) {
+        return parseInt(reviews*0.16);
+    }
+
+    var leafLayers = [];
+    // loop through each earthquake features and assign its coordinates
+    for (var i=0; i < listings[0].length; i++) {
+
+        size = leafSize(totalReviews[0][i]);
+        
+        var LeafIcon = L.Icon.extend({
+            options: {
+                shadowUrl: '../static/images/leaf-shadow.png',
+                iconSize:     [38+size, 95+size], // size of the icon in pixels [width, height]
+                shadowSize:   [50+(parseInt(size/2)), 64+(parseInt(size/2))], // size of the shadow
+                iconAnchor:   [22+(parseInt(size*0.65)), 94+size], // point of the icon which will correspond to marker's location [+ left, + up]
+                shadowAnchor: [4+(parseInt(size*0.05)), 62+(parseInt(size/2))], // the same for the shadow
+                popupAnchor:  [-3, -76-parseInt(size/1.5)] // point from which the popup should open relative to the iconAnchor
+            }
+        });
+
+        var greenIcon = new LeafIcon({iconUrl: '../static/images/leaf-green.png'}),
+            redIcon = new LeafIcon({iconUrl: '../static/images/leaf-red.png'}),
+            orangeIcon = new LeafIcon({iconUrl: '../static/images/leaf-orange.png'});
+
+        L.icon = function (options) {
+            return new L.Icon(options);
+        };
+
+        if (nightsBooked[0][i] > 245){
+            leafLayers.push(L.marker([lat[0][i], lon[0][i]], {icon: greenIcon}).bindPopup(
+                `<div class="popup"><h4>Property: ${property[0][i]}</h4><hr> 
+                <h5>Total Reviews: ${parseInt(totalReviews[0][i])} </h5> 
+                <h5>Nights Booked: ${parseInt(nightsBooked[0][i])} </h5>
+                <h5>Star Rating: ${parseInt(starRating[0][i])} </h5>
+                <h5>Rental Income: $${parseInt(rentalIncome[0][i])} </h5>
+                </div>`));
+        }
+        else if (nightsBooked[0][i] > 125){
+            leafLayers.push(L.marker([lat[0][i], lon[0][i]], {icon: orangeIcon}).bindPopup(
+                `<div class="popup"><h4>Property: ${property[0][i]}</h4><hr> 
+                <h5>Total Reviews: ${parseInt(totalReviews[0][i])} </h5> 
+                <h5>Nights Booked: ${parseInt(nightsBooked[0][i])} </h5>
+                <h5>Star Rating: ${parseInt(starRating[0][i])} </h5>
+                <h5>Rental Income: $${parseInt(rentalIncome[0][i])} </h5>
+                </div>`));
+        }
+        else if (nightsBooked[0][i] > 2){
+            leafLayers.push(L.marker([lat[0][i], lon[0][i]], {icon: redIcon}).bindPopup(
+                `<div class="popup"><h4>Property: ${property[0][i]}</h4><hr> 
+                <h5>Total Reviews: ${parseInt(totalReviews[0][i])} </h5> 
+                <h5>Nights Booked: ${parseInt(nightsBooked[0][i])} </h5>
+                <h5>Star Rating: ${parseInt(starRating[0][i])} </h5>
+                <h5>Rental Income: $${parseInt(rentalIncome[0][i])} </h5>
+                </div>`));
+        }
+        
+    }
+
+    // Set up the legend
+    var legend = L.control({ position: "bottomleft" });
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create("div", "legendLeaf");
+        var limits = ["2—125", "125—245", "245—365"];
+        var labels = ['../static/images/leaf-red-l.png', '../static/images/leaf-orange-l.png','../static/images/leaf-green-l.png'];
+
+        div.innerHTML = 'Nights Booked<br>';
+
+        for (var i = 0; i < limits.length; i++) {
+            div.innerHTML +=
+                limits[i] + (" <img src="+ labels[i] +" height='20' width='20'>") +'<br>';
+        }
+
+        return div;
+    };
+
+    // Adding legend to the map
+    legend.addTo(map);
+
+    return leafLayers;
+}
