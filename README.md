@@ -1,4 +1,4 @@
-# Project II - Airbnb Dashboard
+# Project III - Airbnb Dashboard
 
 Group 6:
 Katy Fuentes, Nicole Pipkins, Reza Abasaltian, Radhika Balasubramaniam
