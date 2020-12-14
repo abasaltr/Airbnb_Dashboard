@@ -37,7 +37,9 @@ d3.select("#heatbtn").on("click", function () {
 // function addCities
 function addCities(response) {
     var cities = response;
+    
     initDropList(cities[0]);
+  
     return cities;
 }//end addCities() function
 
@@ -75,7 +77,7 @@ function addTopNbh(response) {
     return top_nbh;
 }//end addTopNbh() function
 
-
+// add rental income
 function addRentalIncome(response) {
     var cities = response;
     buildBulletIncome(response[0], 271298);
@@ -94,6 +96,7 @@ function init(data) {
     rentalIncomeIn = addRentalIncome(data[4]);
     crimeStatsIn = addCrimeStats(data[5]);
     topNbhIn = addTopNbh(data[6]);
+    // pre initialize the select boxes to houston
     createCensusPanel(censusCrimeIn[0], overviewIn[0], 271298);
     createCrimeTable(crimeStatsIn[0], overviewIn[0], 274853);
     d3.select('#selCity').property('value', 'Houston');
@@ -109,12 +112,36 @@ function initDropList(cityData) {
     var uniqueCity = [...new Set(Object.values(cityData['city']))];
     var nbh_name = Object.values(cityData['nbh_name']);
 
+    var city_table = [
+        {
+             "id" : ["selCity", ...new Set(Object.values(cityData['city_id']))], 
+             "name" : ["Select City", ...new Set(Object.values(cityData['city']))]
+        }];
+      
+    var nbh_table = [
+        {
+            "id" : ["selNbh", ...new Set(Object.values(cityData['nbh_id']))], 
+            "name" : ["Select Neighborhood",...new Set(Object.values(cityData['nbh_name']))]
+        }];
+  
+    //createDropListWithNeighborhoodsFiltered(city_table, "#selCity", "Select City")
     // call function to populate the form dropdown menu options for each filter criteria in alphabetical order
     createDropList(uniqueCity, "selCity", "Select City", 2);
     createDropList(nbh_name, "selNeighborhood", "Select Neighborhood", 2);
 
 }//initDropList() function
 
+
+function createDropListWithNeighborhoodsFiltered(menu, selectname, idname)
+{
+    d3.select(selectname).select("options").remove();
+    for (i = 0; i <menu[i]['id'].length; i++)
+    {
+        
+    }
+   
+
+}
 
 // function to populate the form dropdown menu options for each filter criteria in alphabetical order
 // passing parameters include the filter array list, html tag select name (placeholder text string), 
@@ -142,7 +169,7 @@ function createDropList(menu, selectname, idname, sType) {
     // assign result to list array of data values 
     const addElementToBeginningOfArray = (a, e) => [e, ...a]
     values = addElementToBeginningOfArray(sort_values, idname);
-
+   
     // createElement() method creates an Element Node with the specified name.
     // create html select tag assigning name and id to the select parameters passed
     //var select = document.createElement("select");
@@ -194,6 +221,9 @@ function createDropList(menu, selectname, idname, sType) {
         select.appendChild(option);
     }
 }//end createDropList() function
+
+
+
 
 function getNbhIndex(name) {
     indexName = 0
@@ -250,6 +280,7 @@ function getCityId(name) {
     return city_id;
 }
 
+// a function to add commas to the number
 function addCommas(number) {
     number += '';
     var x = number.split('.');
@@ -272,9 +303,10 @@ function decimalRound(number) {
     return !(number % 1) ? formatInteger(number) : formatDecimal(number)
 }
 
+// A function to update the census panel
 function createCensusPanel(censusData, nbhData, nbh_id) {
 
-    d3.select("#demographic").selectAll("div").remove();
+    d3.select("#demographic").selectAll("table").remove();
     d3.select("#population").selectAll("div").remove();
     d3.select("#capita").selectAll("div").remove();
     d3.select("#crime").selectAll("div").remove();
@@ -295,6 +327,7 @@ function createCensusPanel(censusData, nbhData, nbh_id) {
             d3.select("#capita").text(addCommas(censusData["income_cap"][i]));
             d3.select("#crime").text(decimalRound(censusData["crime_rate"][i]));
 
+            // create the table element
             tblElement = "<table><tr>";
             tblElement = tblElement + "<th>Hispanic</th>" + "<th>White</th>" + "<th>Black</th>" + "<th>Native</th>" + "<th>Asian</th>" + "<th>Pacific</th>";
             tblElement = tblElement + "</tr></table>"

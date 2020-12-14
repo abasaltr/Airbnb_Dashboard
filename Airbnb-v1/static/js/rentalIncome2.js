@@ -61,7 +61,7 @@ function BuildRentalIncomeVsOccupancyChart(city_id, nbh_id){
         
                  
       // axis-x
-      g.append("g")
+    g.append("g")
       .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(xScale));

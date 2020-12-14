@@ -1,0 +1,94 @@
+
+/// This method retrieves the rental income information based on the rental size.
+// The rental size is determined as number of beds offered by the guests.
+function BuildRentalVsOccupancyChart(city_id, nbh_id){
+
+    // the url pulls the rental_rates_info based on the bed number 
+    url = "/api/rental_size/";
+    url = url.concat(city_id)
+    url = url.concat("/")
+    url = url.concat(nbh_id)
+    //console.log(url)
+  
+    
+    // Load data from rental size
+    d3.json(url).then(function(data) {
+    
+    
+      // Cast the rental_income, count and median_occupancy value to a number for each piece of data
+      data.forEach(function(d) {
+       
+        d.RentalSizeinfo.rental_income = +parseFloat(d.RentalSizeinfo.rental_income);
+        d.RentalSizeinfo.median_occupancy = + (parseFloat(d.RentalSizeinfo.median_occupancy)) ; 
+        d.RentalSizeinfo.count = +parseFloat(d.RentalSizeinfo.count) ; 
+  
+      });
+
+    data =  data.sort(function(a, b) {
+      return d3.ascending(a.RentalSizeinfo.rental_income, b.RentalSizeinfo.rental_income)
+    })
+
+var property = data.map(function(d){
+  return d.RentalSizeinfo.bed_number 
+})
+var incomes = data.map(function(d){
+  return d.RentalSizeinfo.rental_income 
+})
+     
+var occupancy = data.map(function(d){
+  return d.RentalSizeinfo.median_occupancy 
+})
+
+      
+      var trace1 = {
+        x: property,
+        y: incomes,
+
+        type:'bar',
+        xaxis:'x',
+        yaxis:'y',
+      
+        name: 'Average Incomes'
+      };
+      
+      var trace2 = {
+        x: property,
+        y: occupancy,      
+        xaxis:'x',
+        //yaxis:'y2',
+        name: 'Median Occupancy',
+        type: 'scatter'
+      };
+      
+      var data = [trace1, trace2];
+      
+      var layout = {
+        title: 'Rental Income vs Occupancy',
+        yaxis: {title: 'Avg Rental Income'
+      },
+         
+        yaxis2: {
+          title: 'Median Occupancy',
+          titlefont: {color: 'rgb(148, 103, 189)'},
+          tickfont: {color: 'rgb(148, 103, 189)'},
+          range :[0, 365],  // days of the year
+          overlaying: 'y',
+          side: 'right'
+        }
+      };
+      
+     
+      var config = { responsive: true };
+      var layout = { autosize: false, width: 600, height: 400,  margin: { l: 60,  r: 10, b: 25,  t: 25 } };
+      Plotly.newPlot('map', data, layout, config);
+    
+       
+    }).catch(function(error) {
+      console.log(error);
+    });
+    
+    
+        
+    }
+     
+    BuildRentalVsOccupancyChart("28719", "0")

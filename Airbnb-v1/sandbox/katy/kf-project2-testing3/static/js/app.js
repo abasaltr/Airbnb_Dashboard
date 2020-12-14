@@ -116,7 +116,7 @@ function createDropList(menu, selectname, idname, sType) {
     // assign result to list array of data values 
     const addElementToBeginningOfArray = (a, e) => [e, ...a]
     values = addElementToBeginningOfArray(sort_values, idname);
-
+    console.log(values)
     // createElement() method creates an Element Node with the specified name.
     // create html select tag assigning name and id to the select parameters passed
     //var select = document.createElement("select");

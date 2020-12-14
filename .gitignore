@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# dbkey.py
+db_key.py
+
+#config.js
+config.js
