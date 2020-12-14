@@ -10,21 +10,21 @@ https://github.com/abasaltr/Airbnb_Dashboard
 The Airbnb Dashboard provides guests fun interactive way to plan their vacation, and hosts a general idea about the airbnb market in the area
 with a few key components in mind: 
 
-Guests
-	Can you get to where you’re planning by foot?
-	Will you be paying an arm and a leg for a cleaning fee?
-	And what kind of neighborhood is the listing in?
-	How much rental income do hosts generally make?
-	What are the rental rates in the area and other general statistics?
-Hosts
-        What are the rental rates in the area and other general statistics?
-	What is the investment score, income score and walkscore for the neighborhood
-	Neighborhood facts
-	Compare nightly rates, nights booked and cleaning fees for each property type
-	Heat map analysis for the nights booked, reviews for the property listings
-	Average annual income realised for each property type
-	Average annual income vs occupancy for each property type
-	Average annual income vs occupancy for rental size	
+###Guests  
+	Can you get to where you’re planning by foot?  
+	Will you be paying an arm and a leg for a cleaning fee?  
+	And what kind of neighborhood is the listing in?  
+	How much rental income do hosts generally make?  
+	What are the rental rates in the area and other general statistics?  
+###Hosts  
+        What are the rental rates in the area and other general statistics?  
+	What is the investment score, income score and walkscore for the neighborhood?  
+	Neighborhood facts  
+	Compare nightly rates, nights booked and cleaning fees for each property type  
+	Heat map analysis for the nights booked, reviews for the property listings  
+	Average annual income realised for each property type  
+	Average annual income vs occupancy for each property type  
+	Average annual income vs occupancy for rental size  	
 
 
 ## Data Sources:
@@ -90,9 +90,9 @@ The Airbnb Dashboard includes interactive visualizations and tables on the follo
 	-Income by property type to evaluation. 
 	-Demographics/Crime Data with a summary of population, income per capita, crime rate, demographics, and statistics by crime types.
 	-Rental statistics with average rental rates, nightly rates, cleaning fee, occupancy rates, Airbnb count, and review counts.
-	- Average annual income by property type
-	- Average income by property type vs occupancy
-	- Average income by Rental Size vs occupancy
+	- Average annual income by property type  
+	- Average income by property type vs occupancy  
+	- Average income by Rental Size vs occupancy  
 	
 	
 
