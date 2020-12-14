@@ -9,6 +9,7 @@ https://github.com/abasaltr/Airbnb_Dashboard
 ## Objective:
 The Airbnb Dashboard provides guests fun interactive way to plan their vacation, and hosts a general idea about the airbnb market in the area
 with a few key components in mind: 
+
 Guests
 	Can you get to where you’re planning by foot?
 	Will you be paying an arm and a leg for a cleaning fee?
