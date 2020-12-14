@@ -28,10 +28,10 @@ Promise.all(promises).then(data => init(data));
 
 
 // add event listener to the heatmap button
-d3.select("#heatbtn").on("click", function(){
+d3.select("#heatbtn").on("click", function () {
     // Use D3 to select the dropdown menu value
     var nbh_id = getTopNbhId(d3.select('#selNeighborhood option:checked').text());
-    window.open("/map/" + nbh_id);    
+    window.open("/map/" + nbh_id);
 })
 
 // function addCities
@@ -44,7 +44,7 @@ function addCities(response) {
 // functon addNbhOverview
 function addNbhOverview(response) {
     var overview = response;
-    buildGauge(response[0],31);
+    buildGauge(response[0], 31);
     return overview;
 }//end addNbhOverview() function
 
@@ -57,7 +57,7 @@ function addCityNbh(response) {
 // function addCensusCrime
 function addCensusCrime(response) {
     var census_crime = response;
-    
+
     return census_crime;
 }//end addCensusCrime() function
 
@@ -112,7 +112,7 @@ function initDropList(cityData) {
     // call function to populate the form dropdown menu options for each filter criteria in alphabetical order
     createDropList(uniqueCity, "selCity", "Select City", 2);
     createDropList(nbh_name, "selNeighborhood", "Select Neighborhood", 2);
-    
+
 }//initDropList() function
 
 
@@ -195,10 +195,10 @@ function createDropList(menu, selectname, idname, sType) {
     }
 }//end createDropList() function
 
-function getNbhIndex(name){
+function getNbhIndex(name) {
     indexName = 0
     for (i = 0; i < overviewIn[0]['nbh_name'].length; i++) {
-        if (name == overviewIn[0]['nbh_name'][i]){
+        if (name == overviewIn[0]['nbh_name'][i]) {
             indexName = i;
         }
     }
@@ -206,11 +206,11 @@ function getNbhIndex(name){
 }
 
 // getNbhIndexId function
-function getNbhIndexId(id){
+function getNbhIndexId(id) {
     //console.log(overviewIn);
     indexId = 0
     for (i = 0; i < overviewIn[0]['nbh_id'].length; i++) {
-        if (id == overviewIn[0]['nbh_id'][i]){
+        if (id == overviewIn[0]['nbh_id'][i]) {
             indexId = i;
         }
     }
@@ -218,18 +218,18 @@ function getNbhIndexId(id){
 }
 
 // getCityNbh function
-function getCityNbh(name){
+function getCityNbh(name) {
     city_id = 0
     nbh_id = 0
     for (i = 0; i < citiesIn[0]['city'].length; i++) {
-        if (name == citiesIn[0]['city'][i]){
+        if (name == citiesIn[0]['city'][i]) {
             city_id = parseInt(citiesIn[0]['city_id'][i]);
             break;
         }
     }
 
     for (i = 0; i < cityNbhIn[0]['city_id'].length; i++) {
-        if (city_id == parseInt(cityNbhIn[0]['city_id'][i])){
+        if (city_id == parseInt(cityNbhIn[0]['city_id'][i])) {
             nbh_id = parseInt(cityNbhIn[0]['nbh_id'][i]);
             break;
         }
@@ -238,11 +238,11 @@ function getCityNbh(name){
 }
 
 // getCityId function
-function getCityId(name){
+function getCityId(name) {
     city_id = 0
     nbh_id = 0
     for (i = 0; i < citiesIn[0]['city'].length; i++) {
-        if (name == citiesIn[0]['city'][i]){
+        if (name == citiesIn[0]['city'][i]) {
             city_id = parseInt(citiesIn[0]['city_id'][i]);
             break;
         }
@@ -250,16 +250,16 @@ function getCityId(name){
     return city_id;
 }
 
-function addCommas(number){
+function addCommas(number) {
     number += '';
     var x = number.split('.');
     var x1 = x[0];
     var x2 = x.length > 1 ? '.' + x[1] : '';
     var rgx = /(\d+)(\d{3})/;
-    while (rgx.test(x1)){
+    while (rgx.test(x1)) {
         x1 = x1.replace(rgx, '$1' + ',' + '$2');
     }
-    return x1+x2;
+    return x1 + x2;
 }
 
 //function to ease data cleaning into 2 decimals
@@ -272,9 +272,13 @@ function decimalRound(number) {
     return !(number % 1) ? formatInteger(number) : formatDecimal(number)
 }
 
-function createCensusPanel(censusData, nbhData, nbh_id){
-   
-    d3.select("#demographic").selectAll("table").remove();
+function createCensusPanel(censusData, nbhData, nbh_id) {
+
+    d3.select("#demographic").selectAll("div").remove();
+    d3.select("#population").selectAll("div").remove();
+    d3.select("#capita").selectAll("div").remove();
+    d3.select("#crime").selectAll("div").remove();
+
     let table = d3.select("#demographic").append('table').attr('class', 'table table-striped')
     let header = table.append('thead')
     let headers = ['Hispanic', 'White', 'Black', 'Native', 'Asian', 'Pacific']
@@ -318,11 +322,11 @@ function createCensusPanel(censusData, nbhData, nbh_id){
 
 
 // getTopNbhId function
-function getTopNbhId(name){
+function getTopNbhId(name) {
     nbh_id = 0
     console.log(topNbhIn[0]['name'])
     for (i = 0; i < topNbhIn[0]['name'].length; i++) {
-        if (name == topNbhIn[0]['name'][i]){
+        if (name == topNbhIn[0]['name'][i]) {
             nbh_id = parseInt(topNbhIn[0]['nbh_id'][i]);
         }
     }
@@ -392,13 +396,11 @@ function changeNbh(nbh_name) {
     BuildRental_incomeChart("0", overviewIn[0]['nbh_id'][nbh_index])
     rentalTypeChart("0", overviewIn[0]['nbh_id'][nbh_index])
     name = d3.select('#selCity option:checked').text();
-    if (name != null)
-    {
+    if (name != null) {
         name = (name.concat(", ")).concat(nbh_name)
 
     }
-    else
-    {
+    else {
         name = nbh_name
     }
     console.log(name)
@@ -420,7 +422,7 @@ function changeCity(city_name) {
     rentalTypeChart(city_id, "0")
     BuildRental_incomeChart(city_id, "0")
     updateNeighborhoods(city_name)
-    
+
     city_name = d3.select('#selCity option:checked').text();
     d3.select("#heading").text(city_name)
 
@@ -431,7 +433,7 @@ function removeWalkScore() {
     d3.select("walkscore").selectAll("div").remove();
 }
 
-function buildGauge(nbh_ovw,nbh_index) {
+function buildGauge(nbh_ovw, nbh_index) {
     var walkscore = Object.values(nbh_ovw['walkscore']);
     var nbh_id = Object.values(nbh_ovw['nbh_id']);
 
@@ -459,28 +461,28 @@ function buildGauge(nbh_ovw,nbh_index) {
             ]
         }
     }
-    
+
     var data = [trace1];
     var layout = {
         font: { family: "Arial", size: 12, color: "#337AB7" }, width: 275, height: 100, margin: { t: 0, b: 0 }, plot_bgcolor: "azure",
-        paper_bgcolor: "azure", 
+        paper_bgcolor: "azure",
     };
     Plotly.newPlot('walkScore', data, layout);
 }
 
 //******************** */
 // update the neighborhoods based on the selection
-function updateNeighborhoods(cityName){
+function updateNeighborhoods(cityName) {
 
     var neighborHoods = [];
     for (i = 0; i < citiesIn[0]['city'].length; i++) {
-        if (cityName == citiesIn[0]['city'][i]){
+        if (cityName == citiesIn[0]['city'][i]) {
             neighborHoods.push(citiesIn[0]['nbh_name'][i])
         }
     }
-  
+
     d3.select("#selNeighborhood").selectAll("option").remove()
-    createDropList(neighborHoods, "selNeighborhood", "Select Neighborhood", 2);    
+    createDropList(neighborHoods, "selNeighborhood", "Select Neighborhood", 2);
 }
 
 
@@ -503,21 +505,23 @@ function buildBulletIncome(nbh_insights_data, nbh_index) {
         {
             type: "indicator",
             mode: "number+gauge+delta",
-            gauge: { shape: "bullet" ,  bar: { color: "darkblue" }},
+            gauge: { shape: "bullet", bar: { color: "darkblue" } },
             delta: { reference: rental_income_change_pct },
             value: rental_income,
             domain: { x: [0, 1], y: [0, 1] },
-            title: { text: "Avg Monthly",
-            font: { size: 12 }}
+            title: {
+                text: "Avg Monthly",
+                font: { size: 12 }
+            }
         }
     ];
 
-    var layout = { width: 400, height: 75,  margin: { l: 100,  r: 10, b: 25,  t: 5 }};
+    var layout = { width: 400, height: 75, margin: { l: 100, r: 10, b: 25, t: 5 } };
     Plotly.newPlot('income', data, layout);
 
 }
 function removeBulletIncome() {
-d3.select("income").selectAll("div").remove();
+    d3.select("income").selectAll("div").remove();
 }
 //******************* */
 
