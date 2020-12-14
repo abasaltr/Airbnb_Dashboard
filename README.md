@@ -10,13 +10,14 @@ https://github.com/abasaltr/Airbnb_Dashboard
 The Airbnb Dashboard provides guests fun interactive way to plan their vacation, and hosts a general idea about the airbnb market in the area
 with a few key components in mind: 
 
-###Guests  
+### Guests  
 	Can you get to where you’re planning by foot?  
 	Will you be paying an arm and a leg for a cleaning fee?  
 	And what kind of neighborhood is the listing in?  
 	How much rental income do hosts generally make?  
 	What are the rental rates in the area and other general statistics?  
-###Hosts  
+	  
+### Hosts  
         What are the rental rates in the area and other general statistics?  
 	What is the investment score, income score and walkscore for the neighborhood?  
 	Neighborhood facts  
