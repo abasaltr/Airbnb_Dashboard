@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #map,
+  body,
+  html {
+    height: 100%;
+  }
+  
+  .square {
+    height: 20px;
+    width: 20px;
+    margin-top: -18px;
+  }
+  
+  h5 {
+    margin-left: 20px;
+    padding-top: 3px;
+    width: 50px;
+  }
+  
+  h4 {
+    margin-top: -10px;
+    color: darkblue;
+  }
+  
+  .popup h5 {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    margin-left: 0px;
+    padding-top: 0px;
+    width: 120px;
+  }
+  
+  hr {
+    margin-top: -10px;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    background-color:azure;
+    width: 140px;
+    height: 100px;
+  }
+  
+  .popup {
+    width: 120px;
+    height: 90px;
+    margin-left: -12px;
+  }
+  
+  .legend {
+    height: 140px;
+    width: 90px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color:azure;
+  }
+
+  .legendLeaf {
+    height: 100px;
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color:azure;
+  }
+
+  .maptitle {
+    height: 90px;
+    width: 200px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    text-align: left;
+    font-weight: bold;
+    background-color:azure;
+    color: darkblue;
+  }
+  
+  
+  .polyline {
+    stroke: #FF9900;
+    stroke-width: 2;
+    stroke-opacity: 0.5;
+  }
+  
+  .leaflet-control-layers {
+    background-color: azure;
+  }

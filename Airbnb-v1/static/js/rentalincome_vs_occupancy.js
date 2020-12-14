@@ -1,20 +1,21 @@
 
+/// This method retrieves the rental income information based on the rental size.
+// The rental size is determined as number of beds offered by the guests.
+function BuildRentalVsOccupancyChart(city_id, nbh_id){
 
-function BuildRental_incomeChart(city_id, nbh_id){
-
-
+    // the url pulls the rental_rates_info based on the bed number 
     url = "/api/rental_size/";
     url = url.concat(city_id)
     url = url.concat("/")
     url = url.concat(nbh_id)
-    console.log(url)
+    //console.log(url)
   
     
     // Load data from rental size
     d3.json(url).then(function(data) {
     
     
-      // Cast the hours value to a number for each piece of data
+      // Cast the rental_income, count and median_occupancy value to a number for each piece of data
       data.forEach(function(d) {
        
         d.RentalSizeinfo.rental_income = +parseFloat(d.RentalSizeinfo.rental_income);
@@ -66,7 +67,7 @@ var occupancy = data.map(function(d){
           titlefont: {color: 'rgb(148, 103, 189)'},
           tickfont: {color: 'rgb(148, 103, 189)'},
           rangemode: 'tozero',
-          range :[0, 300],
+          range :[0, 365],  // days of the year
           overlaying: 'y',
           side: 'right',
           position : 1
@@ -81,7 +82,7 @@ var occupancy = data.map(function(d){
 
       var config = { responsive: true };
       var layout = { autosize: false, width: 600, height: 300,  margin: { l: 60,  r: 10, b: 25,  t: 25 } };
-      Plotly.newPlot('incomeChart', data, layout, config);
+      Plotly.newPlot('map', data, layout, config);
     
        
     }).catch(function(error) {

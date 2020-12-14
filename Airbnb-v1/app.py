@@ -1,6 +1,8 @@
 # import necessary libraries
 import os
 import numpy as np
+import datetime
+from sqlalchemy import cast, Date
 
 from flask import (
     Flask,
@@ -120,6 +122,8 @@ class Listing_Info(db.Model):
     max_capacity = db.Column(db.Integer)
     star_rating = db.Column(db.Float)
     total_reviews = db.Column(db.Integer)
+    date_created = db.Column(db.Date)
+    date_updated = db.Column(db.Date)
 
 
     def __repr__(self):
@@ -133,6 +137,10 @@ class Historical(db.Model):
     city = db.Column(db.String(64))
     price = db.Column(db.Float)
     aggregate_calculated_date =db.Column(db.Date)
+    availability_365 = db.Column(db.Float)
+    room_type = db.Column(db.String(64))
+
+
 
     def __repr__(self):
         return '<Historical %r>' % (self.record_id)
@@ -229,14 +237,14 @@ def openHeatMap(nbh_id):
 @app.route("/api/map/<nbh_id>")
 def getHeatData(nbh_id):
 
-    results = db.session.query(Listings_Info.airbnb_id, Listings_Info.nbh_id,
-                Listings_Info.lat, Listings_Info.lon, Listings_Info.city, Listings_Info.state, Listings_Info.night_price,
-                Listings_Info.cleaning_fee, Listings_Info.nights_booked, Listings_Info.rental_income, Listings_Info.property_type, 
-                Listings_Info.room_count, Listings_Info.bed_count, Listings_Info.max_capacity, Listings_Info.star_rating,
-                Listings_Info.total_reviews, Listings_Info.date_created, Listings_Info.date_updated,
+    results = db.session.query(Listing_Info.airbnb_id, Listing_Info.nbh_id,
+                Listing_Info.lat, Listing_Info.lon, Listing_Info.city, Listing_Info.state, Listing_Info.night_price,
+                Listing_Info.cleaning_fee, Listing_Info.nights_booked, Listing_Info.rental_income, Listing_Info.property_type, 
+                Listing_Info.room_count, Listing_Info.bed_count, Listing_Info.max_capacity, Listing_Info.star_rating,
+                Listing_Info.total_reviews, Listing_Info.date_created, Listing_Info.date_updated,
                 Nbh.name, Nbh.county )\
-        .filter(Listings_Info.nbh_id==nbh_id)\
-        .join(Nbh, Listings_Info.nbh_id==Nbh.nbh_id)\
+        .filter(Listing_Info.nbh_id==nbh_id)\
+        .join(Nbh, Listing_Info.nbh_id==Nbh.nbh_id)\
         .all()
 
     airbnb_id = [result[0] for result in results]
@@ -531,7 +539,8 @@ def rentalSize(city_id, nbh_id):
                         Rental_Rates_Info.median_value,\
                         Rental_Rates_Info.median_night_rate,\
                         Rental_Rates_Info.median_occupancy)\
-                        .filter(Rental_Rates_Info.nbh_id == nbh_id) 
+                        .filter(Rental_Rates_Info.nbh_id == nbh_id) \
+                        .order_by(Rental_Rates_Info.bed_number)
     else:
         results =  db.session.query(
                         Rental_Rates_Info.bed_number.label("bed_number"),\
@@ -542,9 +551,10 @@ def rentalSize(city_id, nbh_id):
                         func.avg(Rental_Rates_Info.median_occupancy).label("median_occupancy"))\
                     .join(City_Nbh, City_Nbh.nbh_id ==  Rental_Rates_Info.nbh_id)\
                     .filter(City_Nbh.city_id == city_id)\
-                    .filter(Rental_Rates_Info.bed_number > 0)\
-                    .filter(Rental_Rates_Info.bed_number < 10)\
-                    .group_by(Rental_Rates_Info.bed_number) 
+                    .filter(Rental_Rates_Info.bed_number >= 0)\
+                    .filter(Rental_Rates_Info.bed_number < 15)\
+                    .group_by(Rental_Rates_Info.bed_number) \
+                    .order_by(Rental_Rates_Info.bed_number)
                 
 
 
@@ -665,20 +675,24 @@ def historical(city):
     if city != "0":
          
             results =  db.session.query(                      
-                    Historical.aggregate_calculated_date.label("record_date"),\
+                    cast(Historical.aggregate_calculated_date, Date).label("record_date"),\
                     func.avg(Historical.price).label("price"))\
                     .filter(Historical.city == city)\
                     .group_by(Historical.aggregate_calculated_date) 
 
 
     rentalInfoList = []
-    
+   
     for result in results :
+        t = datetime.datetime.strptime(str(result[0]) , '%Y-%m-%d')        
+         # date = time.strftime(format, result[0])
         rentalData = {
             "Historical" :
             {
                 "city" : city,
-                "date" : result[0],
+                "year" : t.year,
+                "month" : t.strftime('%h'),
+                "date"   : t,
                 "price": str("{0:.2f}".format(result[1]))  
             }
         }
@@ -691,13 +705,18 @@ def historical(city):
 #################################################
 @app.route("/trends")
 def trends():
-     return render_template("trends.html")
+    return render_template("trends.html")
 
 #################################################
 @app.route("/test")
 def test():
-     return render_template("test2.html")
+    return render_template("test2.html")
 
+
+#################################################
+@app.route("/test2")
+def test2():
+    return render_template("index_copy.html")
 
 
 ## end rental_type() route

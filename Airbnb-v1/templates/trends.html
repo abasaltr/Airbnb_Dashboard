@@ -124,10 +124,10 @@
                     
                     <!-- Content Row -->
 
-                    <div class="row">
+                    <div class="row" class="contentRow">
 
                         <!-- Rental Map -->
-                        <div class="col-xl-8 col-lg-8">
+                        <div class="col-xl-12 col-lg-12" col="col-auto">
                             <div class="card shadow mb-4">
                                 <!-- Card Header -->
                                 <div
@@ -135,27 +135,38 @@
                                     <h6 class="m-0 font-weight-bold text-info">Rental Analysis</h6>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body centerElement">
+                                <div class="card-body ">
                                     <div class="row">
-                                        <div class="col-xl-10 col-lg-10 col-md-10">
-                                            <div id= "trends" class="centerElement" >
+                                        <div class="col col-xl-12 col-lg-12  col-md-12 mb-4">
+                                            <div id= "type" class="chartElement" >
+                                            
+                                            </div>
+                                        </div>
+                                    </div>      
+
+                                    <div class="row">
+                                       
+                                        <div class="col col-xl-12 col-lg-12 col-md-12 ml-4 mb-4">
+                                            <div id= "rentaloccupancy" class="chartElement" >
                                             
                                             </div>
                                         </div>
                                         
                                     </div>      
-                            
-                            
 
-                                
+                                    
+                                    <div class="row">
+                                        <div class="col col-xl-12 col-lg-12 col-md-12 mb-4">
+                                            <div id= "incomeChart" class="chartElement" >
+                                            
+                                            </div>
+                                        </div>                                    
+                                        
+                                   </div>      
+                                </div>
+                            </div>                   
                         </div>
-
-                        <!-- income score  -->
-                        <div class="col-xl-4 col-lg-4">
-                            
-                    </div>           
-
-                       
+                    </div>                   
 
 
 
@@ -164,7 +175,7 @@
                 </div>
                 <!-- /.container-fluid -->
 
-    </div>
+            </div>
             <!-- End of Main Content -->
 
          
@@ -201,10 +212,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="static/js/app.js"></script>
-    <script src="static/js/statistics.js"></script>
-    <script src="static/js/roistats.js"></script>
+    <script src="static/js/rentalIncome2.js"></script>
     <script src="static/js/rentalTypes.js"></script>
-    <script src="static/js/rentalIncome.js"></script>
+    <script src="static/js/rentalincomebyprop.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
 </body>
 
 </html>

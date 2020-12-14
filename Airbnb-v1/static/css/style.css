@@ -33,7 +33,7 @@ body {
 }
 
 .centerElement {
-  height: 350px;
+  height: 400px;
   overflow: hidden;
 
 }
@@ -70,6 +70,20 @@ body {
 }
 
 
+.chartElement {
+  height: 400px;
+  width: 600px;
+  overflow: hidden;
+
+}
+
+.conentRow {
+  width :100%;
+}
+
+
+
+
 .bar1 { fill: aqua; }
 .bar2 { fill: deepskyblue; }
 .bar3 { fill: steelblue; }
@@ -91,4 +105,22 @@ body {
 
 .container-fluid {
   min-height: 100%;
+}
+
+.bed-text {
+  fill: gray 
+}
+
+.occu-text {
+  fill: brown;
+}
+
+.income-text {
+  fill: green;
+}
+
+
+.title-text {
+  fill: navy;
+  font-weight: bold;
 }

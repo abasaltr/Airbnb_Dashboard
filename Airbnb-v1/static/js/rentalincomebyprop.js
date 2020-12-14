@@ -1,8 +1,9 @@
 
 
+
 function BuildRental_incomeChart(city_id, nbh_id){
 
-
+    // build the url
     url = "/api/rental_type/";
     url = url.concat(city_id)
     url = url.concat("/")
@@ -12,22 +13,18 @@ function BuildRental_incomeChart(city_id, nbh_id){
 // Load data from rental size
 d3.json(url).then(function(data) {
 console.log(data[0])
-
-    // Cast the hours value to a number for each piece of data
+dataPoints = []
+    // Cast the rental_income value to a number for each piece of data
     data.forEach(function(d) {
-        d.Rentalinfo.rental_income  = + d.Rentalinfo.rental_income * 12
-    
-    });
-    dataPoints = []
-    for (i = 0; i < data.length; i++) {
-        
+        d.Rentalinfo.rental_income  = + d.Rentalinfo.rental_income * 12 // the income is multiplied by 12 to show annual income
+
         dict = {
-            y : data[i].Rentalinfo.rental_income, label :data[i].Rentalinfo.property_type
+            y : d.Rentalinfo.rental_income, label : d.Rentalinfo.property_type
         }
         dataPoints.push(dict)
-    }
 
-
+    
+    });
 console.log(dataPoints)
 
 var chart = new CanvasJS.Chart("incomeChart", {
@@ -60,4 +57,5 @@ chart.render()
    
 }
 
+// set the default to houston city
 BuildRental_incomeChart("28719", "0")

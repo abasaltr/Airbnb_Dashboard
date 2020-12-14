@@ -49,7 +49,7 @@ function rentalTypeChart(city_id, nbh_id){
       
     };
     var config = { responsive: true ,  height: 300,  margin: { l: 60,  r: 10, b: 5,  t: 2 } };
-    Plotly.newPlot("map", data, layout, config);
+    Plotly.newPlot("type", data, layout, config);
   });
 }
 rentalTypeChart(28719,0)
