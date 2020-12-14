@@ -7,14 +7,23 @@ Repo:
 https://github.com/abasaltr/Airbnb_Dashboard 
 
 ## Objective:
-The Airbnb Dashboard provides guests and hosts a fun interactive way to plan their vacation, 
+The Airbnb Dashboard provides guests fun interactive way to plan their vacation, and hosts a general idea about the airbnb market in the area
 with a few key components in mind: 
+Guests
 	Can you get to where you’re planning by foot?
 	Will you be paying an arm and a leg for a cleaning fee?
 	And what kind of neighborhood is the listing in?
 	How much rental income do hosts generally make?
 	What are the rental rates in the area and other general statistics?
-	
+Hosts
+        What are the rental rates in the area and other general statistics?
+	What is the investment score, income score and walkscore for the neighborhood
+	Neighborhood facts
+	Compare nightly rates, nights booked and cleaning fees for each property type
+	Heat map analysis for the nights booked, reviews for the property listings
+	Average annual income realised for each property type
+	Average annual income vs occupancy for each property type
+	Average annual income vs occupancy for rental size	
 
 
 ## Data Sources:
@@ -22,6 +31,8 @@ with a few key components in mind:
 	https://www.mashvisor.com/data-methodology 
 	https://www.census.gov/data/developers/updates/new-discovery-tool.html 
 	https://www.kaggle.com/mikejohnsonjr/united-states-crime-rates-by-county
+	https://public.opendatasoft.com/api/records/1.0/search/?dataset=airbnb-averages&q=&rows=1000&sort=date&facet=neighbourhood&facet=room_type&facet=number_of_rooms&facet=date&facet=location&refine.location=United+states
+	
 
 
 ## Process:
@@ -41,6 +52,7 @@ with a few key components in mind:
 		rental_rates_info
 		top_airbnb_cities
 		top_neighborhood_overview
+		historical_insights
 			
 	
 	Flask Routes:
@@ -58,6 +70,7 @@ with a few key components in mind:
 		rental_type = "/api/rental_type/<city_id>/<nbh_id>"
 		income_change = "/api/income_change"
 		historical= "/api/historical/<city>/"
+		houstonId = "api/getHoustonId
 	
 	Javascript files:
 
