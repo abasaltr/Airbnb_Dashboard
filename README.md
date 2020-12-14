@@ -7,7 +7,7 @@ Repo:
 https://github.com/abasaltr/Airbnb_Dashboard 
 
 ## Objective:
-The Airbnb Dashboard provides guests a fun interactive way to plan their vacation, 
+The Airbnb Dashboard provides guests and hosts a fun interactive way to plan their vacation, 
 with a few key components in mind: 
 	Can you get to where you’re planning by foot?
 	Will you be paying an arm and a leg for a cleaning fee?
@@ -76,6 +76,9 @@ The Airbnb Dashboard includes interactive visualizations and tables on the follo
 	-Income by property type to evaluation. 
 	-Demographics/Crime Data with a summary of population, income per capita, crime rate, demographics, and statistics by crime types.
 	-Rental statistics with average rental rates, nightly rates, cleaning fee, occupancy rates, Airbnb count, and review counts.
+	- Average annual income by property type
+	- Average income by property type vs occupancy
+	- Average income by Rental Size vs occupancy
 	
 	
 
