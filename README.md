@@ -4,7 +4,7 @@ Group 6:
 Katy Fuentes, Nicole Pipkins, Reza Abasaltian, Radhika Balasubramaniam
 
 Dashboard Deployment:
-https://abasaltr.github.io/Airbnb_Dashboard/
+https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/
 
 ## Objective:
 The Airbnb Dashboard provides guests fun interactive way to plan their vacation, and hosts a general idea about the airbnb market in the area
