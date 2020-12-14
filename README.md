@@ -81,17 +81,17 @@ with a few key components in mind:
 
 
 ## Conclusion:
-The Airbnb Dashboard includes interactive visualizations and tables on the following:
-	-Walking score scale to assess if you can walk to places or plan for transportation. The scores include: 0-24 is Almost All Car-Dependent,
-	25-49 is Most Car-Dependent, 50-69 Somewhat Walkable, or 70-89 is Very Walkable.
-	-Map to detail the cleaning fees, nights booked, Airbnb listings with a summary of the listing. The leaf's represent total reviews.
+The Airbnb Dashboard includes interactive visualizations and tables on the following:  
+	-Walking score scale to assess if you can walk to places or plan for transportation. The scores include: 0-24 is Almost All Car-Dependent,  
+	25-49 is Most Car-Dependent, 50-69 Somewhat Walkable, or 70-89 is Very Walkable.  
+	-Map to detail the cleaning fees, nights booked, Airbnb listings with a summary of the listing. The leaf's represent total reviews.  
 	-Cleaning Fees to review the associated cleaning fees by property listing. 
-	-Return on investment compare rental income to home values and assess the potential return on owning an Airbnb in a certain city or neighborhood.
-	-Rental income to discover how much rental income hosts make in the listing area.
-	-Income by property type to evaluation. 
-	-Demographics/Crime Data with a summary of population, income per capita, crime rate, demographics, and statistics by crime types.
-	-Rental statistics with average rental rates, nightly rates, cleaning fee, occupancy rates, Airbnb count, and review counts.
-	- Average annual income by property type  
+	-Return on investment compare rental income to home values and assess the potential return on owning an Airbnb in a certain city or neighborhood.  
+	-Rental income to discover how much rental income hosts make in the listing area.  
+	-Income by property type to evaluation.  
+	-Demographics/Crime Data with a summary of population, income per capita, crime rate, demographics, and statistics by crime types.  
+	-Rental statistics with average rental rates, nightly rates, cleaning fee, occupancy rates, Airbnb count, and review counts.  
+	- Average annual income by property type    
 	- Average income by property type vs occupancy  
 	- Average income by Rental Size vs occupancy  
 	
