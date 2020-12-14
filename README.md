@@ -80,7 +80,8 @@ with a few key components in mind:
 	HTML integration:
 
 
-## Conclusion:
+## Conclusion:  
+  
 The Airbnb Dashboard includes interactive visualizations and tables on the following:  
 	-Walking score scale to assess if you can walk to places or plan for transportation. The scores include: 0-24 is Almost All Car-Dependent,  
 	25-49 is Most Car-Dependent, 50-69 Somewhat Walkable, or 70-89 is Very Walkable.  
