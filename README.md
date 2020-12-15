@@ -6,6 +6,9 @@ Katy Fuentes, Nicole Pipkins, Reza Abasaltian, Radhika Balasubramaniam
 Dashboard Deployment - version requires the execution of the Python Flask app: /Airbnb-v1/app.py on localhost:5000:
 https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/index.html
 
+HEROKU Deployment - 
+https://airbnb-dashboard-g6.herokuapp.com/
+
 ## Installation Notes: 
 PostgreSQL database username and password are required entries in file: /Airbnb-v1/db_key.py <br>
 Heatmap visualization requires Mapbox API access token (https://account.mapbox.com/) key entries in file: /Airbnb-v1/static/js/config.js 
