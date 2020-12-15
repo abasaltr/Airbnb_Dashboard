@@ -10,7 +10,7 @@ url = url.concat(nbh_id)
 
 d3.json(url).then(function(data) {
 
-    // Grab values from the response json object to build the plots
+    // Grab values from the response json object to build the statistics and average rates card
 
    
     d3.select("#daily").text("$" + data[0].statinfo.average_daily_price)

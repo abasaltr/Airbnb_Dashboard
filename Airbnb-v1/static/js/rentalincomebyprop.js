@@ -1,6 +1,6 @@
 
 
-
+// the function uses the canvas.js java script library for building the chart
 function BuildRental_incomeChart(city_id, nbh_id){
 
     // build the url
@@ -12,12 +12,13 @@ function BuildRental_incomeChart(city_id, nbh_id){
 
 // Load data from rental size
 d3.json(url).then(function(data) {
-console.log(data[0])
-dataPoints = []
+
+    dataPoints = []
     // Cast the rental_income value to a number for each piece of data
     data.forEach(function(d) {
         d.Rentalinfo.rental_income  = + d.Rentalinfo.rental_income 
 
+        // build the datapoints to create the graph
         dict = {
             y : d.Rentalinfo.rental_income, label : d.Rentalinfo.property_type
         }
@@ -27,6 +28,7 @@ dataPoints = []
     });
 console.log(dataPoints)
 
+// set the chart configuration
 var chart = new CanvasJS.Chart("incomeChart", {
 	animationEnabled: true,
     height:300,
