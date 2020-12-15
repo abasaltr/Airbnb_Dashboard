@@ -3,11 +3,11 @@
 Group 6:
 Katy Fuentes, Nicole Pipkins, Reza Abasaltian, Radhika Balasubramaniam
 
-Github Dashboard Deployment - version requires the execution of the Python Flask app: /Airbnb-v1/app.py on localhost:5000:
-https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/index.html
-
 HEROKU Dashboard Deployment - 
 https://airbnb-dashboard-g6.herokuapp.com/
+
+Github Dashboard Deployment - version requires the execution of the Python Flask app: /Airbnb-v1/app.py on localhost:5000:
+https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/index.html
 
 ## Installation Notes: 
 PostgreSQL database username and password are required entries in file: /Airbnb-v1/db_key.py <br>
