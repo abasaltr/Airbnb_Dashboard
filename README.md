@@ -3,10 +3,10 @@
 Group 6:
 Katy Fuentes, Nicole Pipkins, Reza Abasaltian, Radhika Balasubramaniam
 
-Dashboard Deployment - version requires the execution of the Python Flask app: /Airbnb-v1/app.py on localhost:5000:
+Github Dashboard Deployment - version requires the execution of the Python Flask app: /Airbnb-v1/app.py on localhost:5000:
 https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/index.html
 
-HEROKU Deployment - 
+HEROKU Dashboard Deployment - 
 https://airbnb-dashboard-g6.herokuapp.com/
 
 ## Installation Notes: 
