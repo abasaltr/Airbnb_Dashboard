@@ -37,7 +37,9 @@ d3.select("#heatbtn").on("click", function () {
 // function addCities
 function addCities(response) {
     var cities = response;
+    
     initDropList(cities[0]);
+  
     return cities;
 }//end addCities() function
 
@@ -75,18 +77,17 @@ function addTopNbh(response) {
     return top_nbh;
 }//end addTopNbh() function
 
-
+// add rental income
 function addRentalIncome(response) {
     var cities = response;
     buildBulletIncome(response[0], 271298);
     return cities;
 }//end addRentalIncome() function
 
-
-
-
 // function init
 function init(data) {
+
+    // initialize the data for the elements
     citiesIn = addCities(data[0]);
     overviewIn = addNbhOverview(data[1]);
     cityNbhIn = addCityNbh(data[2]);
@@ -94,11 +95,16 @@ function init(data) {
     rentalIncomeIn = addRentalIncome(data[4]);
     crimeStatsIn = addCrimeStats(data[5]);
     topNbhIn = addTopNbh(data[6]);
+    // pre initialize the select boxes to houston
     createCensusPanel(censusCrimeIn[0], overviewIn[0], 271298);
-    createCrimeTable(crimeStatsIn[0], overviewIn[0], 274853);
+    createCrimeTable(crimeStatsIn[0], overviewIn[0], 271298);
+
+    // assign the heading text
     d3.select('#selCity').property('value', 'Houston');
-    d3.select("#heading").text("Houston")
-    updateNeighborhoods("Houston")
+    d3.select("#heading").text("Houston");
+    // update the neighborhoods with city
+    updateNeighborhoods("Houston");
+
 }//end init() function
 
 
@@ -114,6 +120,7 @@ function initDropList(cityData) {
     createDropList(nbh_name, "selNeighborhood", "Select Neighborhood", 2);
 
 }//initDropList() function
+
 
 
 // function to populate the form dropdown menu options for each filter criteria in alphabetical order
@@ -142,7 +149,7 @@ function createDropList(menu, selectname, idname, sType) {
     // assign result to list array of data values 
     const addElementToBeginningOfArray = (a, e) => [e, ...a]
     values = addElementToBeginningOfArray(sort_values, idname);
-
+   
     // createElement() method creates an Element Node with the specified name.
     // create html select tag assigning name and id to the select parameters passed
     //var select = document.createElement("select");
@@ -195,6 +202,9 @@ function createDropList(menu, selectname, idname, sType) {
     }
 }//end createDropList() function
 
+
+
+// gets the index for nbh
 function getNbhIndex(name) {
     indexName = 0
     for (i = 0; i < overviewIn[0]['nbh_name'].length; i++) {
@@ -250,6 +260,7 @@ function getCityId(name) {
     return city_id;
 }
 
+// a function to add commas to the number
 function addCommas(number) {
     number += '';
     var x = number.split('.');
@@ -272,9 +283,10 @@ function decimalRound(number) {
     return !(number % 1) ? formatInteger(number) : formatDecimal(number)
 }
 
+// A function to update the census panel
 function createCensusPanel(censusData, nbhData, nbh_id) {
 
-    d3.select("#demographic").selectAll("div").remove();
+    d3.select("#demographic").selectAll("table").remove();
     d3.select("#population").selectAll("div").remove();
     d3.select("#capita").selectAll("div").remove();
     d3.select("#crime").selectAll("div").remove();
@@ -295,6 +307,7 @@ function createCensusPanel(censusData, nbhData, nbh_id) {
             d3.select("#capita").text(addCommas(censusData["income_cap"][i]));
             d3.select("#crime").text(decimalRound(censusData["crime_rate"][i]));
 
+            // create the table element
             tblElement = "<table><tr>";
             tblElement = tblElement + "<th>Hispanic</th>" + "<th>White</th>" + "<th>Black</th>" + "<th>Native</th>" + "<th>Asian</th>" + "<th>Pacific</th>";
             tblElement = tblElement + "</tr></table>"
@@ -388,8 +401,8 @@ function changeNbh(nbh_name) {
     removeWalkScore();
     var nbh_index = getNbhIndex(nbh_name);
     buildGauge(overviewIn[0], nbh_index);
-    createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
-    createCrimeTable(crimeStatsIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
+   // createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
+    //createCrimeTable(crimeStatsIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
     buildBulletIncome(rentalIncomeIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
     Update_statistics("0", overviewIn[0]['nbh_id'][nbh_index])
     ROIstat("0", overviewIn[0]['nbh_id'][nbh_index])
@@ -414,6 +427,7 @@ function changeCity(city_name) {
     var nbh_index = getNbhIndexId(nbh_id)
     var city_id = getCityId(city_name)
     buildGauge(overviewIn[0], nbh_index);
+    var county_id = getCounty(city_name);
     createCensusPanel(censusCrimeIn[0], overviewIn[0], nbh_id)
     createCrimeTable(crimeStatsIn[0], overviewIn[0], nbh_id);
     buildBulletIncome(rentalIncomeIn[0], nbh_id)
@@ -432,7 +446,7 @@ function changeCity(city_name) {
 function removeWalkScore() {
     d3.select("walkscore").selectAll("div").remove();
 }
-
+// builds the guage
 function buildGauge(nbh_ovw, nbh_index) {
     var walkscore = Object.values(nbh_ovw['walkscore']);
     var nbh_id = Object.values(nbh_ovw['nbh_id']);
@@ -463,11 +477,12 @@ function buildGauge(nbh_ovw, nbh_index) {
     }
 
     var data = [trace1];
-    var layout = {
+    var layout = { autosize: true, 
         font: { family: "Arial", size: 12, color: "#337AB7" }, width: 275, height: 100, margin: { t: 0, b: 0 }, plot_bgcolor: "azure",
         paper_bgcolor: "azure",
     };
-    Plotly.newPlot('walkScore', data, layout);
+    var config = { responsive: true}
+    Plotly.newPlot('walkScore', data, layout, config);
 }
 
 //******************** */
@@ -516,8 +531,9 @@ function buildBulletIncome(nbh_insights_data, nbh_index) {
         }
     ];
 
-    var layout = { width: 400, height: 75, margin: { l: 100, r: 10, b: 25, t: 5 } };
-    Plotly.newPlot('income', data, layout);
+    var layout = { autosize: false, width: 400, height: 75, margin: { l: 100, r: 10, b: 25, t: 5 } };
+    var config = { responsive: true };
+    Plotly.newPlot('income', data, layout, config);
 
 }
 function removeBulletIncome() {
