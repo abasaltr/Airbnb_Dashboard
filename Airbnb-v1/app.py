@@ -734,20 +734,21 @@ def getHoustonId():
 ## end getHoustonId() route
 
 #################################################
-# add the routes for the trends
+# add the routes for the trends - need to replace as rental
 @app.route("/trends")
 def trends():
     return render_template("trends.html")
 
 #################################################
 # add the routes for the test
-@app.route("/test")
+@app.route("/test2")
 def test():
     return render_template("test2.html")
 
 
+# a route for testing index ui changes
 #################################################
-@app.route("/test2")
+@app.route("/test")
 def test2():
     return render_template("index_copy.html")
 

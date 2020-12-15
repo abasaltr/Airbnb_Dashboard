@@ -1,4 +1,5 @@
 
+// This method retrieves the rental statistics and the average rates for the board.
 function Update_statistics(city_id, nbh_id)
 {
  
@@ -26,5 +27,5 @@ d3.json(url).then(function(data) {
 
 
 }
-
+// call the function with default as houstonid
 Update_statistics(28719,0)

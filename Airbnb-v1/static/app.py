@@ -356,6 +356,7 @@ def nbh_overview():
 
 
 #################################################
+# the api retrieves the data from city_nbh for the neighborhood facts section
 @app.route("/api/city-nbh")
 def city_nbh():
     results = db.session.query(City_Nbh.nbh_id, City_Nbh.city_id).all()

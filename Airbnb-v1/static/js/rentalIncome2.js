@@ -1,7 +1,10 @@
 // build rental_income chart with d3
 
 // the chart is built based on the reference :- https://bl.ocks.org/htakeuchi/a60c0ecb55713c06c054c26c6dbed57a
-function BuildRentalIncomeVsOccupancyChart(city_id, nbh_id){
+
+// This method retrieves the rental income information based on the rental size.
+// The rental size is determined as number of beds offered by the guests.
+function BuildRentalIncomeVsOccupancyChartForRentalSize(city_id, nbh_id){
 
   // build the url
   url = "/api/rental_size/";
@@ -9,8 +12,10 @@ function BuildRentalIncomeVsOccupancyChart(city_id, nbh_id){
  
   // set the margin
   var margin = {top: 20, right: 60, bottom: 60, left: 60},
-  width = 500, 
-  height = 250;
+  width = 600, 
+  height = 400;
+
+  d3.select("#rentaloccupancy").selectAll("svg").remove();
 
   // set the svg in the div tag
   var svg = d3.select("#rentaloccupancy").append("svg")
@@ -34,7 +39,7 @@ function BuildRentalIncomeVsOccupancyChart(city_id, nbh_id){
   
       });
  
-    console.log(dataset);
+    
 
     // set the xscale as xScaleBand
     var xScale = d3.scaleBand()
@@ -188,10 +193,7 @@ function BuildRentalIncomeVsOccupancyChart(city_id, nbh_id){
       .attr("transform", `translate(${0 + margin.left , 0+ margin.top})`)
       .attr("dy", "1em")
       .classed("title-text", true)
-      .text("Rental Income Vs Avg Occupancy - Rental Size");
-
-
-    
+      .text("Rental Income Vs Avg Occupancy Rate - Rental Size");  
     
       console.log("compl");
 
@@ -199,5 +201,5 @@ function BuildRentalIncomeVsOccupancyChart(city_id, nbh_id){
    
 }
 
-// set the name as BuildRentalIncomeVsOccupancyChart
-BuildRentalIncomeVsOccupancyChart("28719", "0")
+// call the BuildRentalIncomeVsOccupancyChart with houstonid
+BuildRentalIncomeVsOccupancyChartForRentalSize("28719", "0")

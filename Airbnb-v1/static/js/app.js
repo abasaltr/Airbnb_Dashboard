@@ -84,11 +84,10 @@ function addRentalIncome(response) {
     return cities;
 }//end addRentalIncome() function
 
-
-
-
 // function init
 function init(data) {
+
+    // initialize the data for the elements
     citiesIn = addCities(data[0]);
     overviewIn = addNbhOverview(data[1]);
     cityNbhIn = addCityNbh(data[2]);
@@ -98,10 +97,14 @@ function init(data) {
     topNbhIn = addTopNbh(data[6]);
     // pre initialize the select boxes to houston
     createCensusPanel(censusCrimeIn[0], overviewIn[0], 271298);
-    createCrimeTable(crimeStatsIn[0], overviewIn[0], 274853);
+    createCrimeTable(crimeStatsIn[0], overviewIn[0], 271298);
+
+    // assign the heading text
     d3.select('#selCity').property('value', 'Houston');
-    d3.select("#heading").text("Houston")
-    updateNeighborhoods("Houston")
+    d3.select("#heading").text("Houston");
+    // update the neighborhoods with city
+    updateNeighborhoods("Houston");
+
 }//end init() function
 
 
@@ -112,19 +115,6 @@ function initDropList(cityData) {
     var uniqueCity = [...new Set(Object.values(cityData['city']))];
     var nbh_name = Object.values(cityData['nbh_name']);
 
-    var city_table = [
-        {
-             "id" : ["selCity", ...new Set(Object.values(cityData['city_id']))], 
-             "name" : ["Select City", ...new Set(Object.values(cityData['city']))]
-        }];
-      
-    var nbh_table = [
-        {
-            "id" : ["selNbh", ...new Set(Object.values(cityData['nbh_id']))], 
-            "name" : ["Select Neighborhood",...new Set(Object.values(cityData['nbh_name']))]
-        }];
-  
-    //createDropListWithNeighborhoodsFiltered(city_table, "#selCity", "Select City")
     // call function to populate the form dropdown menu options for each filter criteria in alphabetical order
     createDropList(uniqueCity, "selCity", "Select City", 2);
     createDropList(nbh_name, "selNeighborhood", "Select Neighborhood", 2);
@@ -132,16 +122,6 @@ function initDropList(cityData) {
 }//initDropList() function
 
 
-function createDropListWithNeighborhoodsFiltered(menu, selectname, idname)
-{
-    d3.select(selectname).select("options").remove();
-    for (i = 0; i <menu[i]['id'].length; i++)
-    {
-        
-    }
-   
-
-}
 
 // function to populate the form dropdown menu options for each filter criteria in alphabetical order
 // passing parameters include the filter array list, html tag select name (placeholder text string), 
@@ -224,7 +204,7 @@ function createDropList(menu, selectname, idname, sType) {
 
 
 
-
+// gets the index for nbh
 function getNbhIndex(name) {
     indexName = 0
     for (i = 0; i < overviewIn[0]['nbh_name'].length; i++) {
@@ -465,7 +445,7 @@ function changeCity(city_name) {
 function removeWalkScore() {
     d3.select("walkscore").selectAll("div").remove();
 }
-
+// builds the guage
 function buildGauge(nbh_ovw, nbh_index) {
     var walkscore = Object.values(nbh_ovw['walkscore']);
     var nbh_id = Object.values(nbh_ovw['nbh_id']);
@@ -496,11 +476,12 @@ function buildGauge(nbh_ovw, nbh_index) {
     }
 
     var data = [trace1];
-    var layout = {
+    var layout = { autosize: true, 
         font: { family: "Arial", size: 12, color: "#337AB7" }, width: 275, height: 100, margin: { t: 0, b: 0 }, plot_bgcolor: "azure",
         paper_bgcolor: "azure",
     };
-    Plotly.newPlot('walkScore', data, layout);
+    var config = { responsive: true}
+    Plotly.newPlot('walkScore', data, layout, config);
 }
 
 //******************** */
@@ -549,8 +530,9 @@ function buildBulletIncome(nbh_insights_data, nbh_index) {
         }
     ];
 
-    var layout = { width: 400, height: 75, margin: { l: 100, r: 10, b: 25, t: 5 } };
-    Plotly.newPlot('income', data, layout);
+    var layout = { autosize: false, width: 400, height: 75, margin: { l: 100, r: 10, b: 25, t: 5 } };
+    var config = { responsive: true };
+    Plotly.newPlot('income', data, layout, config);
 
 }
 function removeBulletIncome() {

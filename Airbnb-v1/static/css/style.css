@@ -35,10 +35,12 @@ body {
 .centerElement {
   height: 400px;
   overflow: hidden;
+  width: 100%;
 
 }
 .infocard{
   height : 125px;
+  overflow: hidden;
 }
 
 .neighborhoodCard {
@@ -72,11 +74,18 @@ body {
 
 .chartElement {
   height: 400px;
-  width: 600px;
+  width: 700px;
   overflow: hidden;
 
 }
 
+
+.chartElementBig {
+  height: 600Px;
+  width: 750px;
+  overflow: hidden;
+
+}
 .conentRow {
   width :100%;
 }
@@ -124,3 +133,4 @@ body {
   fill: navy;
   font-weight: bold;
 }
+

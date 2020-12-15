@@ -16,7 +16,7 @@ console.log(data[0])
 dataPoints = []
     // Cast the rental_income value to a number for each piece of data
     data.forEach(function(d) {
-        d.Rentalinfo.rental_income  = + d.Rentalinfo.rental_income * 12 // the income is multiplied by 12 to show annual income
+        d.Rentalinfo.rental_income  = + d.Rentalinfo.rental_income 
 
         dict = {
             y : d.Rentalinfo.rental_income, label : d.Rentalinfo.property_type
