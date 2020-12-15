@@ -287,9 +287,14 @@ function decimalRound(number) {
 function createCensusPanel(censusData, nbhData, nbh_id) {
 
     d3.select("#demographic").selectAll("table").remove();
-    d3.select("#population").selectAll("div").remove();
-    d3.select("#capita").selectAll("div").remove();
-    d3.select("#crime").selectAll("div").remove();
+    //d3.select("#population").selectAll("div").remove();
+    //d3.select("#capita").selectAll("div").remove();
+    //d3.select("#crime").selectAll("div").remove();
+
+    d3.select("#population").text("");
+    d3.select("#capita").text("");
+    d3.select("#crime").text("");
+    //d3.select("#crime").selectAll("div").remove();
 
     let table = d3.select("#demographic").append('table').attr('class', 'table table-striped')
     let header = table.append('thead')
@@ -401,8 +406,8 @@ function changeNbh(nbh_name) {
     removeWalkScore();
     var nbh_index = getNbhIndex(nbh_name);
     buildGauge(overviewIn[0], nbh_index);
-   // createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
-    //createCrimeTable(crimeStatsIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
+    createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
+    createCrimeTable(crimeStatsIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
     buildBulletIncome(rentalIncomeIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
     Update_statistics("0", overviewIn[0]['nbh_id'][nbh_index])
     ROIstat("0", overviewIn[0]['nbh_id'][nbh_index])
@@ -427,7 +432,7 @@ function changeCity(city_name) {
     var nbh_index = getNbhIndexId(nbh_id)
     var city_id = getCityId(city_name)
     buildGauge(overviewIn[0], nbh_index);
-    var county_id = getCounty(city_name);
+    //var county_id = getCounty(city_name);
     createCensusPanel(censusCrimeIn[0], overviewIn[0], nbh_id)
     createCrimeTable(crimeStatsIn[0], overviewIn[0], nbh_id);
     buildBulletIncome(rentalIncomeIn[0], nbh_id)
