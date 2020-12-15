@@ -144,7 +144,7 @@ function BuildRentalIncomeVsOccupancyChartForRentalSize(city_id, nbh_id){
       .attr("class", "tooltip")
       .offset([80, -60])
       .html(function(d) {
-        return (`Rental Size: ${d.RentalSizeinfo.bed_number}<br>Occupancy: ${d.RentalSizeinfo.median_occupancy}`);
+        return (`Rental Size: ${d.RentalSizeinfo.bed_number}<br>Occupancy: ${d.RentalSizeinfo.median_occupancy}%`);
       });
 
     // Step 7: Create tooltip in the chart
