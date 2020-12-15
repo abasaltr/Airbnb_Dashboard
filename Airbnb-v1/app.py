@@ -31,7 +31,8 @@ try:
     db_uri = os.environ['DATABASE_URL']
 except KeyError:
     db_uri = f'postgres://{user}:{password}@localhost:5432/airbnb_db'
-app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+    db_heroku = 'postgres://bbnqeqezcajcpj:83bc1e635e767328a747ceead83cdadb9cb366013a4aa4beb2923d03635c29bc@ec2-52-44-55-63.compute-1.amazonaws.com:5432/ds8k2doc3f1an'
+app.config['SQLALCHEMY_DATABASE_URI'] = db_heroku
 db = SQLAlchemy(app)
 
 #################################################
