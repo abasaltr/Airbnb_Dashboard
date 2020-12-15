@@ -7,7 +7,7 @@ var streets = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z
     maxZoom: 16,
     minZoom: 8,
     id: "streets-v11",
-    accessToken: API_KEY
+    accessToken: "pk.eyJ1IjoiYWJhc2FsdHIiLCJhIjoiY2tobnNuandvMDVubDJyb2E4a3F6bGRqZCJ9.csPDIivF_wOHiunkngsKig"
 });
 
 // Adding tile layer
@@ -16,7 +16,7 @@ var light = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/
     maxZoom: 14,
     minZoom: 8,
     id: "light-v10",
-    accessToken: API_KEY
+    accessToken: "pk.eyJ1IjoiYWJhc2FsdHIiLCJhIjoiY2tobnNuandvMDVubDJyb2E4a3F6bGRqZCJ9.csPDIivF_wOHiunkngsKig"
 });
 
 // Adding tile layer
@@ -25,7 +25,7 @@ var dark = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{
     maxZoom: 14,
     minZoom: 8,
     id: "dark-v10",
-    accessToken: API_KEY
+    accessToken: "pk.eyJ1IjoiYWJhc2FsdHIiLCJhIjoiY2tobnNuandvMDVubDJyb2E4a3F6bGRqZCJ9.csPDIivF_wOHiunkngsKig"
 });
 
 // Adding tile layer
@@ -34,7 +34,7 @@ var satellite = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/
     maxZoom: 14,
     minZoom: 8,
     id: "satellite-v9",
-    accessToken: API_KEY
+    accessToken: "pk.eyJ1IjoiYWJhc2FsdHIiLCJhIjoiY2tobnNuandvMDVubDJyb2E4a3F6bGRqZCJ9.csPDIivF_wOHiunkngsKig"
 });
 
 // Adding tile layer
@@ -43,7 +43,7 @@ var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
     maxZoom: 14,
     minZoom: 8,
     id: "outdoors-v11",
-    accessToken: API_KEY
+    accessToken: "pk.eyJ1IjoiYWJhc2FsdHIiLCJhIjoiY2tobnNuandvMDVubDJyb2E4a3F6bGRqZCJ9.csPDIivF_wOHiunkngsKig"
 });
 
 
