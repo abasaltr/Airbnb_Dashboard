@@ -401,8 +401,8 @@ function changeNbh(nbh_name) {
     removeWalkScore();
     var nbh_index = getNbhIndex(nbh_name);
     buildGauge(overviewIn[0], nbh_index);
-    createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
-    createCrimeTable(crimeStatsIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
+   // createCensusPanel(censusCrimeIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
+    //createCrimeTable(crimeStatsIn[0], overviewIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]));
     buildBulletIncome(rentalIncomeIn[0], parseInt(overviewIn[0]['nbh_id'][nbh_index]))
     Update_statistics("0", overviewIn[0]['nbh_id'][nbh_index])
     ROIstat("0", overviewIn[0]['nbh_id'][nbh_index])
@@ -427,6 +427,7 @@ function changeCity(city_name) {
     var nbh_index = getNbhIndexId(nbh_id)
     var city_id = getCityId(city_name)
     buildGauge(overviewIn[0], nbh_index);
+    var county_id = getCounty(city_name);
     createCensusPanel(censusCrimeIn[0], overviewIn[0], nbh_id)
     createCrimeTable(crimeStatsIn[0], overviewIn[0], nbh_id);
     buildBulletIncome(rentalIncomeIn[0], nbh_id)

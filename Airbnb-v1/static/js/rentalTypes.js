@@ -45,10 +45,10 @@ function rentalTypeChart(city_id, nbh_id){
     var layout = {
       title: "Average Rental Details Per Rental Type",
       xaxis: { title: "Rental Type"},
-      yaxis: { title: "Avgerage"},
+      yaxis: { title: "Average"},
       
     };
-    var config = { responsive: false ,  height: 300,  margin: { l: 60,  r: 10, b: 5,  t: 2 } };
+    var config = { responsive: true ,  height: 350,  margin: { l: 60,  r: 10, b: 5,  t: 2 } };
     Plotly.newPlot("type", data, layout, config);
   });
 }
