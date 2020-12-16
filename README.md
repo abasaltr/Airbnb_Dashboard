@@ -14,13 +14,20 @@ PostgreSQL database username and password are required entries in file: /Airbnb-
 Heatmap visualization requires Mapbox API access token (https://account.mapbox.com/) key entries in file: /Airbnb-v1/static/js/config.js 
 
 For database installation, run the sql script located at ![DataSetup](Airbnb-v1/Datasetup).  
-Once the tables are created you can import the data in the folder to the tables at the ![data](Airbnb-v1/Datasetup/data) folder.  
+Once the tables are created you can import the data in the folder to the tables at the !(Airbnb-v1/Datasetup/data) folder.  
 The order and the mapping of files to tables for the import are  
 
   1. top_airbnb_cities --> top_airbnb_cities.csv  
   2. top_neighborhood_overview --> top_neighborhood_overview.csv  
   3. city_nbh --> city_nbh.csv
-      
+  4. neighborhood_overview --> neighborhood_overview.csv  
+  5. neighborhood_insights --> neighborhood_insights.csv  
+  5. rental_rates --> rental_rates.csv  
+  6. rental_rates_info --> rental_rates_info.csv  
+  7. listings_info --> listings_info.csv  
+  8. merged_census_crime -- > merged_census_crime.csv  
+  9. historical_insights --> historical_insights.csv  
+ 
 
 ## Objective:
 The Airbnb Dashboard provides guests fun interactive way to plan their vacation, and hosts a general idea about the airbnb market in the area
