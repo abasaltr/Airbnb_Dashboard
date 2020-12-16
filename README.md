@@ -99,7 +99,7 @@ with a few key components in mind:
 	
 	Javascript files:
 	         app.js - for the index file functions    
-		 rentalapp.js - for the rental file functions   
+		 rentalapp.js - for the rental analysis file functions   
 		 app-heatmap.js - heatmap module    
 		 rentalincome2.js -  Rental Size vs occupancy chart  
 		 rentalincomebyprop.js - Rental income by property chart  
@@ -107,7 +107,11 @@ with a few key components in mind:
 		 roistat.js - Bullet chart for ROI module   
 		 statistics.js - statistics module  
 		 
-	HTML integration:
+	HTML integration:  
+	           index.html - main dashboard file  
+		   trends.html - rental analysis file  
+		   heatmap.html - heatmap analysis file  
+		   icon.html - icon for heatmap analysis  
 
 
 ## Conclusion:    
