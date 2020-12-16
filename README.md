@@ -14,7 +14,7 @@ PostgreSQL database username and password are required entries in file: /Airbnb-
 Heatmap visualization requires Mapbox API access token (https://account.mapbox.com/) key entries in file: /Airbnb-v1/static/js/config.js 
 
 For database installation, run the sql script located at ![DataSetup](Airbnb-v1/Datasetup).  
-Once the tables are created you can import the data in the folder to the tables at the !(Airbnb-v1/Datasetup/data) folder.  
+Once the tables are created you can import the data in the folder to the tables at the !![data](Airbnb-v1/Datasetup/data) folder.  
 The order and the mapping of files to tables for the import are  
 
   1. top_airbnb_cities --> top_airbnb_cities.csv  
@@ -98,8 +98,15 @@ with a few key components in mind:
 		houstonId = "api/getHoustonId
 	
 	Javascript files:
-
-
+	         app.js - for the index file functions    
+		 rentalapp.js - for the rental file functions   
+		 app-heatmap.js - heatmap module    
+		 rentalincome2.js -  Rental Size vs occupancy chart  
+		 rentalincomebyprop.js - Rental income by property chart  
+		 rentalTypes.js - Comparison for cleaning costs, rooms booked chart module  
+		 roistat.js - Bullet chart for ROI module   
+		 statistics.js - statistics module  
+		 
 	HTML integration:
 
 
