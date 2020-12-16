@@ -7,11 +7,20 @@ HEROKU Dashboard Deployment -
 https://airbnb-dashboard-g6.herokuapp.com/
 
 Github Dashboard Deployment - version requires the execution of the Python Flask app: /Airbnb-v1/app.py on localhost:5000:
-https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/templates/index.html
+https://abasaltr.github.io/Airbnb_Dashboard/Airbnb-v1/index.html
 
 ## Installation Notes: 
 PostgreSQL database username and password are required entries in file: /Airbnb-v1/db_key.py <br>
 Heatmap visualization requires Mapbox API access token (https://account.mapbox.com/) key entries in file: /Airbnb-v1/static/js/config.js 
+
+For database installation, run the sql script located at ![DataSetup](Airbnb-v1/Datasetup).  
+Once the tables are created you can import the data in the folder to the tables at the ![data](Airbnb-v1/Datasetup/data) folder.  
+The order and the mapping of files to tables for the import are  
+
+  1. top_airbnb_cities --> top_airbnb_cities.csv  
+  2. top_neighborhood_overview --> top_neighborhood_overview.csv  
+  3. city_nbh --> city_nbh.csv
+      
 
 ## Objective:
 The Airbnb Dashboard provides guests fun interactive way to plan their vacation, and hosts a general idea about the airbnb market in the area
